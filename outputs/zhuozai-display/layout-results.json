@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "viewports": [
+    {
+      "width": 320,
+      "nav": [
+        59,
+        61,
+        61,
+        72,
+        61,
+        61,
+        60,
+        72
+      ],
+      "scrollWidth": 320
+    },
+    {
+      "width": 390,
+      "nav": [
+        59,
+        61,
+        61,
+        72,
+        61,
+        61,
+        60,
+        72
+      ],
+      "scrollWidth": 390
+    },
+    {
+      "width": 1238,
+      "nav": [
+        65,
+        66,
+        66,
+        79,
+        66,
+        67,
+        66,
+        79
+      ],
+      "scrollWidth": 1238
+    }
+  ],
+  "checks": [
+    "chapter tabs have no clipped text or overlap",
+    "first and last chapter reachable",
+    "no horizontal page overflow"
+  ],
+  "exports": "scroll container expanded for full chapter screenshots"
+}

@@ -1,0 +1,12 @@
+{
+  "capture": "44 actual prototype states, isolated Chrome file session",
+  "annotations": "HTML markers; original images remain unchanged",
+  "chapterExports": "Scroll containers expanded for full-chapter reading exports; original UI images unchanged",
+  "prototypeRuntimeModified": false,
+  "sections": 8,
+  "galleries": 6,
+  "gallerySteps": 30,
+  "date": "2026-10-13",
+  "sourceAtCapture": "cases/zhuozai/prototype/",
+  "sourceNote": "截图采集时使用独立原型快照。当前作品集为纯展示版，已移除该快照；后续素材从单独保存的 branch2 更新。"
+}

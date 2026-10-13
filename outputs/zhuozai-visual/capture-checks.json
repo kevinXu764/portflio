@@ -1,0 +1,15 @@
+{
+  "screens": 44,
+  "checks": [
+    "Discover, detail, favourite and library",
+    "Creator validation and persisted draft",
+    "Created character opens first conversation",
+    "Suggestions, reply, draft restoration, cancel refund",
+    "Message to memory, edit, classify, filter and delete confirmation",
+    "Video connection, natural event trigger, progress, success, failure, exit, stable frame and redial",
+    "All 3 pet modes, reply, pause/resume, collapse/expand, hide/restore draft, drag, keyboard, switch character and continue chat",
+    "Theater configuration, playback, pause, script, completion, naming and local collection"
+  ],
+  "errors": [],
+  "method": "Actual prototype interactions in isolated Chrome file session. No prototype runtime modified."
+}

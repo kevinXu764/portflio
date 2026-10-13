@@ -1,0 +1,41 @@
+﻿The Original / My Assets · 静态卡片作品集
+当前版本：20261013-zhuozai-display-case
+
+打开方式
+双击根目录 index.html，或双击“启动网站.cmd”，即可在默认浏览器中使用。
+无需运行服务器、保持命令窗口、安装 Python 或 Node.js，也无需联网下载资源。
+复制或移动网站时，请保留整个 card 文件夹，包括 assets、vendor、cases 等子目录。
+
+唯一页面入口：index.html
+直接进入卡片网站，支持 file:// 直接打开及普通静态网站托管。
+卡片切换、项目详情、返回和动态暂停均保留。
+
+维护说明（正常浏览不需要执行）
+app.js 保留为可维护的模块源码。
+页面实际加载 assets/app.bundle.js，其中已包含所需的 Three.js 和项目数据。
+修改 JavaScript 源码后，需要重新构建；修改 HTML 或 CSS 后直接刷新即可。
+
+重新构建：在此文件夹打开终端，使用 Node.js 与 npm：
+  npm install --cache .build-cache
+  npm run build
+构建工具固定为 esbuild 0.27.3；npm 只用于维护，不属于网站运行依赖。
+也可以复用已有工具链：
+  node build-static.cjs <已安装的 esbuild 包目录>
+构建完成后更新 assets/app.bundle.js。
+
+Three.js 授权文件：vendor/THREE-LICENSE.txt；打包文件也保留其许可声明。
+DESIGN.md 为当前设计与维护说明；UI-REVIEW.md 为优化记录和前后截图索引。
+_history 为历史备份，不属于网站运行文件，无需随网站复制或部署。
+
+桌崽 AI 案例
+桌崽是第一张作品卡，共 6 张卡片。选中后再次点击卡片或“查看项目”进入案例。
+详情按产品经理方向组织，支持章节跳转、查看截图原图、返回及下一作品。
+案例仅用于图文展示，不打包桌崽应用源码，也不提供桌崽原型跳转。
+案例正文：cases/zhuozai/case.js；案例样式：cases/zhuozai/case.css。
+展示图片：cases/zhuozai/media/。
+案例事实范围与可补信息：cases/zhuozai/案例编排说明.md。
+
+图文交互版更新
+案例按核心产品功能分为 8 章，提供 6 组步骤展示、30 个可切换状态。
+点击每组上方的步骤查看不同界面；也可聚焦步骤后使用左右方向键、Home 和 End。
+编号标注与图片下方说明对应，点击界面可查看原图。步骤切换只切换展示截图，不运行桌崽的功能。
