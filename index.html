@@ -11,6 +11,7 @@
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./cases/zhuozai/case.css" />
+    <link rel="stylesheet" href="./typography.css" />
     <title>My Assets Three — 交互作品集</title>
   </head>
   <body>
@@ -24,7 +25,7 @@
       >
         <div class="stage-texture" aria-hidden="true"></div>
         <div class="stage-topbar">
-          <span class="archive-label">MY ASSETS / COLLECTION</span>
+          <span class="archive-label">MY ASSETS</span>
           <button id="motion-toggle" type="button" aria-pressed="false">暂停动态</button>
         </div>
         <canvas id="scene" aria-hidden="true"></canvas>
@@ -32,8 +33,8 @@
         <div class="collection-view" id="collection">
           <header class="intro" id="intro">
             <p class="eyebrow">SELECTED WORK · 2023—2026</p>
-            <h1>My assets</h1>
-            <p class="intro-subtitle">一叠可以翻阅的作品。<br class="desktop-break" />关于产品、体验与设计判断。</p>
+            <h1>My Assets</h1>
+            <p class="intro-subtitle">关于产品、体验与设计。</p>
             <button class="explore-button" id="explore-projects" type="button">浏览作品 <span aria-hidden="true">↗</span></button>
           </header>
 
@@ -104,7 +105,7 @@
             <h2 id="active-title"></h2>
             <p id="active-description"></p>
             <span class="active-meta"><span id="active-category"></span> · <span id="active-year"></span></span>
-            <button class="explore-button" id="open-active" type="button">查看项目 <span aria-hidden="true">↗</span></button>
+            <button class="explore-button" id="open-active" type="button">查看作品 <span aria-hidden="true">↗</span></button>
           </section>
 
           <nav class="step-controls" id="step-controls" aria-label="作品切换">
@@ -125,14 +126,14 @@
 
         <section class="detail-view" id="detail-view" aria-label="项目详情" hidden>
           <header class="detail-toolbar">
-            <button id="detail-back" type="button" aria-label="返回作品集合">← 返回</button>
+            <button id="detail-back" type="button" aria-label="返回作品集合">← 返回作品集</button>
             <span id="detail-count">01 / 06</span>
           </header>
           <div class="detail-hero" id="detail-hero">
             <span class="detail-mark" id="detail-mark" aria-hidden="true"></span>
             <p id="detail-kicker"></p>
             <h1 id="detail-title" tabindex="-1"></h1>
-            <h2 id="detail-cn-title"></h2>
+            <p id="detail-cn-title" class="detail-subtitle"></p>
           </div>
           <article id="zhuozai-case" aria-label="桌崽 AI 产品经理案例" hidden></article>
           <article class="detail-content">
@@ -143,39 +144,37 @@
             </dl>
 
             <section class="detail-lead">
-              <p class="section-label">OVERVIEW</p>
-              <h3 id="detail-description"></h3>
+              <h2 class="section-heading">项目概览</h2>
+              <p id="detail-description"></p>
             </section>
 
             <figure class="study-panel study-panel-wide">
               <div class="study-grid" aria-hidden="true"><span></span><span></span><span></span></div>
-              <figcaption>STRUCTURE STUDY / 01</figcaption>
+              <figcaption>结构研究</figcaption>
             </figure>
 
             <section class="text-section">
-              <p class="section-label">CHALLENGE</p>
-              <h3>问题</h3>
+              <h2>设计问题</h2>
               <p id="detail-challenge"></p>
             </section>
 
             <section class="text-section">
-              <p class="section-label">APPROACH</p>
-              <h3>方法</h3>
+              <h2>设计方法</h2>
               <p id="detail-approach"></p>
             </section>
 
             <div class="study-pair" aria-label="过程视觉占位">
-              <figure class="study-panel study-panel-tall"><div class="object-line" aria-hidden="true"></div><figcaption>FORM / 02</figcaption></figure>
-              <figure class="study-panel study-panel-tall"><div class="object-ring" aria-hidden="true"></div><figcaption>DETAIL / 03</figcaption></figure>
+              <figure class="study-panel study-panel-tall"><div class="object-line" aria-hidden="true"></div><figcaption>形态研究</figcaption></figure>
+              <figure class="study-panel study-panel-tall"><div class="object-ring" aria-hidden="true"></div><figcaption>细节研究</figcaption></figure>
             </div>
 
             <section class="outcome-section">
-              <p class="section-label">OUTCOME</p>
+              <h2 class="section-heading">设计结果</h2>
               <div class="outcome-list" id="detail-outcomes"></div>
             </section>
 
             <button class="next-detail" id="next-detail" type="button">
-              <small>下一个项目</small>
+              <small>下一个作品</small>
               <span id="next-detail-title"></span>
               <b aria-hidden="true">→</b>
             </button>

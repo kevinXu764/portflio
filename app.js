@@ -441,7 +441,11 @@ function initThree() {
 }
 
 const targets = projects.map(() => ({}));
-function focusY() { return stageHeight * (wideLayout ? 0.23 : 0.19); }
+function focusY() {
+  if (wideLayout) return stageHeight * 0.23;
+  // Leave room for readable copy and a separate navigation row on short phones.
+  return Math.max(84, stageHeight * (stageHeight <= 640 ? 0.15 : 0.19));
+}
 function cardTarget(index) {
   let y;
   let x = 0;

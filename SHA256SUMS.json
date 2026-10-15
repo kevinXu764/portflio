@@ -1,98 +1,607 @@
-{
-  "DESIGN.md": "c691eb2cf571e6ebc8e23d91e7cf27994421cc40d849ca8d818baadd801bbd21",
-  "UI-REVIEW.md": "df17f6b3c0def9703f1bd5f276a044ecdbdab041dd757ba22ae4a003da6675c6",
-  "app.js": "7517737c3f3300c19ffe21cf7fe19ba7d2e40ec101d9c652891121eefd3a96b2",
-  "assets/app.bundle.js": "c844d512528f636eff36e78c7564ae23b4f550f72f22178e39b2282e1ac3aaa0",
-  "build-static.cjs": "1f93be0d5619569444ede6844c87af4e047a42f0ab58732ea14d9d8d26f2cd21",
-  "cases/zhuozai/captures.js": "b895be7c90a94c992d975c5ffda41326b52866df9dae67d660aca2fcf860b1b2",
-  "cases/zhuozai/case.css": "504b3949b1c7c8d89c9309c4adcf1dd01638b632ffba05666d5cbb1c9b2bf0b8",
-  "cases/zhuozai/case.js": "08bd2eaed3f529c18c3f1345e3ae2b3d6f504a58412057f59aaaddc5d108e5e3",
-  "cases/zhuozai/media/call-before.png": "cff36940fb50585d5e62ffda8574e1758b730d25d3e1fc9de6e9ba10dd8873ff",
-  "cases/zhuozai/media/chengxia.png": "a6a69addc12ac236f96b6d2e32781fa1382e494e0d16770a34d151d8693f0f16",
-  "cases/zhuozai/media/flows/call-connecting.png": "e3552872108e38ddb2b58bd26f291c8645a4da59c2e6cafc6aff940a994d9d59",
-  "cases/zhuozai/media/flows/call-ended.png": "ac964d45b58bd618c2674350e16eccef39b97d66eb2607d1fa9292f8d36b8da0",
-  "cases/zhuozai/media/flows/call-event.png": "2a8e1edb566335797fbb943916c908234ea2cb019fba72ed76130844d22e1642",
-  "cases/zhuozai/media/flows/call-normal.png": "e2cd57149875b8d47f4d9c6d372a1a9b891917062f81e01958258a02e90928f3",
-  "cases/zhuozai/media/flows/call-return.png": "35e1059ecb30f959ab59885e571cb61c96e6bcb2a30c26ebef14dc9f72e1caf9",
-  "cases/zhuozai/media/flows/call-success.png": "5ab1c44622f67db972b2ad86d0111c1c6265b59d2abfb812de4443fc898461bc",
-  "cases/zhuozai/media/flows/chat-cancel.png": "c69e10bd0bc702a85cb55bea1f78b6822de46db58b28e360b6fa0ef5f7892333",
-  "cases/zhuozai/media/flows/chat-draft.png": "6b19f352c8e48b4472bb24bdc66a4e8d62d7f946bd47df09e40126ec1ad0878b",
-  "cases/zhuozai/media/flows/chat-reply.png": "dc1d557888869e2b04fd028d34943c6a32e3c1602faa852471b3e9c03074c034",
-  "cases/zhuozai/media/flows/chat-start.png": "5ec1df24bd828035e53beed17a34299087d2fbcc6624264c2d3ba0bf71c436ca",
-  "cases/zhuozai/media/flows/chat-thinking.png": "26074d8c096fdf2beaf45bbd4b1aa10cba0cd615ac92db137696c4fa5bcbb0fc",
-  "cases/zhuozai/media/flows/create-confirm.png": "dc86204afac3a43a5ebdcaabaaf52007b6ed2339869209f7278afedd3bd4dfc1",
-  "cases/zhuozai/media/flows/create-first-chat.png": "82474b01c4d48d05f7dc565b77084936f193bc49e02c79f22cbec7f9ad95b57e",
-  "cases/zhuozai/media/flows/create-look.png": "39653dde20976777aa3a0f4e67bc0811041f5fb8ec052df7beed37982e2be9c7",
-  "cases/zhuozai/media/flows/create-personality.png": "70b600b1e57751555430b531dad7f002b976c620d2f55df656e3e5c0f9db0ace",
-  "cases/zhuozai/media/flows/create-validation.png": "f72fbc7a4e748de3ca9d06af5675f4d712ee9ff54e2c504f83f0255bd0430d13",
-  "cases/zhuozai/media/flows/discover.png": "518fac9c1b9d803a6d0d08ea926180754746251c0dde6b3892062a6b22d8e5d1",
-  "cases/zhuozai/media/flows/event-failed.png": "e4086d7335e29d0ad4e47c1f31bd81574b925d0690a2dec9668d369ac44ea30d",
-  "cases/zhuozai/media/flows/event-progress.png": "6bff73865c9e62d98b49e6edc0e0cf8b7e1cf4870db5d20c7172c5e0c663dc52",
-  "cases/zhuozai/media/flows/event-start.png": "9a5ea70821b58b5ce00f09bcaf4d49376098b72c10b25d176be5b6030c5ac0c8",
-  "cases/zhuozai/media/flows/event-success.png": "556c698f3aabbc219472acc5ee1760ce23b363c1b758738a17a07af75ca593cd",
-  "cases/zhuozai/media/flows/memory-collection.png": "a89389efc8c088e59c809d6a1b224234b75ea1642f9b37070938f218ec5efd38",
-  "cases/zhuozai/media/flows/memory-delete.png": "afdb8756b95736560b4ccbd431e3e140108315694fd3f6afff87e237fe66b1ec",
-  "cases/zhuozai/media/flows/memory-edit.png": "cbfc0f16448841d9869e016acd010f0b2607c34c53024d9e9e63beacb4fe95a9",
-  "cases/zhuozai/media/flows/memory-filter.png": "bbeb8141b9256644301af441ad55da635afbf5015890e52fbf174bd52a570c3d",
-  "cases/zhuozai/media/flows/memory-from-chat.png": "c9f701ed1ba42bcb31ec5e2e757698a26e14b7b750e35f0fe16646ac6367cfba",
-  "cases/zhuozai/media/flows/pet-avatar.png": "9c26d6603a91deef5659ca123bc8cda25b5bbbe15b3a514b585a8dbdb0f18d10",
-  "cases/zhuozai/media/flows/pet-character.png": "2bc7eadcb628fa7a6c473968a7363101565ccd20b336327ab7952ca0d1aa82a6",
-  "cases/zhuozai/media/flows/pet-collapsed.png": "f8963ad518a99d2c8f0a742e1db1bcb1ad10b67fa988b274e288e3a9a92fe88e",
-  "cases/zhuozai/media/flows/pet-drag.png": "fcb6efe07cd5f4e994827b1e58036f4d7b07b98d35025768a0ee0f8e7071a620",
-  "cases/zhuozai/media/flows/pet-full.png": "21dd85a820bb67725edd1bce48de52c61539b159501c239d1b8ec57fab43ec2c",
-  "cases/zhuozai/media/flows/pet-hidden.png": "3fadea268caa9472c0e5ecacfd80bdb09f426d31b8c14e9176e9cda1cc5199cd",
-  "cases/zhuozai/media/flows/pet-overview.png": "d8f8152213845b9781686a92af6deb356d4a09b630d93cb0990b2a58da9a27f6",
-  "cases/zhuozai/media/flows/pet-paused.png": "19554643d27cbbf98949bc44003ece4d9eade228ff834bd725eaaf530865fdf0",
-  "cases/zhuozai/media/flows/pet-reply.png": "d6c667442b3127a5df2b7a144b5f5816e432540a4e0765a5e30d92778a5f437e",
-  "cases/zhuozai/media/flows/pet-small.png": "2085c50067bb31fc5b1bf5c1879c47d06bf35d35d12ffeb5a16ebcc4b9c5b148",
-  "cases/zhuozai/media/flows/role-detail.png": "27c54245652c96433de88ef2e39eef548f07cd84ef049aabc5c7af0736c9c6b8",
-  "cases/zhuozai/media/flows/role-library.png": "48f43c1b29c64f0d2850de411f0fb4d4317d39b45c1c2b1a808d7414b209d9b2",
-  "cases/zhuozai/media/flows/theater-collection.png": "66cfde32872a20c45bea65826dd346062c8c6205bd643e116fb63a4f1fc2a580",
-  "cases/zhuozai/media/flows/theater-finished.png": "3b7c1714f1353c0f447553aabce94706dfd77f33c8ecc7eb44ea25bb8dd8b4cb",
-  "cases/zhuozai/media/flows/theater-playing.png": "0e2dd7bab5af651abd56e2b8fa0117109336dd131104b0d8078d505b48a01701",
-  "cases/zhuozai/media/flows/theater-save.png": "e043fe108caf6779d4017f50edc318b9e065a164824d165cba8353e3edc840de",
-  "cases/zhuozai/media/flows/theater-script.png": "1922e1e3ea154c5b8a4701b0caa6401ca17edef498f3a831f6819604c4d74a02",
-  "cases/zhuozai/media/flows/theater-setup.png": "1351ed503474da36e6d5593c21a4cfac5c7619117c76d485ee1ad7566818f1e5",
-  "cases/zhuozai/案例编排说明.md": "995f9e4d0e906770f3856b7c9efa08c3d00cb6bea9cae2eddaf36e111c69ef19",
-  "favicon.svg": "ea733f5c06f4a3cce2f7903490c35e3f2fa5a763171e4c622a056774fe11fa6a",
-  "index.html": "a8bdc029c902e08487f738d5fbc07d94dbc498ec26ae00e27e5040a1e3145099",
-  "outputs/original-only/desktop.png": "ef707a297485c544beb2e25dc4ea903c3331e6e9ce0d818dc378eebf23d5ba2d",
-  "outputs/original-only/mobile.png": "497aae93add782542ff1e98a92a1ea630a07d788c1fa6a9db5df3c3a2341e5a2",
-  "outputs/original-only/narrow.png": "95256c6977ed99456d7eced0f4b9de3ab9bbde4e9e40f7042cd8d346b815847d",
-  "outputs/original-only/results.json": "45f28ee6413e78c6c7276678c79d171ad0ce8315eb7fcde2f5a409ea6e5f7dc4",
-  "outputs/ui-polish/after-320-active.png": "d3dfe40e2cddde17cb9e64c3a991ebcbc663fd3228063c5a105edf56d7672992",
-  "outputs/ui-polish/after-desktop-active.png": "605bec027272a36bf2d7dbaa202cd1dc367839617c857ceba252c3ab5999fbc5",
-  "outputs/ui-polish/after-desktop-detail.png": "b2de1dce2bca5f0a7c04aa6d0ef40a6c8865aeab72e77604432e3c1e6f81359d",
-  "outputs/ui-polish/after-desktop.png": "2bfca837e24891b6c7967a6c344204b94ed05d81ff2c7eb73c690596bd04022b",
-  "outputs/ui-polish/after-mobile-active.png": "3991ef84f0cce0c03b2ddaed06f0f0fa781e7937b7abbf4b6a7cdcbbe27e26e2",
-  "outputs/ui-polish/after-mobile-detail.png": "ce0fddec0dd83c607a000dd3f277b053c63927f9c409c7efb126086552fde38f",
-  "outputs/ui-polish/after-mobile.png": "c6107e1146ad3365abeadefec89d9b8c18ba10c7e572862a3fb0c348022d2385",
-  "outputs/ui-polish/before-desktop-active.png": "d5e9519a68aa73f22e4ef84086fd2db0846fb470cad0a3c83775ad4db29986ff",
-  "outputs/ui-polish/before-desktop.png": "4ca90428684422ff136afda30da68f0d7a19e35c1044f2f13b271957e1da77dc",
-  "outputs/ui-polish/before-mobile.png": "f3f66f25b1b9f9901cecb34d9e3e48c6e44131f537dccb526f5197a1a0a27ece",
-  "outputs/ui-polish/main-results.json": "ec60832b45f3745beda9534a01746ce6291a0632fd1899a63d814b7a62198eec",
-  "outputs/ui-polish/performance-results.json": "29209b16798a3dad3ef33f496cd1faa3bb5a3ae1b77ff4b2dd73598dddfb7abd",
-  "outputs/ui-polish/static-access-results.json": "fe71902af68dcfb4f8ea223c8c690ea63adca72bd83ad66a5b2b362f3b832508",
-  "outputs/zhuozai-display/layout-results.json": "320a1cd3e1bbfa2966b940924b1bc8947f119d57dc43e77bf1895200248243dc",
-  "outputs/zhuozai-display/review-results.json": "1b1d27abaf154c5e78dbb3c8cf310c389ba06a48de09b0670420548e302d41ce",
-  "outputs/zhuozai-visual/capture-checks.json": "8d09db177226a81b951e5184650d26f7a18c0da2d74cafd05bf7682a7b8639d9",
-  "outputs/zhuozai-visual/chapter-call.png": "1c2236b0c958d8ef40659fd647a727e9de32883796ab6cbac06cdd50ddd86c62",
-  "outputs/zhuozai-visual/chapter-meet.png": "5ecd3594be110b6f99e12f3a2a56536d82cd34a6d6d96e7a720a998962333a68",
-  "outputs/zhuozai-visual/final-layout.json": "9fd383c320963b30d86bbcadf145e1b65f501163c129a57c3621d387b3896b66",
-  "outputs/zhuozai-visual/provenance.json": "432185a49085b5cfa1a29e183eb4251bed819b7c9a46eb52218ee15f24b9f9cd",
-  "outputs/zhuozai-visual/review-results.json": "b413b7d03d5a59dbd472085f6a7b9012c526bd0520e5d2ac1cd82808945090ea",
-  "outputs/zhuozai/README.md": "3a6c7857e94e6714c3a37e3cb0cf8a445a32ea17a53c201a7e78a47802cc8e0e",
-  "outputs/zhuozai/card-1440.png": "7d652c8c1adf5e1c1a951cb1c4c8185ddf14da0d5a5d6efe7b68e748455fa3da",
-  "outputs/zhuozai/case-1440.png": "a0d9f4c932039a516cd62c39a9f18650b4fb51e1a7afeae9a87f0057e2fafc8b",
-  "outputs/zhuozai/case-390.png": "5af4ea8f8c71067221c6c7ada83e5ecb694fdfc15b266e7a725bb59104f04551",
-  "outputs/zhuozai/decision-1440.png": "f97a4035301a8ac5750295dfa554eed3cec900530028069087f02879df3d122b",
-  "outputs/zhuozai/review-results.json": "b6fc0d959ce89705533a894b6804346945f63f07004f99cd99d840f99f0aea9d",
-  "outputs/zhuozai/validation-1440.png": "dee97a5d83fde5508ef25c997817cadc26a4eb71007f226787b3371c56200166",
-  "package.json": "c6408957be2a31474bd426b0dc66b4cddcc598e16b1700d1d3171dee9e73d8c0",
-  "styles.css": "7cf6ca74c559fca06302e0c19c235cec7a388e7566a013a62b88fa6a7bd655f3",
-  "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
-  "vendor/three.core.min.js": "0e9dd2793e01d0d9eb4f2ab00b4ffcdd4488275ebebee5c31fa8d347bc29f0bf",
-  "vendor/three.module.min.js": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6",
-  "启动网站.cmd": "0edbd8f5b22789c3f11971244871f1b36e23f9e710fdc8b25ca6429165ec81be",
-  "本地使用说明.txt": "2ad07dd66f70b16b8022c5f3fa6c431be32323cb5229782828060a97139f7f3b"
-}
+[
+  {
+    "path": "DESIGN.md",
+    "sha256": "714a4253e8c625ccf9e05e928af541baff2a59593263b4303d2aa6fef45e7edb",
+    "bytes": 9473
+  },
+  {
+    "path": "TYPOGRAPHY.md",
+    "sha256": "9fdbca7682e647dfe82088ef06f696084af54c47f7fb0c19f24ec9229b98bd1c",
+    "bytes": 3175
+  },
+  {
+    "path": "UI-REVIEW.md",
+    "sha256": "df17f6b3c0def9703f1bd5f276a044ecdbdab041dd757ba22ae4a003da6675c6",
+    "bytes": 5477
+  },
+  {
+    "path": "app.js",
+    "sha256": "d1e2f04d8e3bd56eaf81619839c4f97b90921eade583dca6da60e45900d35893",
+    "bytes": 40103
+  },
+  {
+    "path": "assets/app.bundle.js",
+    "sha256": "06ab7c27a24ab2716e3904aa326253cf6d8fe9a87a92ce2314f0932c0ba6a90b",
+    "bytes": 618968
+  },
+  {
+    "path": "build-static.cjs",
+    "sha256": "1f93be0d5619569444ede6844c87af4e047a42f0ab58732ea14d9d8d26f2cd21",
+    "bytes": 1323
+  },
+  {
+    "path": "cases/zhuozai/captures.js",
+    "sha256": "7ab74e1f034f8ec1a1b95be8fdd59d0e67260e0465b370c7c70430eb675602fa",
+    "bytes": 10114
+  },
+  {
+    "path": "cases/zhuozai/case.css",
+    "sha256": "7cece3ff2eabcd685e3fac18d8b8aadab278c2db1ba53a43db3c907facec021c",
+    "bytes": 24056
+  },
+  {
+    "path": "cases/zhuozai/case.js",
+    "sha256": "7f6552dd7c7ce2bc56cb56a1b2eb04049b8a37d22616db926d869d2eacf738de",
+    "bytes": 18151
+  },
+  {
+    "path": "cases/zhuozai/media/call-before.png",
+    "sha256": "cff36940fb50585d5e62ffda8574e1758b730d25d3e1fc9de6e9ba10dd8873ff",
+    "bytes": 370473
+  },
+  {
+    "path": "cases/zhuozai/media/chengxia.png",
+    "sha256": "a6a69addc12ac236f96b6d2e32781fa1382e494e0d16770a34d151d8693f0f16",
+    "bytes": 1637842
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-connecting.png",
+    "sha256": "e3552872108e38ddb2b58bd26f291c8645a4da59c2e6cafc6aff940a994d9d59",
+    "bytes": 257285
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-ended.png",
+    "sha256": "ac964d45b58bd618c2674350e16eccef39b97d66eb2607d1fa9292f8d36b8da0",
+    "bytes": 232452
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-event.png",
+    "sha256": "2a8e1edb566335797fbb943916c908234ea2cb019fba72ed76130844d22e1642",
+    "bytes": 266101
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-normal.png",
+    "sha256": "e2cd57149875b8d47f4d9c6d372a1a9b891917062f81e01958258a02e90928f3",
+    "bytes": 257576
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-return.png",
+    "sha256": "35e1059ecb30f959ab59885e571cb61c96e6bcb2a30c26ebef14dc9f72e1caf9",
+    "bytes": 259092
+  },
+  {
+    "path": "cases/zhuozai/media/flows/call-success.png",
+    "sha256": "5ab1c44622f67db972b2ad86d0111c1c6265b59d2abfb812de4443fc898461bc",
+    "bytes": 268278
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-cancel.png",
+    "sha256": "c69e10bd0bc702a85cb55bea1f78b6822de46db58b28e360b6fa0ef5f7892333",
+    "bytes": 71127
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-draft.png",
+    "sha256": "6b19f352c8e48b4472bb24bdc66a4e8d62d7f946bd47df09e40126ec1ad0878b",
+    "bytes": 10531
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-focus.png",
+    "sha256": "b440edefcedcf49339655421a9ab5baf281f4d1b2cb64e531198e376e31b87ea",
+    "bytes": 65245
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-reply.png",
+    "sha256": "dc1d557888869e2b04fd028d34943c6a32e3c1602faa852471b3e9c03074c034",
+    "bytes": 142262
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-start.png",
+    "sha256": "5ec1df24bd828035e53beed17a34299087d2fbcc6624264c2d3ba0bf71c436ca",
+    "bytes": 120109
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-thinking.png",
+    "sha256": "26074d8c096fdf2beaf45bbd4b1aa10cba0cd615ac92db137696c4fa5bcbb0fc",
+    "bytes": 54483
+  },
+  {
+    "path": "cases/zhuozai/media/flows/chat-waiting-detail.png",
+    "sha256": "b196f862826a534703f16e445a1c04a3761249487246fb5fed5bf3b77c91d9d9",
+    "bytes": 11071
+  },
+  {
+    "path": "cases/zhuozai/media/flows/create-confirm.png",
+    "sha256": "dc86204afac3a43a5ebdcaabaaf52007b6ed2339869209f7278afedd3bd4dfc1",
+    "bytes": 120733
+  },
+  {
+    "path": "cases/zhuozai/media/flows/create-first-chat.png",
+    "sha256": "82474b01c4d48d05f7dc565b77084936f193bc49e02c79f22cbec7f9ad95b57e",
+    "bytes": 109116
+  },
+  {
+    "path": "cases/zhuozai/media/flows/create-look.png",
+    "sha256": "39653dde20976777aa3a0f4e67bc0811041f5fb8ec052df7beed37982e2be9c7",
+    "bytes": 147390
+  },
+  {
+    "path": "cases/zhuozai/media/flows/create-personality.png",
+    "sha256": "70b600b1e57751555430b531dad7f002b976c620d2f55df656e3e5c0f9db0ace",
+    "bytes": 114017
+  },
+  {
+    "path": "cases/zhuozai/media/flows/create-validation.png",
+    "sha256": "f72fbc7a4e748de3ca9d06af5675f4d712ee9ff54e2c504f83f0255bd0430d13",
+    "bytes": 41708
+  },
+  {
+    "path": "cases/zhuozai/media/flows/discover.png",
+    "sha256": "518fac9c1b9d803a6d0d08ea926180754746251c0dde6b3892062a6b22d8e5d1",
+    "bytes": 454195
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-failed.png",
+    "sha256": "e4086d7335e29d0ad4e47c1f31bd81574b925d0690a2dec9668d369ac44ea30d",
+    "bytes": 17806
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-paused.png",
+    "sha256": "fda626a5b93f9d4c424438d51a39289aafbb53d912134b99b8ed05c09aef83d1",
+    "bytes": 19249
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-progress-current.png",
+    "sha256": "cdc1e20a87ef812010ee6ce1dc25210270a6bbac2625e7f272359659e0779f4e",
+    "bytes": 17591
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-progress.png",
+    "sha256": "6bff73865c9e62d98b49e6edc0e0cf8b7e1cf4870db5d20c7172c5e0c663dc52",
+    "bytes": 17590
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-start-current.png",
+    "sha256": "9a5ea70821b58b5ce00f09bcaf4d49376098b72c10b25d176be5b6030c5ac0c8",
+    "bytes": 17504
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-start.png",
+    "sha256": "9a5ea70821b58b5ce00f09bcaf4d49376098b72c10b25d176be5b6030c5ac0c8",
+    "bytes": 17504
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-success-current.png",
+    "sha256": "9130bae1ee485ecaec13f1828b0a9e768232348d8d4857f20c7bee7c6eab7ee3",
+    "bytes": 15359
+  },
+  {
+    "path": "cases/zhuozai/media/flows/event-success.png",
+    "sha256": "556c698f3aabbc219472acc5ee1760ce23b363c1b758738a17a07af75ca593cd",
+    "bytes": 15799
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-collection.png",
+    "sha256": "a89389efc8c088e59c809d6a1b224234b75ea1642f9b37070938f218ec5efd38",
+    "bytes": 50347
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-delete.png",
+    "sha256": "afdb8756b95736560b4ccbd431e3e140108315694fd3f6afff87e237fe66b1ec",
+    "bytes": 19303
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-edit.png",
+    "sha256": "cbfc0f16448841d9869e016acd010f0b2607c34c53024d9e9e63beacb4fe95a9",
+    "bytes": 44618
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-filter-controls.png",
+    "sha256": "176a4c02dff4150576479821cad53f4f13a97ec79ca5c6803ef9256f6879aaff",
+    "bytes": 10674
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-filter.png",
+    "sha256": "bbeb8141b9256644301af441ad55da635afbf5015890e52fbf174bd52a570c3d",
+    "bytes": 100007
+  },
+  {
+    "path": "cases/zhuozai/media/flows/memory-from-chat.png",
+    "sha256": "c9f701ed1ba42bcb31ec5e2e757698a26e14b7b750e35f0fe16646ac6367cfba",
+    "bytes": 104010
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-avatar.png",
+    "sha256": "9c26d6603a91deef5659ca123bc8cda25b5bbbe15b3a514b585a8dbdb0f18d10",
+    "bytes": 53654
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-character.png",
+    "sha256": "2bc7eadcb628fa7a6c473968a7363101565ccd20b336327ab7952ca0d1aa82a6",
+    "bytes": 74599
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-collapsed.png",
+    "sha256": "f8963ad518a99d2c8f0a742e1db1bcb1ad10b67fa988b274e288e3a9a92fe88e",
+    "bytes": 9315
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-drag.png",
+    "sha256": "fcb6efe07cd5f4e994827b1e58036f4d7b07b98d35025768a0ee0f8e7071a620",
+    "bytes": 120206
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-full.png",
+    "sha256": "21dd85a820bb67725edd1bce48de52c61539b159501c239d1b8ec57fab43ec2c",
+    "bytes": 55906
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-hidden.png",
+    "sha256": "3fadea268caa9472c0e5ecacfd80bdb09f426d31b8c14e9176e9cda1cc5199cd",
+    "bytes": 109517
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-overview.png",
+    "sha256": "d8f8152213845b9781686a92af6deb356d4a09b630d93cb0990b2a58da9a27f6",
+    "bytes": 122562
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-paused.png",
+    "sha256": "19554643d27cbbf98949bc44003ece4d9eade228ff834bd725eaaf530865fdf0",
+    "bytes": 123794
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-reply.png",
+    "sha256": "d6c667442b3127a5df2b7a144b5f5816e432540a4e0765a5e30d92778a5f437e",
+    "bytes": 57537
+  },
+  {
+    "path": "cases/zhuozai/media/flows/pet-small.png",
+    "sha256": "2085c50067bb31fc5b1bf5c1879c47d06bf35d35d12ffeb5a16ebcc4b9c5b148",
+    "bytes": 28386
+  },
+  {
+    "path": "cases/zhuozai/media/flows/role-detail.png",
+    "sha256": "27c54245652c96433de88ef2e39eef548f07cd84ef049aabc5c7af0736c9c6b8",
+    "bytes": 88875
+  },
+  {
+    "path": "cases/zhuozai/media/flows/role-library.png",
+    "sha256": "48f43c1b29c64f0d2850de411f0fb4d4317d39b45c1c2b1a808d7414b209d9b2",
+    "bytes": 58862
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-collection.png",
+    "sha256": "66cfde32872a20c45bea65826dd346062c8c6205bd643e116fb63a4f1fc2a580",
+    "bytes": 187972
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-finished.png",
+    "sha256": "3b7c1714f1353c0f447553aabce94706dfd77f33c8ecc7eb44ea25bb8dd8b4cb",
+    "bytes": 317112
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-play-controls.png",
+    "sha256": "2bf347b2838b81338d1a6958b808b0ed784670e1f7eb1c1782504b5ea7fa569a",
+    "bytes": 4454
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-playing.png",
+    "sha256": "0e2dd7bab5af651abd56e2b8fa0117109336dd131104b0d8078d505b48a01701",
+    "bytes": 389172
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-save.png",
+    "sha256": "e043fe108caf6779d4017f50edc318b9e065a164824d165cba8353e3edc840de",
+    "bytes": 43081
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-script.png",
+    "sha256": "1922e1e3ea154c5b8a4701b0caa6401ca17edef498f3a831f6819604c4d74a02",
+    "bytes": 302603
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-setup-panel.png",
+    "sha256": "8cf0b2399d31940eb75e1d519a4eecd6fd565a9b8c5461bad2156f92df47d167",
+    "bytes": 77522
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-setup.png",
+    "sha256": "1351ed503474da36e6d5593c21a4cfac5c7619117c76d485ee1ad7566818f1e5",
+    "bytes": 516475
+  },
+  {
+    "path": "cases/zhuozai/media/flows/theater-transcript-detail.png",
+    "sha256": "08f0eefa86d57e2c9504960182460f8c2e1a5b4123d2be2ef0f65f87291b2f66",
+    "bytes": 21744
+  },
+  {
+    "path": "cases/zhuozai/文字排版规范.md",
+    "sha256": "dc06df0515755f0ee6af6d011a1c6463ca955ed9c3e79c4ebd4adcca6a94362a",
+    "bytes": 2849
+  },
+  {
+    "path": "cases/zhuozai/案例编排说明.md",
+    "sha256": "934b00cedc0da2e666e12a1ef82e197b8aa8f35c874110f33e3a92d9bdab670f",
+    "bytes": 5398
+  },
+  {
+    "path": "favicon.svg",
+    "sha256": "ea733f5c06f4a3cce2f7903490c35e3f2fa5a763171e4c622a056774fe11fa6a",
+    "bytes": 476
+  },
+  {
+    "path": "index.html",
+    "sha256": "60a7a2919c8ca25022a9d954ac2091b9d0e8c0c1ff496092938e4157852b0315",
+    "bytes": 9487
+  },
+  {
+    "path": "outputs/global-typography-20261015/README.md",
+    "sha256": "e5e7dad1f7e5e07d3ef02b47a39f6beb7d5b7d8ae972f11867bcc4c10e2b5575",
+    "bytes": 834
+  },
+  {
+    "path": "outputs/global-typography-20261015/interaction-results.json",
+    "sha256": "b4d14a9a0df125a54740b0000b632cb86f3fdd3e85db93511ba850fa986e56bf",
+    "bytes": 302
+  },
+  {
+    "path": "outputs/global-typography-20261015/site-results.json",
+    "sha256": "38f9893e65f30cbe78befe19788e15eda9f4ab8b4f50eeeb7672a51f95043f6a",
+    "bytes": 12967
+  },
+  {
+    "path": "outputs/original-only/desktop.png",
+    "sha256": "ef707a297485c544beb2e25dc4ea903c3331e6e9ce0d818dc378eebf23d5ba2d",
+    "bytes": 297191
+  },
+  {
+    "path": "outputs/original-only/mobile.png",
+    "sha256": "497aae93add782542ff1e98a92a1ea630a07d788c1fa6a9db5df3c3a2341e5a2",
+    "bytes": 156185
+  },
+  {
+    "path": "outputs/original-only/narrow.png",
+    "sha256": "95256c6977ed99456d7eced0f4b9de3ab9bbde4e9e40f7042cd8d346b815847d",
+    "bytes": 126467
+  },
+  {
+    "path": "outputs/original-only/results.json",
+    "sha256": "45f28ee6413e78c6c7276678c79d171ad0ce8315eb7fcde2f5a409ea6e5f7dc4",
+    "bytes": 1376
+  },
+  {
+    "path": "outputs/typography-20261015/README.md",
+    "sha256": "d79d191f5a90c0ba1fb57e0fdf0c7d254348115de6692d72cefee734ae823736",
+    "bytes": 960
+  },
+  {
+    "path": "outputs/typography-20261015/portfolio-results.json",
+    "sha256": "8c20dea7a3aa322c99a3c995fbeb76fe79a672c24fd0cb60ea61956cfa014ea2",
+    "bytes": 995
+  },
+  {
+    "path": "outputs/typography-20261015/shared-results.json",
+    "sha256": "53d4cce98e3b27e93271ec7f432eb3f0d4e6385a2034994fde64f1f29d26568a",
+    "bytes": 2090
+  },
+  {
+    "path": "outputs/typography-20261015/typography-results.json",
+    "sha256": "33e771789e412a5de0ab59c532ee5077cc8cd4459a9076861a6c73b2ca391753",
+    "bytes": 2734
+  },
+  {
+    "path": "outputs/ui-polish/after-320-active.png",
+    "sha256": "d3dfe40e2cddde17cb9e64c3a991ebcbc663fd3228063c5a105edf56d7672992",
+    "bytes": 94889
+  },
+  {
+    "path": "outputs/ui-polish/after-desktop-active.png",
+    "sha256": "605bec027272a36bf2d7dbaa202cd1dc367839617c857ceba252c3ab5999fbc5",
+    "bytes": 192626
+  },
+  {
+    "path": "outputs/ui-polish/after-desktop-detail.png",
+    "sha256": "b2de1dce2bca5f0a7c04aa6d0ef40a6c8865aeab72e77604432e3c1e6f81359d",
+    "bytes": 168300
+  },
+  {
+    "path": "outputs/ui-polish/after-desktop.png",
+    "sha256": "2bfca837e24891b6c7967a6c344204b94ed05d81ff2c7eb73c690596bd04022b",
+    "bytes": 301393
+  },
+  {
+    "path": "outputs/ui-polish/after-mobile-active.png",
+    "sha256": "3991ef84f0cce0c03b2ddaed06f0f0fa781e7937b7abbf4b6a7cdcbbe27e26e2",
+    "bytes": 113084
+  },
+  {
+    "path": "outputs/ui-polish/after-mobile-detail.png",
+    "sha256": "ce0fddec0dd83c607a000dd3f277b053c63927f9c409c7efb126086552fde38f",
+    "bytes": 89180
+  },
+  {
+    "path": "outputs/ui-polish/after-mobile.png",
+    "sha256": "c6107e1146ad3365abeadefec89d9b8c18ba10c7e572862a3fb0c348022d2385",
+    "bytes": 155309
+  },
+  {
+    "path": "outputs/ui-polish/before-desktop-active.png",
+    "sha256": "d5e9519a68aa73f22e4ef84086fd2db0846fb470cad0a3c83775ad4db29986ff",
+    "bytes": 159744
+  },
+  {
+    "path": "outputs/ui-polish/before-desktop.png",
+    "sha256": "4ca90428684422ff136afda30da68f0d7a19e35c1044f2f13b271957e1da77dc",
+    "bytes": 225272
+  },
+  {
+    "path": "outputs/ui-polish/before-mobile.png",
+    "sha256": "f3f66f25b1b9f9901cecb34d9e3e48c6e44131f537dccb526f5197a1a0a27ece",
+    "bytes": 135994
+  },
+  {
+    "path": "outputs/ui-polish/main-results.json",
+    "sha256": "ec60832b45f3745beda9534a01746ce6291a0632fd1899a63d814b7a62198eec",
+    "bytes": 9791
+  },
+  {
+    "path": "outputs/ui-polish/performance-results.json",
+    "sha256": "29209b16798a3dad3ef33f496cd1faa3bb5a3ae1b77ff4b2dd73598dddfb7abd",
+    "bytes": 1799
+  },
+  {
+    "path": "outputs/ui-polish/static-access-results.json",
+    "sha256": "fe71902af68dcfb4f8ea223c8c690ea63adca72bd83ad66a5b2b362f3b832508",
+    "bytes": 855
+  },
+  {
+    "path": "outputs/zhuozai/README.md",
+    "sha256": "3a6c7857e94e6714c3a37e3cb0cf8a445a32ea17a53c201a7e78a47802cc8e0e",
+    "bytes": 1112
+  },
+  {
+    "path": "outputs/zhuozai/card-1440.png",
+    "sha256": "7d652c8c1adf5e1c1a951cb1c4c8185ddf14da0d5a5d6efe7b68e748455fa3da",
+    "bytes": 148011
+  },
+  {
+    "path": "outputs/zhuozai/case-1440.png",
+    "sha256": "a0d9f4c932039a516cd62c39a9f18650b4fb51e1a7afeae9a87f0057e2fafc8b",
+    "bytes": 176067
+  },
+  {
+    "path": "outputs/zhuozai/case-390.png",
+    "sha256": "5af4ea8f8c71067221c6c7ada83e5ecb694fdfc15b266e7a725bb59104f04551",
+    "bytes": 88135
+  },
+  {
+    "path": "outputs/zhuozai/decision-1440.png",
+    "sha256": "f97a4035301a8ac5750295dfa554eed3cec900530028069087f02879df3d122b",
+    "bytes": 172520
+  },
+  {
+    "path": "outputs/zhuozai/review-results.json",
+    "sha256": "b6fc0d959ce89705533a894b6804346945f63f07004f99cd99d840f99f0aea9d",
+    "bytes": 1156
+  },
+  {
+    "path": "outputs/zhuozai/validation-1440.png",
+    "sha256": "dee97a5d83fde5508ef25c997817cadc26a4eb71007f226787b3371c56200166",
+    "bytes": 142621
+  },
+  {
+    "path": "outputs/zhuozai-display/layout-results.json",
+    "sha256": "320a1cd3e1bbfa2966b940924b1bc8947f119d57dc43e77bf1895200248243dc",
+    "bytes": 790
+  },
+  {
+    "path": "outputs/zhuozai-display/review-results.json",
+    "sha256": "1b1d27abaf154c5e78dbb3c8cf310c389ba06a48de09b0670420548e302d41ce",
+    "bytes": 980
+  },
+  {
+    "path": "outputs/zhuozai-editorial/README.md",
+    "sha256": "dd3dd2ecc526d0f0a5cb300f2f1628d3535c4269cf69a415383e91b97cc1f797",
+    "bytes": 676
+  },
+  {
+    "path": "outputs/zhuozai-editorial/browser-results.json",
+    "sha256": "16956fde4c1de83e0e2b495725b38b7cadcbeeca04f8c28f1d8da7dcd808a4f1",
+    "bytes": 1069
+  },
+  {
+    "path": "outputs/zhuozai-editorial/cover-desktop.png",
+    "sha256": "a31726005862b29969422109cc2cd21405b6942b41ae7c9ddd3339a824347c7c",
+    "bytes": 247734
+  },
+  {
+    "path": "outputs/zhuozai-editorial/cover-mobile.png",
+    "sha256": "7c569c476508afd6c1e3e82fc7f99ede94443f3fe616ba3aaca4dddf79cad466",
+    "bytes": 74708
+  },
+  {
+    "path": "outputs/zhuozai-editorial/new-captures.json",
+    "sha256": "3b4b41edefa2d002fadf99861c1ac0c4dbe310d9b88499608c08d52a5e809f19",
+    "bytes": 841
+  },
+  {
+    "path": "outputs/zhuozai-visual/capture-checks.json",
+    "sha256": "8d09db177226a81b951e5184650d26f7a18c0da2d74cafd05bf7682a7b8639d9",
+    "bytes": 772
+  },
+  {
+    "path": "outputs/zhuozai-visual/chapter-call.png",
+    "sha256": "1c2236b0c958d8ef40659fd647a727e9de32883796ab6cbac06cdd50ddd86c62",
+    "bytes": 691384
+  },
+  {
+    "path": "outputs/zhuozai-visual/chapter-meet.png",
+    "sha256": "5ecd3594be110b6f99e12f3a2a56536d82cd34a6d6d96e7a720a998962333a68",
+    "bytes": 899130
+  },
+  {
+    "path": "outputs/zhuozai-visual/final-layout.json",
+    "sha256": "9fd383c320963b30d86bbcadf145e1b65f501163c129a57c3621d387b3896b66",
+    "bytes": 912
+  },
+  {
+    "path": "outputs/zhuozai-visual/provenance.json",
+    "sha256": "432185a49085b5cfa1a29e183eb4251bed819b7c9a46eb52218ee15f24b9f9cd",
+    "bytes": 587
+  },
+  {
+    "path": "outputs/zhuozai-visual/review-results.json",
+    "sha256": "b413b7d03d5a59dbd472085f6a7b9012c526bd0520e5d2ac1cd82808945090ea",
+    "bytes": 869
+  },
+  {
+    "path": "package.json",
+    "sha256": "c6408957be2a31474bd426b0dc66b4cddcc598e16b1700d1d3171dee9e73d8c0",
+    "bytes": 294
+  },
+  {
+    "path": "styles.css",
+    "sha256": "d7a16b5227bdb8c989e015f3f9498f158df0847aecce51ee2d384b22514237fc",
+    "bytes": 22708
+  },
+  {
+    "path": "typography.css",
+    "sha256": "d2eb990098ea843c87e5ff071a4c3a7588eb08212188e4e45f66acd542ad00c9",
+    "bytes": 9932
+  },
+  {
+    "path": "vendor/THREE-LICENSE.txt",
+    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "bytes": 1081
+  },
+  {
+    "path": "vendor/three.core.min.js",
+    "sha256": "0e9dd2793e01d0d9eb4f2ab00b4ffcdd4488275ebebee5c31fa8d347bc29f0bf",
+    "bytes": 385390
+  },
+  {
+    "path": "vendor/three.module.min.js",
+    "sha256": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6",
+    "bytes": 365552
+  },
+  {
+    "path": "启动网站.cmd",
+    "sha256": "0edbd8f5b22789c3f11971244871f1b36e23f9e710fdc8b25ca6429165ec81be",
+    "bytes": 39
+  },
+  {
+    "path": "本地使用说明.txt",
+    "sha256": "8fc763d30325be95fac90b3b326607753610b62fc22e9b50a1ea920b30fe143d",
+    "bytes": 3277
+  }
+]
