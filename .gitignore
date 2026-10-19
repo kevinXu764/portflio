@@ -1,0 +1,4 @@
+history/
+_history/
+node_modules/
+.build-cache/

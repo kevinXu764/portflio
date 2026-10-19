@@ -1,13 +1,4 @@
-/* The host keeps its quiet card archive; this project uses a dedicated editorial case. */
-.tone-zhuozai{--tone:#6541ce}
-.card-illustration{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-.card-illustration:before{content:"";position:absolute;width:53%;aspect-ratio:1;right:-7%;top:16%;border:1px solid #e9dfff70;border-radius:50%;box-shadow:0 0 0 24px #fff06a0a,0 0 0 48px #fff06a08}
-.card-illustration img{position:absolute;width:43%;height:107%;right:0;top:9%;object-fit:contain;object-position:50% 0;filter:drop-shadow(8px 9px 0 #26125833)}
-.tone-zhuozai .card-title-wrap{right:43%}
-.tone-zhuozai .card-title{letter-spacing:0}
-.tone-zhuozai .card-cn-title{opacity:1}
-.tone-zhuozai .card-mark{display:none;bottom:39%;font-size:12px;letter-spacing:.1em;opacity:.85;left:1.25rem;color:#ffef91}
-@media(min-width:900px){.tone-zhuozai .card-mark{left:26px;font-size:13px}.tone-zhuozai .card-title{font-size:42px}.tone-zhuozai .card-cn-title{font-size:15px}}
+/* Independent editorial case. The collection cover lives in card.css. */
 #zhuozai-case[hidden],.detail-hero[hidden],.detail-content[hidden]{display:none!important}
 /* A restrained reading system: body 18/17, captions 16, controls 14+. */
 .phone-stage.is-detail { overflow: clip; }

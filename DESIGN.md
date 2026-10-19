@@ -1,6 +1,6 @@
 # My Assets · 交互作品集
 
-版本：v2.10 / 2026-10-15。仅保留 The Original（My Assets Three）卡片网站，唯一入口是本文件同目录的 `index.html`，双击即可打开。当前版本无需服务器、Python、Node.js 或联网；维护 JavaScript 时才需要构建工具。旧版文件保存在更新时创建的 `_history` 备份中。
+版本：v2.11 / 2026-10-15。仅保留 The Original（My Assets Three）卡片网站，唯一入口是本文件同目录的 `index.html`，双击即可打开。当前版本无需服务器、Python、Node.js 或联网；维护 JavaScript 时才需要构建工具。旧版文件保存在更新时创建的 `_history` 备份中。
 
 ## 页面与内容
 
@@ -32,7 +32,7 @@
 
 唯一页面加载本地经典脚本，支持 `file://` 及普通静态托管。没有远程字体、CDN、fetch 数据或运行时模块请求。
 
-可维护源码：`app.js`，桌崽内容与样式位于 `cases/zhuozai/case.js`、`case.css`。实际页面加载：`assets/app.bundle.js`。保留 `vendor/THREE-LICENSE.txt`。
+可维护源码：`app.js`，桌崽内容与样式位于 `cases/zhuozai/case.js`、`case.css`；独立作品卡封面位于 `cases/zhuozai/card.css`。实际页面加载：`assets/app.bundle.js`。保留 `vendor/THREE-LICENSE.txt`。
 
 修改 JS 后运行 `npm install --cache .build-cache` 和 `npm run build`；也可以运行 `node build-static.cjs <已有 esbuild 包目录>`。修改 HTML/CSS 后直接刷新。正常打开无需这些步骤。启动 CMD 直接打开 HTML。构建仅生成主站一个脚本包。
 
@@ -94,3 +94,12 @@
 2026-10-15：隐藏桌崽横向目录的可视滚动条，保留横向滚动与当前项自动跟随。紫色下划线改为一个共享指示条，以 320ms 缓动平移并调整宽度，切换章节时连续移动。窗口变化后重新对齐；系统启用减少动态效果时直接定位。
 
 同轮按用户追加要求清理展示页中强调原型性质的旁注：封面 HTML 原型标签、声音印象保存限制、长期记忆未接入、网页悬浮能力限制与剧场本地模板说明。技术事实继续保留在维护资料，不新增已实现能力的声称。
+
+
+## 桌崽独立作品卡（v2.11）
+
+2026-10-15：第一张卡片采用明黄底色、深紫标题与紫色对话形背景，角色改为半身构图，以双眼对话标记和“我在呢”气泡表达陪伴主题。取消这张卡的通用线纹、同心圆与斜纹；保留实体卡片的厚度、翻阅方式和原来的详情入口。
+
+封面 DOM 在 index.html，独立样式 card.css 在 typography.css 之后加载，选择器限定在桌崽卡片。Three.js 根据 coverStyle: companion 关闭通用线纹网格，DOM 降级模式同步取消伪元素纹理。角色复用现有 chengxia.png，不新增位图、字体、依赖或应用源码。标题随实际卡宽变化，副标题至少 16px，辅助文字至少 14px。角色优先加载。
+
+其余五张卡片、桌崽案例章节和目录交互保持原有内容。

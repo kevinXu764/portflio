@@ -409,6 +409,8 @@ function initThree() {
       const mesh = new THREE.Mesh(cardGeometry, material);
       const lineMesh = new THREE.Mesh(lineGeometry, lineMaterials[index]);
       lineMesh.position.z = (cardGeometry.boundingBox?.max.z || 0.024) + 0.0015;
+      // Bespoke covers supply their own artwork, including the no-WebGL fallback.
+      lineMesh.visible = projects[index].coverStyle !== "companion";
       lineMesh.frustumCulled = true;
       mesh.add(lineMesh);
       lineMeshes.push(lineMesh);
