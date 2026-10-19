@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "metrics": [
+    {
+      "width": 1440,
+      "detail": 1238,
+      "sections": 8,
+      "overflow": [],
+      "mainImages": 30,
+      "legacyTabs": 0,
+      "prototypeLinks": 0
+    },
+    {
+      "width": 1024,
+      "detail": 892,
+      "sections": 8,
+      "overflow": [],
+      "mainImages": 30,
+      "legacyTabs": 0,
+      "prototypeLinks": 0
+    },
+    {
+      "width": 390,
+      "detail": 390,
+      "sections": 8,
+      "overflow": [],
+      "mainImages": 30,
+      "legacyTabs": 0,
+      "prototypeLinks": 0
+    },
+    {
+      "width": 320,
+      "detail": 320,
+      "sections": 8,
+      "overflow": [],
+      "mainImages": 30,
+      "legacyTabs": 0,
+      "prototypeLinks": 0
+    }
+  ],
+  "broken": [],
+  "errors": [],
+  "checks": [
+    "all core chapters directly visible",
+    "all images decoded",
+    "mobile overflow checks",
+    "image viewer, zoom and Escape",
+    "supplemental states disclosure",
+    "next project and original cases navigation",
+    "browser route change closes image viewer and releases modal state"
+  ]
+}

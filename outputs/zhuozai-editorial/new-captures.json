@@ -1,0 +1,52 @@
+{
+  "event-start-current": {
+    "width": 304,
+    "height": 261,
+    "pins": []
+  },
+  "event-paused": {
+    "width": 304,
+    "height": 261,
+    "pins": []
+  },
+  "event-progress-current": {
+    "width": 304,
+    "height": 261,
+    "pins": []
+  },
+  "event-success-current": {
+    "width": 304,
+    "height": 261,
+    "pins": []
+  },
+  "chat-focus": {
+    "width": 853,
+    "height": 818,
+    "pins": []
+  },
+  "chat-waiting-detail": {
+    "width": 849,
+    "height": 159,
+    "pins": []
+  },
+  "memory-filter-controls": {
+    "width": 776,
+    "height": 111,
+    "pins": []
+  },
+  "theater-setup-panel": {
+    "width": 320,
+    "height": 727,
+    "pins": []
+  },
+  "theater-transcript-detail": {
+    "width": 781,
+    "height": 214,
+    "pins": []
+  },
+  "theater-play-controls": {
+    "width": 781,
+    "height": 73,
+    "pins": []
+  }
+}

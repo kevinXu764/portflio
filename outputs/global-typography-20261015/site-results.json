@@ -1,0 +1,655 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "width": 1440,
+      "index": 0,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "index": 1,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "index": 2,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "index": 3,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "index": 4,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "index": 5,
+      "copyBottom": 540.5,
+      "controlsTop": 865,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "21px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1440,
+      "slug": "brand-atlas",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1440,
+      "slug": "move-with-me",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1440,
+      "slug": "quiet-type",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1440,
+      "slug": "civic-signal",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1440,
+      "slug": "objects-at-rest",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1024,
+      "index": 0,
+      "copyBottom": 477.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "index": 1,
+      "copyBottom": 461.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "index": 2,
+      "copyBottom": 461.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "index": 3,
+      "copyBottom": 461.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "index": 4,
+      "copyBottom": 461.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "index": 5,
+      "copyBottom": 461.28125,
+      "controlsTop": 681,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "19px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 1024,
+      "slug": "brand-atlas",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1024,
+      "slug": "move-with-me",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1024,
+      "slug": "quiet-type",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1024,
+      "slug": "civic-signal",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 1024,
+      "slug": "objects-at-rest",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 768,
+      "index": 0,
+      "copyBottom": 679.0718994140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "index": 1,
+      "copyBottom": 650.1812744140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "index": 2,
+      "copyBottom": 650.1812744140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "index": 3,
+      "copyBottom": 650.1812744140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "index": 4,
+      "copyBottom": 650.1812744140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "index": 5,
+      "copyBottom": 650.1812744140625,
+      "controlsTop": 853,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 768,
+      "slug": "brand-atlas",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 768,
+      "slug": "move-with-me",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 768,
+      "slug": "quiet-type",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 768,
+      "slug": "civic-signal",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 768,
+      "slug": "objects-at-rest",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 390,
+      "index": 0,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "index": 1,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "index": 2,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "index": 3,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "index": 4,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "index": 5,
+      "copyBottom": 567.3718872070312,
+      "controlsTop": 738,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 390,
+      "slug": "brand-atlas",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 390,
+      "slug": "move-with-me",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 390,
+      "slug": "quiet-type",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 390,
+      "slug": "civic-signal",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 390,
+      "slug": "objects-at-rest",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 320,
+      "index": 0,
+      "copyBottom": 474.0625,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "index": 1,
+      "copyBottom": 445.171875,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "index": 2,
+      "copyBottom": 445.171875,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "index": 3,
+      "copyBottom": 445.171875,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "index": 4,
+      "copyBottom": 445.171875,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "index": 5,
+      "copyBottom": 445.171875,
+      "controlsTop": 498,
+      "copyOverflow": false,
+      "titleInCard": true,
+      "titleFits": true,
+      "subtitleFits": true,
+      "cardOverlap": false,
+      "body": {
+        "font": "17px",
+        "weight": "400"
+      }
+    },
+    {
+      "width": 320,
+      "slug": "brand-atlas",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 320,
+      "slug": "move-with-me",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 320,
+      "slug": "quiet-type",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 320,
+      "slug": "civic-signal",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    },
+    {
+      "width": 320,
+      "slug": "objects-at-rest",
+      "detail": {
+        "overflow": [],
+        "small": []
+      }
+    }
+  ]
+}
