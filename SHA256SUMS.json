@@ -1,8 +1,8 @@
 [
   {
     "path": "DESIGN.md",
-    "sha256": "fad8c207a905dae2278f5662a756aabbde814f372ed1a5b304bbd0f8a22465d0",
-    "bytes": 10364
+    "sha256": "ac675de65ea4c97d9140c60bb8415d1b16a77a55efbb0d15dc8807161aa96ddc",
+    "bytes": 10319
   },
   {
     "path": "TYPOGRAPHY.md",
@@ -21,8 +21,8 @@
   },
   {
     "path": "assets/app.bundle.js",
-    "sha256": "3f8e7426c6643204e333f5f0b482efc5efae7e0a38fdab1365426008ba0a1a9c",
-    "bytes": 619032
+    "sha256": "f8c61f108379f44a5ecd0213513e60614cdd885c648c9034e7cfef0b9769ff7f",
+    "bytes": 618161
   },
   {
     "path": "build-static.cjs",
@@ -41,18 +41,13 @@
   },
   {
     "path": "cases/zhuozai/case.css",
-    "sha256": "8bab68cbe9ed3d5e7cdbb1e68da61551efc0af603e0d821df1b07d2aaa73d7e0",
-    "bytes": 23149
+    "sha256": "ebabfcb0e305458087fdf4d66d45cec196adf15371910ce2c2e7c7fcf037b2b9",
+    "bytes": 22443
   },
   {
     "path": "cases/zhuozai/case.js",
-    "sha256": "c38be5b1cc25e0eea330bdd644357bf101b39f0f53b505740e520435395a1206",
-    "bytes": 18174
-  },
-  {
-    "path": "cases/zhuozai/media/call-before.png",
-    "sha256": "cff36940fb50585d5e62ffda8574e1758b730d25d3e1fc9de6e9ba10dd8873ff",
-    "bytes": 370473
+    "sha256": "d633a4de76c17e6e08368c729e61028e883cff60475e726b8773779c3c123456",
+    "bytes": 17299
   },
   {
     "path": "cases/zhuozai/media/chengxia.png",
@@ -336,8 +331,8 @@
   },
   {
     "path": "cases/zhuozai/案例编排说明.md",
-    "sha256": "934b00cedc0da2e666e12a1ef82e197b8aa8f35c874110f33e3a92d9bdab670f",
-    "bytes": 5398
+    "sha256": "e7619b84e377891c3e761ecc572791ec62d52cd87bdcb614671dd728cbbe538a",
+    "bytes": 5371
   },
   {
     "path": "favicon.svg",
@@ -606,7 +601,7 @@
   },
   {
     "path": "本地使用说明.txt",
-    "sha256": "286d4fb6c2650fb2d71a5b234f0834505ee68e4f837a9f2422115966051e1ac0",
-    "bytes": 3580
+    "sha256": "4f8ddbdba3f07ab8a370bc70776b67bdabf0fb12edc35776595b07bca6d373a4",
+    "bytes": 3574
   }
 ]

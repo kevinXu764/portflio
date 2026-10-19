@@ -1,5 +1,5 @@
 import { captures } from './captures.js';
-export const zhuozaiProject={number:'01',slug:'zhuozai-ai',title:'桌崽 AI',cnTitle:'AI 陪伴产品设计',category:'AI 陪伴 · 产品与交互',year:'2026',role:'产品与交互复盘',duration:'持续迭代',description:'从角色交流到日常陪伴，探索视频事件、共同记忆与桌面陪伴的产品路径。',challenge:'怎样把一次角色交流，延续成有上下文、有共同经历、也能由用户掌控节奏的陪伴？',approach:'围绕关键场景呈现界面与交互，用前后对照说明布局、反馈和陪伴强度的取舍。',outcomes:['连接角色交流与日常陪伴','梳理核心交互的连续性','呈现关键设计取舍'],tone:'#ffe344',coverStyle:'companion',mark:'Z—01'};
+export const zhuozaiProject={number:'01',slug:'zhuozai-ai',title:'桌崽 AI',cnTitle:'AI 陪伴产品设计',category:'AI 陪伴 · 产品与交互',year:'2026',role:'产品与交互复盘',duration:'持续迭代',description:'从角色交流到日常陪伴，探索视频事件、共同记忆与桌面陪伴的产品路径。',challenge:'怎样把一次角色交流，延续成有上下文、有共同经历、也能由用户掌控节奏的陪伴？',approach:'围绕关键场景呈现界面与交互，说明角色交流、情绪回应与日常陪伴的设计。',outcomes:['连接角色交流与日常陪伴','梳理核心交互的连续性','呈现关键设计取舍'],tone:'#ffe344',coverStyle:'companion',mark:'Z—01'};
 const base='cases/zhuozai/media/';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function shot(name,alt,cls='',caption=''){
@@ -19,8 +19,8 @@ export function renderZhuozaiCase(){return `<div class="zz-case">
 </header>
 <nav class="zz-toc" aria-label="桌崽案例章节">${nav.map(([id,t])=>`<button type="button" data-case-jump="zz-${id}">${t}</button>`).join('')}</nav>
 <section id="zz-context" class="zz-section zz-context">
-${chapter('产品定位','面向喜欢角色互动的用户，将一次交流延续为日常陪伴。')}
-<div class="zz-context-statement"><h3>交流之后，<br>仍有共同经历。</h3><p>文字和视频用于交流，记忆保留有意义的片段，桌面模式提供轻量陪伴。功能围绕同一角色衔接，减少重复建立上下文的成本。</p></div>
+${chapter('产品定位','面向喜欢角色互动的用户，让 AI 陪伴融入情绪与日常。')}
+<div class="zz-context-statement"><h3>懂你的心情，<br>陪你过日常。</h3><p>让 AI 角色成为可以分享心情的日常伙伴。用对话回应此刻的情绪，用共同记忆珍藏在意的片段；忙碌时，也能以桌面陪伴的方式安静相伴。</p></div>
 <div class="zz-journey">${[['认识角色','推荐或创建','meet'],['开始交流','文字与视频','chat'],['经历事件','回应与退出','call'],['留下记忆','收藏与整理','memory'],['日常陪伴','形态与控制','pet']].map(([t,d,id])=>`<button data-case-jump="zz-${id}"><strong>${t}</strong><small>${d}</small><span aria-hidden="true">↗</span></button>`).join('')}</div>
 <p class="zz-context-principle"><strong>设计重点是交流的连续性与用户的控制权。</strong>角色设定、消息和事件保持衔接；中断、退出和收起都有明确入口。</p>
 </section>
@@ -37,14 +37,13 @@ ${chapter('文字对话','从开口到等待回应，状态清楚，表达可以
 <p class="zz-inline-rule"><strong>输入确认。</strong>语音识别结果先进入草稿，由用户确认发送；输入法组合态不会被 Enter 误提交。</p>
 </section>
 <section id="zz-call" class="zz-section zz-call">
-${chapter('视频通话与关系事件','把事件移到独立窗口，给角色画面和连续交流留下稳定空间。')}
+${chapter('视频通话与关系事件','角色画面、消息与事件独立分区，让交流与共同经历自然衔接。')}
 <div class="zz-call-regions"><span>角色画面</span><span>消息与输入</span><span>事件起因与进度</span></div>
-${shot('call-event','优化后的通话布局：固定角色画面、连续消息、右侧独立事件窗口','zz-call-main')}
+${shot('call-event','视频通话布局：固定角色画面、连续消息、右侧独立事件窗口','zz-call-main')}
 <p class="zz-call-explanation">事件开始、推进和结束时，视频尺寸与比例保持不变。文字与视频共享消息，用户始终在同一个输入框回应。</p>
-<div class="zz-layout-comparison"><div class="zz-before-image"><span class="zz-comparison-label">调整前</span><button class="zz-image" data-zz-view="${base}call-before.png" data-zz-caption="调整前：事件嵌在消息面板下方" aria-label="放大查看调整前界面"><img src="${base}call-before.png" width="1440" height="1000" alt="调整前，事件卡位于聊天面板内部" loading="lazy"><span class="zz-enlarge" aria-hidden="true">↗</span></button></div><div><h3>事件移出消息面板</h3><p>原方案在对话下方展开事件，压缩了消息的阅读空间。调整后，起因与进度独立显示，交流区域保持完整。</p><p class="zz-small">桌面端右侧悬浮，小屏纵向排列。</p></div></div>
 <div class="zz-subtitle"><h3>事件的三个状态</h3><p>起因持续可见，回应更新进度，完成后回到日常交流。</p></div>
 <div class="zz-event-story">${[['event-start-current','1','说明起因'],['event-progress-current','2','反馈回应'],['event-success-current','3','完成事件']].map(([im,n,t])=>`<article>${label(n,t)}${shot(im,t+'的事件卡片')}</article>`).join('')}</div>
-<div class="zz-event-policy"><div><h3>事件未完成，<br>亲密度保持不变。</h3><p>三轮后仍未完成，可以暂时搁置。普通回应未命中关键词时不再扣进度，避免一次事件影响整段关系。</p><p class="zz-policy-change">原规则：未完成扣 8 点亲密度。<br><strong>现规则：保留关系，继续日常交流。</strong></p><p class="zz-small">成功奖励 6 点亲密度，进行中也可以退出。</p></div>${shot('event-paused','事件暂时搁置，亲密度不变，可以继续日常聊天')}</div>
+<div class="zz-event-policy"><div><h3>事件未完成，<br>亲密度保持不变。</h3><p>三轮后仍未完成，可以暂时搁置。普通回应未命中关键词时不会扣除进度，避免一次事件影响整段关系。</p><p class="zz-small">成功奖励 6 点亲密度，进行中也可以退出。</p></div>${shot('event-paused','事件暂时搁置，亲密度不变，可以继续日常聊天')}</div>
 <details class="zz-support" open><summary>连接、结束与返回聊天 <span>＋</span></summary><div class="zz-support-grid">${shot('call-connecting','正在连接：状态可见，接通前暂不输入','','连接可取消，接通后恢复输入。')}${shot('call-ended','结束通话：回到聊天或再次拨打','','挂断后可以返回聊天，或再次拨打。')}</div></details>
 </section>
 <section id="zz-memory" class="zz-section zz-memory">
