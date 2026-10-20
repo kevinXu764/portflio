@@ -1,0 +1,47 @@
+{
+  "viewports": [
+    {
+      "viewport": 1440,
+      "width": 1238,
+      "scrollWidth": 1238,
+      "scrollHeight": 15643,
+      "x": 101
+    },
+    {
+      "viewport": 1024,
+      "width": 930,
+      "scrollWidth": 930,
+      "scrollHeight": 15125,
+      "x": 47.078125
+    },
+    {
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 17081,
+      "x": 0
+    },
+    {
+      "viewport": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "scrollHeight": 17105,
+      "x": 0
+    }
+  ],
+  "sections": 8,
+  "galleries": 6,
+  "galleryStates": 30,
+  "imageCount": 51,
+  "uniqueImages": 45,
+  "checks": [
+    "all gallery states at four sizes",
+    "keyboard tabs",
+    "all images and local links",
+    "next and back",
+    "five original projects retained",
+    "offline prototype opens"
+  ],
+  "errors": [],
+  "failed": []
+}

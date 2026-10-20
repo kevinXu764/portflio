@@ -1,0 +1,55 @@
+{
+  "sizes": [
+    {
+      "viewport": 1440,
+      "width": 1238,
+      "scrollWidth": 1238,
+      "scrollHeight": 15844,
+      "petImages": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "viewport": 1024,
+      "width": 930,
+      "scrollWidth": 930,
+      "scrollHeight": 15300,
+      "petImages": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "viewport": 390,
+      "width": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 17198,
+      "petImages": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "viewport": 320,
+      "width": 320,
+      "scrollWidth": 320,
+      "scrollHeight": 17233,
+      "petImages": [
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "final screenshot aspect ratios",
+    "pet modes fully contained",
+    "theater completion details",
+    "30 steps preserved"
+  ]
+}

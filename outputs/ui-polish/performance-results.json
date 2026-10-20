@@ -1,0 +1,78 @@
+{
+  "original": {
+    "metrics": {
+      "threeRevision": "185",
+      "webgl": true,
+      "lowPowerDevice": false,
+      "pixelRatio": 1.5,
+      "frames": 166,
+      "averageFrameMs": 91.76,
+      "maxFrameMs": 200,
+      "renderSamples": 167,
+      "averageRenderMs": 2.055,
+      "maxRenderMs": 266,
+      "lastAnimationMs": 3688,
+      "drawCalls": 10,
+      "triangles": 1270,
+      "longTasks": 2,
+      "rafActive": false,
+      "lineTextureDepthTest": true,
+      "mutedGrayBlend": 0.56,
+      "copyVisible": true,
+      "copyProjectIndex": 4,
+      "copyFocusY": 143.5,
+      "copyDistance": 0,
+      "copyEnterRange": 88,
+      "copyExitRange": 121.8,
+      "copyTransitions": 9,
+      "cardTopPositions": [
+        4,
+        19,
+        34,
+        49,
+        143.5
+      ],
+      "bootRevealed": true,
+      "bootRevealMs": 636.6
+    },
+    "stationaryPressRenderSamples": 6
+  },
+  "site": {
+    "metrics": {
+      "threeRevision": "185",
+      "webgl": true,
+      "lowPowerDevice": false,
+      "pixelRatio": 2,
+      "frames": 168,
+      "averageFrameMs": 87,
+      "maxFrameMs": 150.1,
+      "renderSamples": 174,
+      "averageRenderMs": 0.655,
+      "maxRenderMs": 13.6,
+      "lastAnimationMs": 2448,
+      "drawCalls": 10,
+      "triangles": 4390,
+      "longTasks": 0,
+      "rafActive": false,
+      "lineTextureDepthTest": true,
+      "mutedGrayBlend": 0.56,
+      "copyVisible": true,
+      "copyProjectIndex": 4,
+      "copyFocusY": 160.4,
+      "copyDistance": 0,
+      "copyEnterRange": 88,
+      "copyExitRange": 121.8,
+      "copyTransitions": 9,
+      "cardTopPositions": [
+        -136.9,
+        -123.9,
+        -110.9,
+        -97.9,
+        160.4
+      ],
+      "bootRevealed": true,
+      "bootRevealMs": 92.7
+    },
+    "stationaryPressRenderSamples": 0
+  }
+}

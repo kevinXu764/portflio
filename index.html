@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN" class="prototype-booting">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e7e7e5" />
+    <meta
+      name="description"
+      content="My Assets 交互作品集，翻阅六个产品与设计项目，支持桌面、手机和离线访问。"
+    />
+    <link rel="preload" as="image" href="./cases/zhuozai/media/chengxia.png" fetchpriority="high" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./cases/zhuozai/case.css" />
+    <link rel="stylesheet" href="./typography.css" />
+    <link rel="stylesheet" href="./cases/zhuozai/card.css" />
+    <link rel="stylesheet" href="./cases/yanshuju/case.css" />
+    <link rel="stylesheet" href="./cases/yanshuju/card.css" />
+    <title>My Assets Three — 交互作品集</title>
+  </head>
+  <body>
+
+    <main class="prototype-shell">
+      <section
+        class="phone-stage is-deck"
+        id="stage"
+        aria-label="My Assets Three 作品集卡片浏览原型"
+        tabindex="0"
+      >
+        <div class="stage-texture" aria-hidden="true"></div>
+        <div class="stage-topbar">
+          <span class="archive-label">MY ASSETS</span>
+          <button id="motion-toggle" type="button" aria-pressed="false">暂停动态</button>
+        </div>
+        <canvas id="scene" aria-hidden="true"></canvas>
+
+        <div class="collection-view" id="collection">
+          <header class="intro" id="intro">
+            <p class="eyebrow">SELECTED WORK · 2023—2026</p>
+            <h1>My Assets</h1>
+            <p class="intro-subtitle">关于产品、体验与设计。</p>
+            <button class="explore-button" id="explore-projects" type="button">浏览作品 <span aria-hidden="true">↗</span></button>
+          </header>
+
+          <div class="gesture-cue" id="gesture-cue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path d="m5 12 7-7 7 7M12 19V5" />
+            </svg>
+            <p><span class="desktop-instruction">滚轮翻阅 · </span>向上滑动</p>
+          </div>
+
+          <div class="card-field" aria-label="共 7 个作品">
+            <button class="project-card tone-zhuozai" data-card="0" type="button" aria-label="切换到项目：桌崽 AI">
+              <span class="zz-card-art" aria-hidden="true">
+                <span class="zz-card-window"></span>
+                <svg class="zz-card-spark" viewBox="0 0 56 56"><path d="M28 2 33 22 53 28 33 34 28 54 22 34 2 28 22 22Z"/></svg>
+                <img class="zz-card-character" src="cases/zhuozai/media/chengxia.png" width="1024" height="1536" alt="" decoding="sync" fetchpriority="high">
+                <span class="zz-card-message">我在呢。</span>
+              </span>
+              <span class="zz-card-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 5h22a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H18L8 38v-7a6 6 0 0 1-5-6V11a6 6 0 0 1 6-6Z"/><path d="M14 15v7m12-7v7"/></svg></span>
+              <span class="card-index">01 / 07</span>
+              <span class="card-title-wrap"><span class="card-title">桌崽 <span class="zz-card-ai">AI</span></span><span class="card-cn-title">AI 陪伴产品设计</span></span>
+              <span class="zz-card-signoff" aria-hidden="true">陪伴，就在身边。</span>
+            </button>
+            <button class="project-card tone-yanshuju" data-card="1" type="button" aria-label="切换到项目：研数据" tabindex="-1">
+              <span class="yd-card-art" aria-hidden="true"><svg class="yd-card-network" viewBox="0 0 200 230"><path d="M20 36H85V90H170M85 90v90H150M20 36v130h65M150 180v35M85 90h-50"/><g><circle cx="20" cy="36" r="12"/><circle cx="85" cy="90" r="10"/><circle cx="170" cy="90" r="7"/><circle cx="150" cy="180" r="11"/><circle cx="35" cy="90" r="5"/><circle cx="150" cy="215" r="5"/></g></svg><img src="cases/yanshuju/media/ip.webp" width="1024" height="1024" alt="" decoding="async"></span>
+              <span class="card-index">02 / 07</span><span class="card-title-wrap"><span class="card-title">研数据</span><span class="card-cn-title">考研信息探索<br>与择校辅助</span></span><span class="yd-card-data" aria-hidden="true"><i></i><i></i><i></i><span>比较 · 选择</span></span>
+            </button>
+            <button class="project-card tone-1" data-card="2" type="button" aria-label="切换到项目：Brand Atlas">
+              <span class="card-mark" aria-hidden="true">A—01</span>
+              <span class="card-number">02</span>
+              <span class="card-title-wrap">
+                <span class="card-title">Brand Atlas</span>
+                <span class="card-cn-title">品牌视觉档案</span>
+              </span>
+              <span class="card-index">03 / 07</span>
+            </button>
+            <button class="project-card tone-2" data-card="3" type="button" aria-label="切换到项目：Move With Me" tabindex="-1">
+              <span class="card-mark" aria-hidden="true">M—02</span>
+              <span class="card-number">03</span>
+              <span class="card-title-wrap">
+                <span class="card-title">Move With Me</span>
+                <span class="card-cn-title">运动生活产品</span>
+              </span>
+              <span class="card-index">04 / 07</span>
+            </button>
+            <button class="project-card tone-3" data-card="4" type="button" aria-label="切换到项目：Quiet Type" tabindex="-1">
+              <span class="card-mark" aria-hidden="true">Q—03</span>
+              <span class="card-number">04</span>
+              <span class="card-title-wrap">
+                <span class="card-title">Quiet Type</span>
+                <span class="card-cn-title">编辑与字体实验</span>
+              </span>
+              <span class="card-index">05 / 07</span>
+            </button>
+            <button class="project-card tone-4" data-card="5" type="button" aria-label="切换到项目：Civic Signal" tabindex="-1">
+              <span class="card-mark" aria-hidden="true">C—04</span>
+              <span class="card-number">05</span>
+              <span class="card-title-wrap">
+                <span class="card-title">Civic Signal</span>
+                <span class="card-cn-title">城市公共导视</span>
+              </span>
+              <span class="card-index">06 / 07</span>
+            </button>
+            <button class="project-card tone-5" data-card="6" type="button" aria-label="切换到项目：Objects at Rest" tabindex="-1">
+              <span class="card-mark" aria-hidden="true">O—05</span>
+              <span class="card-number">06</span>
+              <span class="card-title-wrap">
+                <span class="card-title">Objects at Rest</span>
+                <span class="card-cn-title">物件与材质研究</span>
+              </span>
+              <span class="card-index">07 / 07</span>
+            </button>
+          </div>
+
+          <section class="active-copy" id="active-copy" aria-live="polite" aria-hidden="true" inert>
+            <span class="active-number" id="active-number"></span>
+            <h2 id="active-title"></h2>
+            <p id="active-description"></p>
+            <span class="active-meta"><span id="active-category"></span> · <span id="active-year"></span></span>
+            <button class="explore-button" id="open-active" type="button">查看作品 <span aria-hidden="true">↗</span></button>
+          </section>
+
+          <nav class="step-controls" id="step-controls" aria-label="作品切换">
+            <button id="previous-project" type="button" aria-label="上一个作品">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7M12 19V5" /></svg>
+            </button>
+            <span id="project-count">00 / 07</span>
+            <button id="next-project" type="button" aria-label="下一个作品">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m7-7-7 7-7-7" /></svg>
+            </button>
+          </nav>
+
+          <footer class="stage-footer" id="stage-footer" aria-hidden="true">
+            <span>SEVEN PROJECTS / 2023—2026</span>
+            <span>DESIGNED TO BE EXPLORED</span>
+          </footer>
+        </div>
+
+        <section class="detail-view" id="detail-view" aria-label="项目详情" hidden>
+          <header class="detail-toolbar">
+            <button id="detail-back" type="button" aria-label="返回作品集合">← 返回作品集</button>
+            <span id="detail-count">01 / 07</span>
+          </header>
+          <div class="detail-hero" id="detail-hero">
+            <span class="detail-mark" id="detail-mark" aria-hidden="true"></span>
+            <p id="detail-kicker"></p>
+            <h1 id="detail-title" tabindex="-1"></h1>
+            <p id="detail-cn-title" class="detail-subtitle"></p>
+          </div>
+          <article id="zhuozai-case" aria-label="桌崽 AI 产品经理案例" hidden></article>
+          <article id="yanshuju-case" aria-label="研数据产品经理案例" hidden></article>
+          <article class="detail-content">
+            <dl class="project-meta">
+              <div><dt>角色</dt><dd id="detail-role"></dd></div>
+              <div><dt>周期</dt><dd id="detail-duration"></dd></div>
+              <div><dt>年份</dt><dd id="detail-year"></dd></div>
+            </dl>
+
+            <section class="detail-lead">
+              <h2 class="section-heading">项目概览</h2>
+              <p id="detail-description"></p>
+            </section>
+
+            <figure class="study-panel study-panel-wide">
+              <div class="study-grid" aria-hidden="true"><span></span><span></span><span></span></div>
+              <figcaption>结构研究</figcaption>
+            </figure>
+
+            <section class="text-section">
+              <h2>设计问题</h2>
+              <p id="detail-challenge"></p>
+            </section>
+
+            <section class="text-section">
+              <h2>设计方法</h2>
+              <p id="detail-approach"></p>
+            </section>
+
+            <div class="study-pair" aria-label="过程视觉占位">
+              <figure class="study-panel study-panel-tall"><div class="object-line" aria-hidden="true"></div><figcaption>形态研究</figcaption></figure>
+              <figure class="study-panel study-panel-tall"><div class="object-ring" aria-hidden="true"></div><figcaption>细节研究</figcaption></figure>
+            </div>
+
+            <section class="outcome-section">
+              <h2 class="section-heading">设计结果</h2>
+              <div class="outcome-list" id="detail-outcomes"></div>
+            </section>
+
+            <button class="next-detail" id="next-detail" type="button">
+              <small>下一个作品</small>
+              <span id="next-detail-title"></span>
+              <b aria-hidden="true">→</b>
+            </button>
+          </article>
+        </section>
+
+        <p class="sr-only" id="live-status" aria-live="polite"></p>
+        <noscript><p class="noscript">需要启用 JavaScript 才能体验卡片交互。</p></noscript>
+      </section>
+
+
+    </main>
+
+    <script defer src="./assets/app.bundle.js"></script>
+  </body>
+</html>

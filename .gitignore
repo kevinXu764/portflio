@@ -1,0 +1,7 @@
+# Local backup snapshots
+history/
+_history/
+
+# Local dependencies and build cache
+node_modules/
+.build-cache/

@@ -1,0 +1,150 @@
+/* Shared type system. Load after layout and individual case styles.
+   Keep project content and Three.js geometry independent of presentation. */
+:root {
+  --font-reading: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+  --text-primary: #1d1d1f;
+  --text-secondary: #626268;
+  --body-lg-size: 1.125rem;
+  --body-lg-line: 1.875rem;
+  --body-md-size: 1rem;
+  --body-md-line: 1.625rem;
+  --body-sm-size: 1rem;
+  --body-sm-line: 1.5rem;
+  --label-size: .875rem;
+  --label-line: 1.375rem;
+  font-family: var(--font-reading);
+}
+/* One title and one introduction on the collection cover. */
+.intro .eyebrow,.stage-footer,.active-copy .active-number { display: none; }
+.archive-label { font-size: .875rem; font-weight: 500; line-height: 1.5; letter-spacing: .025em; }
+.stage-topbar { font-size: .875rem; line-height: 1.5; }
+.stage-topbar button { flex: none; white-space: nowrap; min-height: 40px; }
+.intro h1 { font-size: clamp(3.25rem,5.3vw,4.75rem); font-weight: 600; line-height: 1.08; letter-spacing: -.035em; text-wrap: balance; }
+.intro-subtitle { font-size: 1.375rem; line-height: 1.6; color: var(--text-secondary); margin-top: 24px; text-wrap: pretty; }
+.intro .explore-button { margin-top: 32px; }
+.explore-button { font-size: 1rem; font-weight: 500; line-height: 1.5; min-height: 48px; padding-inline: 24px; }
+.gesture-cue p { font-size: .875rem; line-height: 1.5; }
+.step-controls span { font-size: .875rem; font-weight: 500; line-height: 1.5; letter-spacing: .025em; }
+/* Card titles scale to the actual card width, rather than the viewport. */
+.project-card .card-number,.project-card .card-mark { display: none; }
+.project-card .card-index { left: clamp(18px,calc(var(--card-width,350px) * .047),26px); right: auto; font-size: .875rem; font-weight: 500; line-height: 1.5; letter-spacing: .025em; }
+.project-card .card-title-wrap { gap: 12px; }
+.project-card .card-title { font-size: clamp(1.625rem,calc(var(--card-width,350px) * .075),2.625rem); font-weight: 600; line-height: 1.15; letter-spacing: -.025em; text-wrap: balance; }
+.project-card .card-cn-title { font-size: 1rem; font-weight: 400; line-height: 1.5; opacity: .92; }
+/* The selected project uses a single readable introduction. */
+.active-copy h2 { font-size: clamp(2rem,3.45vw,3rem); font-weight: 600; line-height: 1.16; letter-spacing: -.025em; text-wrap: balance; margin: 0 0 24px; }
+.active-copy p { max-width: 28em; font-size: 1.3125rem; font-weight: 400; line-height: 1.65; color: var(--text-primary); text-wrap: pretty; }
+.active-copy .active-meta { display: flex; flex-wrap: wrap; column-gap: .35em; font-size: .9375rem; font-weight: 400; line-height: 1.6; color: var(--text-secondary); margin-top: 24px; }
+.active-copy .explore-button { margin-top: 28px; }
+/* Shared detail pages: broad images, bounded paragraphs, fewer labels. */
+.detail-toolbar { padding-block: 8px; }
+.detail-toolbar > span { font-size: .875rem; font-weight: 500; line-height: 1.5; letter-spacing: .025em; }
+.detail-toolbar button { font-size: 1rem; line-height: 1.5; font-weight: 400; }
+.detail-mark { display: none; }
+.detail-hero { min-height: 380px; padding: 64px max(6%,calc((100% - 1000px) / 2)); gap: 0; }
+.detail-hero::before { opacity: .45; }
+.detail-hero > p:not(.detail-subtitle) { font-size: 1rem; line-height: 1.6; font-weight: 400; letter-spacing: 0; margin-bottom: 24px; }
+.detail-hero h1 { font-size: clamp(3rem,5.2vw,4.5rem); line-height: 1.1; letter-spacing: -.025em; font-weight: 600; max-width: 15ch; text-wrap: balance; }
+.detail-hero .detail-subtitle { margin-top: 20px; margin-bottom: 0; font-size: 1.5rem; font-weight: 400; line-height: 1.5; letter-spacing: 0; opacity: .94; }
+.detail-content { width: 100%; max-width: 1104px; padding: 0 52px 80px; margin-inline: auto; }
+.project-meta { margin: 0 0 80px; border-bottom: 1px solid var(--line); gap: 32px; }
+.project-meta div { padding: 32px 0; border: 0; }
+.project-meta dt { margin-bottom: 10px; color: var(--text-secondary); font-size: .9375rem; line-height: 1.6; }
+.project-meta dd { font-size: 1.125rem; line-height: 1.6; font-weight: 500; }
+.section-heading,.text-section h2 { margin: 0; color: var(--text-primary); font-size: 2.5rem; font-weight: 600; line-height: 1.3; letter-spacing: 0; text-wrap: balance; }
+.detail-lead { margin-bottom: 48px; }
+.detail-lead .section-heading { margin-bottom: 24px; }
+.detail-lead > p { max-width: 760px; margin: 0; color: var(--text-secondary); font-size: 1.5rem; line-height: 1.65; font-weight: 400; text-wrap: pretty; }
+.study-panel { margin-bottom: 64px; }
+.study-panel figcaption { margin-top: 16px; font-size: 1rem; font-weight: 400; line-height: 1.5; letter-spacing: 0; color: var(--text-secondary); }
+.text-section { display: grid; grid-template-columns: 1fr 2.1fr; gap: 56px; align-items: start; margin: 80px 0; }
+.text-section h2 { font-size: 2rem; }
+.text-section > p:last-child { max-width: 640px; font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); text-wrap: pretty; }
+.study-pair { gap: 28px; margin-bottom: 80px; }
+.study-pair .study-panel { margin: 0; }
+.outcome-section { margin-bottom: 80px; }
+.outcome-section .section-heading { margin-bottom: 32px; }
+.outcome-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; border-top: 1px solid var(--line); }
+.outcome-list div { display: block; padding: 28px 0; border: 0; }
+.outcome-list span { display: none; }
+.outcome-list strong { display: block; color: var(--text-primary); font-size: 1.375rem; font-weight: 500; line-height: 1.5; text-wrap: balance; }
+.next-detail { min-height: 144px; padding: 28px 32px; gap: 12px 28px; align-content: center; border-radius: 16px; }
+.next-detail small { font-size: .9375rem; line-height: 1.5; color: var(--text-secondary); }
+.next-detail span { font-size: 2rem; font-weight: 600; line-height: 1.25; letter-spacing: -.02em; text-wrap: balance; }
+.next-detail b { font-size: 2rem; line-height: 1; }
+@media(min-width:900px) {
+  .intro { top: 30%; width: 36%; }
+  .active-copy,.has-active .active-copy { width: 35%; top: 24%; }
+}
+@media(max-width:1100px) and (min-width:900px) {
+  .intro-subtitle { font-size: 1.25rem; }
+  .active-copy p { font-size: 1.1875rem; }
+  .active-copy .active-meta { font-size: .875rem; }
+  .text-section { gap: 32px; grid-template-columns: 1fr 2fr; }
+  .detail-content { padding-inline: 6%; }
+  .outcome-list { gap: 24px; }
+}
+@media(max-width:899px) {
+  .intro { left: 24px; right: 24px; }
+  .intro h1 { font-size: 3rem; line-height: 1.12; }
+  .intro-subtitle { font-size: 1.1875rem; line-height: 1.6; margin-top: 20px; }
+  .active-copy,.has-active .active-copy { left: 24px; right: 24px; }
+  .active-copy p { font-size: 1.0625rem; line-height: 1.7; }
+  .active-copy .active-meta { font-size: .875rem; margin-top: 14px; line-height: 1.6; }
+  .active-copy .explore-button { margin-top: 20px; min-height: 44px; padding-inline: 20px; }
+  .project-card .card-title-wrap { gap: 10px; }
+  .detail-hero { min-height: 340px; padding: 48px 6%; }
+  .detail-hero h1 { font-size: 3rem; }
+  .detail-hero .detail-subtitle { font-size: 1.375rem; }
+  .detail-content { padding: 0 6% 56px; }
+  .project-meta { margin-bottom: 56px; gap: 20px; }
+  .section-heading { font-size: 2rem; }
+  .detail-lead > p { font-size: 1.3125rem; }
+  .text-section { grid-template-columns: 1fr; gap: 24px; margin: 56px 0; }
+  .text-section h2 { font-size: 1.75rem; }
+  .text-section > p:last-child { font-size: 1.0625rem; line-height: 1.8; }
+  .study-panel,.study-pair { margin-bottom: 56px; }
+  .outcome-list { grid-template-columns: 1fr; gap: 0; }
+  .outcome-list div { padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .outcome-list strong { font-size: 1.25rem; text-wrap: pretty; }
+  .outcome-section { margin-bottom: 56px; }
+  .next-detail { min-height: 136px; padding: 24px; }
+  .next-detail span { font-size: 1.625rem; }
+}
+@media(max-width:600px) {
+  .detail-toolbar { padding-inline: 16px; }
+  .project-meta { grid-template-columns: 1fr; gap: 0; padding-block: 16px; }
+  .project-meta div { display: flex; align-items: baseline; gap: 24px; justify-content: space-between; padding: 12px 0; }
+  .project-meta dt { margin: 0; font-size: 1rem; }
+  .project-meta dd { font-size: 1.0625rem; text-align: right; }
+  .detail-hero { min-height: 320px; padding-block: 44px; }
+  .detail-hero h1 { font-size: 2.75rem; }
+  .detail-hero > p:not(.detail-subtitle) { font-size: .9375rem; }
+  .detail-hero .detail-subtitle { margin-top: 16px; font-size: 1.25rem; }
+  .detail-lead > p { font-size: 1.25rem; line-height: 1.7; }
+  .study-pair { grid-template-columns: 1fr; gap: 32px; }
+  .study-panel-tall > :first-child { height: 16rem; }
+}
+@media(max-height:700px) and (max-width:899px) {
+  .intro { top: 84px; }
+  .intro h1 { font-size: 2.75rem; }
+  .intro-subtitle { font-size: 1.125rem; margin-top: 16px; }
+  .stage-topbar { top: 16px; }
+  .active-copy .active-meta { margin-top: 10px; }
+  .active-copy .explore-button { margin-top: 14px; }
+}
+@media(max-width:350px) {
+  .intro h1 { font-size: 2.625rem; }
+  .stage-topbar { left: 20px; right: 20px; }
+  .active-copy,.has-active .active-copy { left: 20px; right: 20px; }
+  .project-card .card-title-wrap { left: 18px; right: 18px; bottom: 18px; }
+  .project-card .card-title { font-size: 1.625rem; }
+  .next-detail { padding: 24px 20px; }
+}
+@media(max-height:640px) and (max-width:899px) {
+  .step-controls { bottom: 16px; }
+}
+/* User font preferences enlarge text; never shrink it to fit old labels. */
+html.large-type .project-meta,html.large-type .text-section,html.large-type .study-pair,html.large-type .outcome-list { grid-template-columns: 1fr; }
+html.large-type .detail-hero h1 { overflow-wrap: anywhere; }

@@ -1,0 +1,133 @@
+/* A character-led companion cover. No shared archive texture on either renderer. */
+.project-card.tone-zhuozai {
+  --tone: #ffe344;
+  --zz-card-ink: #33234f;
+  --zz-card-unit: calc(var(--card-width, 350px) / 560);
+  color: var(--zz-card-ink);
+}
+.project-card.tone-zhuozai::before,
+.project-card.tone-zhuozai::after { display: none; }
+.project-card.tone-zhuozai.is-face { background: var(--tone); }
+.project-card.tone-zhuozai:focus-visible { outline-color: var(--zz-card-ink); }
+.project-card.tone-zhuozai .zz-card-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.zz-card-window {
+  position: absolute;
+  left: 54%;
+  top: 17%;
+  width: 40%;
+  height: 73%;
+  background: #8259e9;
+  border: max(1.5px, calc(var(--zz-card-unit) * 2)) solid var(--zz-card-ink);
+  border-radius: 18% 18% 18% 4%;
+  box-shadow: calc(var(--zz-card-unit) * 7) calc(var(--zz-card-unit) * 8) 0 var(--zz-card-ink);
+  transform: rotate(-7deg);
+}
+.zz-card-window::after {
+  content: "";
+  position: absolute;
+  left: 9%;
+  bottom: -8%;
+  width: 15%;
+  height: 17%;
+  background: #8259e9;
+  border-left: inherit;
+  border-bottom: inherit;
+  transform: skewY(-36deg);
+}
+.zz-card-character {
+  position: absolute;
+  width: 78%;
+  height: auto;
+  max-width: none;
+  left: 32%;
+  top: -1%;
+  filter: drop-shadow(3px 3px 0 #33234f28);
+}
+.zz-card-spark {
+  position: absolute;
+  width: 8%;
+  left: 44%;
+  top: 16%;
+  fill: #8259e9;
+  stroke: var(--zz-card-ink);
+  stroke-width: 1.5;
+  transform: rotate(12deg);
+}
+.zz-card-message {
+  position: absolute;
+  left: 68%;
+  bottom: 13%;
+  padding: .5em .85em;
+  background: #fffaf0;
+  border: 1.5px solid var(--zz-card-ink);
+  border-radius: .75em .75em .75em .15em;
+  box-shadow: 3px 3px 0 var(--zz-card-ink);
+  transform: rotate(6deg);
+  font-size: clamp(14px, calc(var(--zz-card-unit) * 19), 19px);
+  line-height: 1.4;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.project-card.tone-zhuozai .zz-card-symbol {
+  position: absolute;
+  left: 5.3%;
+  top: 7.2%;
+  width: 7%;
+  height: auto;
+}
+.zz-card-symbol svg { display: block; width: 100%; fill: var(--zz-card-ink); }
+.zz-card-symbol path + path { fill: none; stroke: #ffe344; stroke-width: 3.5; stroke-linecap: round; }
+.project-card.tone-zhuozai .card-index {
+  left: 15%;
+  top: 9.2%;
+  right: auto;
+  color: var(--zz-card-ink);
+  font-size: 14px;
+}
+.project-card.tone-zhuozai .card-title-wrap {
+  left: 5.3%;
+  right: 48%;
+  top: 35%;
+  bottom: auto;
+  gap: clamp(10px, calc(var(--zz-card-unit) * 14), 14px);
+}
+.project-card.tone-zhuozai .card-title {
+  display: flex;
+  align-items: center;
+  gap: .1em;
+  font-size: clamp(36px, calc(var(--zz-card-unit) * 72), 72px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+.zz-card-ai {
+  margin-top: .2em;
+  padding: .16em .22em;
+  border: 1.5px solid currentColor;
+  border-radius: .3em;
+  font-size: clamp(14px, calc(var(--zz-card-unit) * 24), 24px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.04em;
+  transform: rotate(-8deg);
+}
+.project-card.tone-zhuozai .card-cn-title {
+  font-size: clamp(16px, calc(var(--zz-card-unit) * 18), 18px);
+  line-height: 1.5;
+  opacity: 1;
+  white-space: nowrap;
+}
+.project-card.tone-zhuozai .zz-card-signoff {
+  position: absolute;
+  left: 5.3%;
+  bottom: 9%;
+  font-size: clamp(14px, calc(var(--zz-card-unit) * 19), 19px);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: .02em;
+}
