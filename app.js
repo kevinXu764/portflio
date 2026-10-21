@@ -2,6 +2,7 @@ import * as THREE from "./vendor/three.module.min.js";
 import { zhuozaiProject, renderZhuozaiCase, bindZhuozaiCase } from "./cases/zhuozai/case.js";
 
 import { yanshujuProject, renderYanshujuCase, bindYanshujuCase } from "./cases/yanshuju/case.js";
+import {watchMedia, prepareImages, setupImagePreview} from './media.js';
 
 const projects = [
   zhuozaiProject,
@@ -210,6 +211,8 @@ let initialized = false;
 let activeIndex = -1;
 let detailIndex = -1;
 let detailOpen = false;
+let pendingPage = null;
+let transitionGeneration = 0;
 let wheelAccumulator = 0;
 let wheelLocked = false;
 let suppressClick = false;
@@ -835,7 +838,55 @@ function setActive(nextIndex, { announce = true } = {}) {
   scheduleFrame();
 }
 
-function withViewTransition(update) { update(); }
+const pageTransition = document.querySelector('#page-transition');
+watchMedia(stage);
+setupImagePreview(stage);
+const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
+function completeLoadingPass() {
+  if (reducedMotion.matches) return Promise.resolve();
+  return new Promise(resolve => {
+    let timer;
+    const finish = () => {
+      clearTimeout(timer);
+      pageTransition.removeEventListener('animationend', ended);
+      resolve();
+    };
+    const ended = event => {if (event.animationName === 'page-loading') finish()};
+    pageTransition.addEventListener('animationend', ended);
+    // A background tab or a browser disabling CSS animation must never trap navigation.
+    timer = setTimeout(finish, 3000);
+  });
+}
+async function withViewTransition(update, {label = '正在打开作品', root = detailView, focus} = {}) {
+  const generation = ++transitionGeneration;
+  const completedPass = completeLoadingPass();
+  const track = pageTransition.querySelector('.page-transition-track');
+  track.replaceWith(track.cloneNode(true));
+  pageTransition.querySelector('.page-transition-label').textContent = label;
+  pageTransition.classList.add('is-active');
+  pageTransition.removeAttribute('aria-hidden');
+  stage.setAttribute('aria-busy', 'true');
+  collection.inert = true;
+  detailView.inert = true;
+  try {
+    await pause(reducedMotion.matches ? 0 : 150);
+    if (generation !== transitionGeneration) return;
+    update();
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    // Only first-screen previews can hold the transition, for at most 1.1s.
+    await Promise.all([prepareImages(root), completedPass]);
+  } finally {
+    if (generation === transitionGeneration) {
+      pendingPage = null;
+      pageTransition.classList.remove('is-active');
+      pageTransition.setAttribute('aria-hidden', 'true');
+      stage.removeAttribute('aria-busy');
+      collection.inert = detailOpen;
+      detailView.inert = false;
+      focus?.();
+    }
+  }
+}
 
 function fillDetail(index) {
   const project = projects[index];
@@ -879,8 +930,13 @@ function fillDetail(index) {
   nextDetail.setAttribute("aria-label", `查看下一个项目：${next.title}`);
 }
 
-function showDetail(index, { fromHistory = false } = {}) {
-  if (index < 0) return;
+function showDetail(index, { fromHistory = false, replaceHistory = false } = {}) {
+  if (index < 0 || pendingPage === index) return;
+  if (!fromHistory && location.hash !== `#${projects[index].slug}`) {
+    window.history[replaceHistory ? 'replaceState' : 'pushState']({ myAssetsThreeDetail: true }, '', `#${projects[index].slug}`);
+    if (!replaceHistory) ownsDetailHistory = true;
+  }
+  pendingPage = index;
   withViewTransition(() => {
     fillDetail(index);
     detailOpen = true;
@@ -897,16 +953,11 @@ function showDetail(index, { fromHistory = false } = {}) {
     stage.classList.add("is-detail");
     stage.classList.remove("is-deck");
     setCopyState(false);
-  });
-  if (!fromHistory && location.hash !== `#${projects[index].slug}`) {
-    window.history.pushState({ myAssetsThreeDetail: true }, "", `#${projects[index].slug}`);
-    ownsDetailHistory = true;
-  }
-  requestAnimationFrame(() => detailBack.focus({ preventScroll: true }));
+  }, {label: `正在打开${projects[index].title}`, focus: () => detailBack.focus({preventScroll: true})});
 }
 
 function closeDetail({ fromHistory = false } = {}) {
-  if (!detailOpen) return;
+  if (!detailOpen && pendingPage === null) return;
   if (!fromHistory && ownsDetailHistory) {
     ownsDetailHistory = false;
     window.history.back();
@@ -916,6 +967,7 @@ function closeDetail({ fromHistory = false } = {}) {
     const url = new URL(location.href); url.hash = '';
     history.replaceState(null, '', url.href);
   }
+  pendingPage = 'collection';
   withViewTransition(() => {
     detailOpen = false;
     collection.inert = false;
@@ -927,8 +979,7 @@ function closeDetail({ fromHistory = false } = {}) {
     stage.classList.remove("is-detail");
     stage.classList.add("is-deck");
     scheduleFrame();
-  });
-  cards[Math.max(activeIndex, 0)].focus({ preventScroll: true });
+  }, {label: '正在返回作品集', root: collection, focus: () => cards[Math.max(activeIndex, 0)].focus({preventScroll: true})});
 }
 
 function beginDrag(event) {
@@ -1049,11 +1100,7 @@ nextDetail.addEventListener("click", () => {
   const nextIndex = (detailIndex + 1) % projects.length;
   activeIndex = nextIndex;
   updateCollectionUI();
-  withViewTransition(() => {
-    fillDetail(nextIndex);
-    detailView.scrollTo({ top: 0, behavior: reducedMotion.matches ? "auto" : "smooth" });
-  });
-  window.history.replaceState({ myAssetsThreeDetail: true }, "", `#${projects[nextIndex].slug}`);
+  showDetail(nextIndex, {replaceHistory: true});
 });
 
 stage.addEventListener("pointerdown", beginDrag);
@@ -1067,17 +1114,17 @@ stage.addEventListener("keydown", handleKey);
 function syncLocation() {
   const index = projects.findIndex(project => `#${project.slug}` === location.hash);
   if (index >= 0) {
-    if (detailOpen && detailIndex === index) return;
+    if (pendingPage === index || (pendingPage === null && detailOpen && detailIndex === index)) return;
     ownsDetailHistory = false;
     activeIndex = index;
     updateCollectionUI();
     showDetail(index, { fromHistory: true });
-  } else closeDetail({ fromHistory: true });
+  } else if (pendingPage !== 'collection') closeDetail({ fromHistory: true });
 }
 window.addEventListener('popstate', syncLocation);
 window.addEventListener('hashchange', syncLocation);
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && detailOpen) closeDetail();
+  if (event.key === 'Escape' && (detailOpen || typeof pendingPage === 'number')) closeDetail();
 });
 const motionToggle = document.querySelector('#motion-toggle');
 function updateBackgroundMotion() {

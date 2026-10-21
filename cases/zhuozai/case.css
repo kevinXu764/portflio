@@ -30,8 +30,6 @@
 .zz-shot { width: 100%; }
 .zz-image { display: block; padding: 0; border: 0; background: transparent; width: 100%; position: relative; text-align: left; color: inherit; overflow: hidden; border-radius: 4px; }
 .zz-image > img { width: 100%; height: auto; }
-.zz-enlarge { position: absolute; right: 8px; bottom: 8px; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #25222d65; background: #fffdf3ed; border-radius: 50%; color: #25222d; font-size: 18px; opacity: 0; transition: opacity .15s; }
-.zz-image:hover .zz-enlarge,.zz-image:focus-visible .zz-enlarge { opacity: 1; }
 .zz-shot figcaption { margin-top: 16px; font-size: 16px; line-height: 1.75; color: var(--z-muted); }
 .zz-cover { padding: 64px 6% 32px; background: var(--z-yellow); }
 .zz-cover-title { display: flex; justify-content: space-between; gap: 48px; align-items: end; padding-bottom: 48px; }
@@ -43,6 +41,9 @@
 .zz-cover-intro > button:hover { text-decoration: underline; text-underline-offset: 5px; }
 .zz-cover-stage { background: #25222d; border-radius: 12px; padding: 16px; }
 .zz-cover-caption { display: flex; justify-content: space-between; gap: 24px; margin-top: 24px!important; font-size: 14px; color: #534723; }
+.zz-ui-collection { width: 100%; background: #f1eff8; }
+.zz-collection-image { display: block; position: relative; width: 100%; overflow: hidden; cursor: zoom-in; }
+.zz-collection-image > img { display: block; width: 100%; height: auto; }
 .zz-toc { position: sticky; top: 76px; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 12px 6%; border-bottom: 1px solid var(--z-line); background: #faf8f0f5; backdrop-filter: blur(12px); overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -ms-overflow-style: none; } /* taste-skill-ignore: Existing portfolio navigation and detail layout retained for this image-only revision. */
 .zz-toc::-webkit-scrollbar { display: none; width: 0; height: 0; }
 .zz-toc button { flex: none; white-space: nowrap; border: 0; background: transparent; font-size: 14px; font-weight: 500; padding: 8px 0; color: #504a59; line-height: 1.5; }
@@ -166,18 +167,6 @@
 .zz-end > div { display: flex; gap: 20px; }
 .zz-end button { border: 1px solid var(--z-ink); border-radius: 24px; background: transparent; padding: 10px 20px; font-size: 16px; white-space: nowrap; }
 .zz-end button:last-child { background: var(--z-ink); color: var(--z-yellow); }
-.zz-viewer { padding: 0; border: 1px solid #bdaace; border-radius: 8px; background: #25222d; color: #fff9eb; width: calc(100vw - 48px); height: calc(100dvh - 48px); max-width: 1600px; max-height: none; overflow: hidden; margin: auto; }
-.zz-viewer::backdrop { background: #120d20d9; backdrop-filter: blur(6px); }
-.zz-viewer[open] { display: flex; flex-direction: column; }
-.zz-viewer-bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 24px; border-bottom: 1px solid #665275; } /* taste-skill-ignore: Existing portfolio navigation and detail layout retained for this image-only revision. */
-.zz-viewer-bar > p { font-size: 16px; line-height: 1.6; }
-.zz-viewer-bar > div { display: flex; gap: 12px; flex: none; }
-.zz-viewer-bar button { border: 1px solid #ac95ba; background: transparent; color: #fff8eb; padding: 8px 16px; white-space: nowrap; font-size: 14px; border-radius: 4px; }
-.zz-viewer-bar button:last-child { background: #ffe344; color: #25222d; border-color: #ffe344; }
-.zz-viewer-scroll { flex: 1; overflow: auto; display: flex; padding: 20px; min-height: 0; align-items: center; justify-content: center; }
-.zz-viewer-scroll img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; flex: none; }
-.zz-viewer.is-zoomed .zz-viewer-scroll { display: block; }
-.zz-viewer.is-zoomed img { max-width: none; max-height: none; margin: auto; }
 @media(max-width:1100px) {
   .zz-cover { padding-top: 48px; }
   .zz-cover-title { gap: 32px; }
@@ -304,12 +293,6 @@
   .zz-end { display: block; padding: 32px 6%; }
   .zz-end > div { margin-top: 24px; gap: 12px; }
   .zz-end button { font-size: 14px; padding: 10px 16px; }
-  .zz-viewer { width: calc(100vw - 16px); height: calc(100dvh - 24px); }
-  .zz-viewer-bar { padding: 16px; display: block; }
-  .zz-viewer-bar > div { margin-top: 16px; justify-content: flex-end; }
-  .zz-viewer-bar button { font-size: 14px; padding: 8px 12px; }
-  .zz-viewer-scroll { padding: 10px; }
-  .zz-enlarge { opacity: 1; width: 28px; height: 28px; font-size: 18px; }
 }
 @media(max-width:350px) {
   .zz-cover h1 { font-size: 56px; }
@@ -321,8 +304,9 @@
   .zz-case * { scroll-behavior: auto; transition: none!important; }
 }
 
-/* UI imagery is captured at 2×; reading scale is independent of the lightbox. */
-.zz-media-viewport{box-sizing:border-box;width:100%;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#a79bb7 transparent;padding:16px;background:#fffdf6;border-radius:6px}
+/* Product captures fit their reading column at every viewport width. */
+.zz-media-viewport{box-sizing:border-box;width:100%;min-width:0;overflow:hidden;padding:0;background:transparent;border-radius:6px}
+.zz-media-viewport .zz-image{width:100%;min-width:0;max-width:100%}
 .zz-media-viewport:focus-visible{outline:3px solid var(--z-purple);outline-offset:4px}
 .zz-discover-layout,.zz-chat-layout{grid-template-columns:minmax(0,1fr);gap:36px}
 .zz-discover-notes{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;align-items:start}
@@ -346,8 +330,6 @@
  .zz-creation-story>article>p{grid-column:1;grid-row:3}
 }
 @media(max-width:600px){
- .zz-media-viewport{padding:12px}
- .zz-media-viewport .zz-image{min-width:min(700px,var(--capture-width));max-width:none}
  .zz-cover-ui .zz-media-viewport .zz-image,.zz-call-main .zz-media-viewport .zz-image,.zz-memory-single .zz-media-viewport .zz-image,.zz-theater-focus .zz-media-viewport .zz-image{min-width:0}
  .zz-cover-ui .zz-media-viewport{padding:0}
  .zz-memory-single .zz-media-viewport{height:100%;padding:0;overflow:hidden}

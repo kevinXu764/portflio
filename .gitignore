@@ -5,3 +5,6 @@ _history/
 # Local dependencies and build cache
 node_modules/
 .build-cache/
+
+# Local update staging
+outputs/ui-collections-install-*/

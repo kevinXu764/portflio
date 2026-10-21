@@ -1,3 +1,4 @@
+import {imageLink} from '../../media.js';
 import {captures} from './captures.js';
 import {renderMechanism} from './mechanism.js';
 
@@ -20,14 +21,15 @@ const sets={
  compare:[['compare-cost-main','学费与学制','分别比较金钱与时间投入。'],['compare-trend-main','复试分数线','查看相同口径的历年变化。'],['compare-seats-main','招生人数','比较同专业各年的招生计划。'],['compare-requirements-main','初试科目','看共同准备和各自要求。'],['compare-retest-main','复试准备','对照作品集、面试与材料。']],
  candidate:[['candidate-saved','保留候选','记录自己的理由。'],['candidate-excluded','暂时排除','保留原理由，也可以恢复考虑。']]
 };
-function shot(id,label,{eager=false,cls=''}={}){const m=captures[id];if(!m)throw Error('Missing capture '+id);return `<figure class="yd-shot ${cls}" style="--capture-width:${m.width}px"><div class="yd-media-viewport" tabindex="0" role="region" aria-label="${esc(label)}，可横向查看"><button type="button" class="yd-image" aria-haspopup="dialog" data-yd-view="${id}" data-caption="${esc(label)}" aria-label="放大查看：${esc(label)}"><img src="${base+id}.webp" width="${m.width}" height="${m.height}" loading="${eager?'eager':'lazy'}" decoding="async" alt="${esc(label)}"></button></div><figcaption>${label}</figcaption></figure>`}
+function shot(id,label,{eager=false,cls=''}={}){const m=captures[id];if(!m)throw Error('Missing capture '+id);return `<figure class="yd-shot ${cls}"><div class="yd-media-viewport">${imageLink({src:base+id+'.webp',alt:label,width:m.width,height:m.height,className:'yd-image',eager})}</div><figcaption>${label}</figcaption></figure>`}
 function panel(entry){const [id,title,copy,type]=entry;return type==='video'?`<figure class="yd-shot"><video controls playsinline muted preload="none" poster="${base}graph-overview.webp" aria-label="知识图谱缩放与选中录屏"><source src="${base}knowledge-demo.mp4" type="video/mp4"></video><figcaption><span>${copy}</span></figcaption></figure>`:shot(id,copy)}
 function gallery(key,label){return `<div class="yd-gallery" data-yd-gallery="${key}"><div class="yd-switch" role="group" aria-label="${label}">${sets[key].map((e,i)=>`<button type="button" data-yd-state="${i}" aria-pressed="${i===0}">${e[1]}</button>`).join('')}</div><div class="yd-gallery-panel">${panel(sets[key][0])}</div></div>`}
 const head=(title,copy)=>`<header class="yd-heading"><h2>${title}</h2><p>${copy}</p></header>`;
 export function renderYanshujuCase(){return `<div class="yd-case">
 <header class="yd-cover" id="yd-top"><div class="yd-cover-copy"><div><h1>研数据</h1><p>考研信息探索与择校辅助</p></div><div class="yd-cover-intro"><p>用知识图谱、数据比较与 AI 对话，<br>帮助用户形成自己的择校判断。</p></div></div>${shot('home','择校探索首页',{eager:true,cls:'yd-cover-shot'})}<div class="yd-cover-meta"><span>个人毕业设计</span><span>Web 产品设计</span><span>数据可视化 · AI 交互</span></div></header>
+<figure class="yd-ui-collection" aria-label="研数据界面锦集">${imageLink({src:base+'ui-collection.png',displaySrc:base+'ui-collection.webp',alt:'研数据 Web 界面锦集：择校探索、知识图谱、院校专业、数据分析与专业比较',width:2400,height:1440,className:'yd-collection-image'})}</figure>
 <nav class="yd-toc" aria-label="研数据案例章节">${chapters.map(([id,t])=>`<button type="button" data-yd-jump="yd-${id}">${t}</button>`).join('')}</nav>
-<section id="yd-overview" class="yd-section yd-overview">${head('项目概览','将分散的信息，组织为可以探索和比较的择校过程。')}<div class="yd-overview-content"><p>面向仍在探索方向的考研学生，以双系统理论为设计参考：先表达直觉偏好，再结合数据讨论取舍。</p><ol class="yd-route" aria-label="核心产品路径"><li>表达偏好<span aria-hidden="true">→</span></li><li>探索信息<span aria-hidden="true">→</span></li><li>比较选择</li></ol></div></section>
+<section id="yd-overview" class="yd-section yd-overview">${head('项目概览','将分散的信息，组织为可以探索和比较的择校过程。')}<div class="yd-overview-content"><p>面向仍在探索方向的考研学生，以双系统理论为设计参考：先表达直觉偏好，再结合数据讨论取舍。</p><ol class="yd-route" aria-label="核心产品路径"><li>表达偏好</li><li>探索信息</li><li>比较选择</li></ol></div></section>
 <section id="yd-preferences" class="yd-section">${head('偏好表达','从感兴趣的事情开始，再明确各项条件的重要程度。')}<div class="yd-pair yd-interest-run">${shot('interest-choices','选择感兴趣的活动')}${shot('training-evidence','展开对应的培养方向')}</div><div class="yd-preference-main">${shot('ratings','用 1—5 分表达重视程度，允许暂不确定')}<p class="yd-aside">偏好由用户确认，<br>再用于后续讨论。</p></div></section>
 <section id="yd-conversation" class="yd-section yd-blue-tint">${head('对话中的分析与取舍','说明、图表与追问，属于同一条 AI 回复。')}<div class="yd-conversation-board"><div class="yd-conversation-main">${shot('discussion','查看投入差异，再回应 AI 的追问')}</div><div class="yd-conversation-states">${shot('budget-input','先区分可讨论的偏好与必须满足的上限')}${gallery('budget','预算调整状态')}${shot('budget-slider','拖动预算只更新预览，确认后再改变条件')}</div></div><div class="yd-response-run">${shot('cost-discuss','保留预算、查看内容或继续调整')}${shot('chat-compare','在同一段对话里，继续比较两条路径')}</div></section>
 ${renderMechanism(shot)}
@@ -36,10 +38,10 @@ ${renderMechanism(shot)}
 <section id="yd-compare" class="yd-section yd-blue-tint">${head('多专业比较','切换分析维度，始终比较同一组专业。')}${gallery('compare','专业比较视图')}<div class="yd-comparison-details">${shot('compare-matrix','只看差异，逐项核对条件')}${shot('candidate-reason','结合数据，写下自己的取舍')}</div></section>
 <section id="yd-decision" class="yd-section yd-decision-tone">${head('资料与候选清单','保留依据、理由与下一步行动。')}<div class="yd-decision-board"><div class="yd-evidence-run">${shot('document-evidence','从学费字段定位到对应资料')}${shot('evidence-result','阅读后确认这一项依据')}${shot('candidate-order','调整调查顺序，保留原有理由')}</div>${gallery('candidate','候选状态')}</div></section>
 
-<dialog class="yd-viewer" aria-label="研数据界面原图"><div class="yd-viewer-bar"><p></p><div><button type="button" data-yd-zoom aria-pressed="false">原始大小</button><button type="button" data-yd-close>关闭 ×</button></div></div><div class="yd-viewer-scroll"><img alt=""></div></dialog></div>`}
+</div>`}
 export function bindYanshujuCase(host){
  const scroller=host.closest('.detail-view')||document.scrollingElement,toc=host.querySelector('.yd-toc'),links=[...toc.querySelectorAll('[data-yd-jump]')],sections=links.map(b=>host.querySelector('#'+b.dataset.ydJump));
- const viewer=host.querySelector('.yd-viewer'),viewerImg=viewer.querySelector('img'),zoom=viewer.querySelector('[data-yd-zoom]');let frame=0,active=-1,recenter=true,lastViewButton;
+ let frame=0,active=-1,recenter=true;
  const indicator=document.createElement('span');indicator.className='yd-toc-indicator';indicator.setAttribute('aria-hidden','true');toc.append(indicator);const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const pause=()=>host.querySelectorAll('video').forEach(v=>v.pause());
  function track(){
@@ -67,8 +69,6 @@ export function bindYanshujuCase(host){
  (scroller===document.scrollingElement?window:scroller).addEventListener('scroll',schedule,{passive:true});const resize=new ResizeObserver(()=>{recenter=true;schedule()});resize.observe(host);resize.observe(toc);if(scroller!==document.scrollingElement)resize.observe(scroller);host.addEventListener('load',schedule,true);
  host.addEventListener('click',e=>{const j=e.target.closest('[data-yd-jump]');if(j)jump(j.dataset.ydJump);
  const state=e.target.closest('[data-yd-state]');if(state){const group=state.closest('[data-yd-gallery]');group.querySelectorAll('video').forEach(v=>v.pause());group.querySelectorAll('[data-yd-state]').forEach(b=>b.setAttribute('aria-pressed',String(b===state)));group.querySelector('.yd-gallery-panel').innerHTML=panel(sets[group.dataset.ydGallery][Number(state.dataset.ydState)]);schedule();}
- const image=e.target.closest('[data-yd-view]');if(image){lastViewButton=image;viewerImg.src=base+image.dataset.ydView+'.webp';viewerImg.alt=image.dataset.caption;viewer.querySelector('p').textContent=image.dataset.caption;viewer.classList.remove('is-zoomed');zoom.setAttribute('aria-pressed','false');zoom.textContent='原始大小';viewer.showModal();viewer.querySelector('.yd-viewer-scroll').scrollTo(0,0);}
- if(e.target.closest('[data-yd-close]'))viewer.close();if(e.target.closest('[data-yd-zoom]')){const on=viewer.classList.toggle('is-zoomed');zoom.setAttribute('aria-pressed',String(on));zoom.textContent=on?'适应窗口':'原始大小';}
- });viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});viewer.addEventListener('close',()=>lastViewButton?.focus({preventScroll:true}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.open){e.preventDefault();e.stopImmediatePropagation();viewer.close()}},true);
- const visibility=new MutationObserver(()=>{if(host.hidden||scroller.hidden){pause();if(viewer.open)viewer.close()}else {recenter=true;schedule()}});visibility.observe(host,{attributes:true,attributeFilter:['hidden']});if(scroller!==document.scrollingElement)visibility.observe(scroller,{attributes:true,attributeFilter:['hidden']});document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});schedule();
+ });
+ const visibility=new MutationObserver(()=>{if(host.hidden||scroller.hidden){pause();}else {recenter=true;schedule()}});visibility.observe(host,{attributes:true,attributeFilter:['hidden']});if(scroller!==document.scrollingElement)visibility.observe(scroller,{attributes:true,attributeFilter:['hidden']});document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});schedule();
 }
