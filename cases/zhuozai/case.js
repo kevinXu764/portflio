@@ -1,3 +1,4 @@
+import {imageLink} from '../../media.js';
 import { captures } from './captures.js';
 export const zhuozaiProject={number:'01',slug:'zhuozai-ai',title:'桌崽 AI',cnTitle:'AI 陪伴产品设计',category:'AI 陪伴 · 产品与交互',year:'2026',role:'产品与交互复盘',duration:'持续迭代',description:'从角色交流到日常陪伴，探索视频事件、共同记忆与桌面陪伴的产品路径。',challenge:'怎样把一次角色交流，延续成有上下文、有共同经历、也能由用户掌控节奏的陪伴？',approach:'围绕关键场景呈现界面与交互，说明角色交流、情绪回应与日常陪伴的设计。',outcomes:['连接角色交流与日常陪伴','梳理核心交互的连续性','呈现关键设计取舍'],tone:'#ffe344',coverStyle:'companion',mark:'Z—01'}; // taste-skill-ignore: Existing portfolio project index, retained for route metadata.
 const base='cases/zhuozai/media/';
@@ -6,7 +7,7 @@ function shot(name,alt,cls='',caption=''){
  const m=captures[name];if(!m)throw Error('Missing capture: '+name);
  const src=base+'flows/'+name+'.webp';
  const focus=captures[name+'-focus'],display=focus?base+'flows/'+name+'-focus.webp':src,dm=focus||m;
- return `<figure class="zz-shot ${cls}" style="--capture-width:${dm.width}px"><div class="zz-media-viewport" tabindex="0" role="region" aria-label="${esc(alt)}，可横向查看"><button type="button" class="zz-image" data-zz-view="${src}" data-zz-caption="${esc(alt)}" aria-label="放大查看：${esc(alt)}"><img src="${display}" width="${dm.width}" height="${dm.height}" alt="${esc(alt)}" loading="lazy" decoding="async"><span class="zz-enlarge" aria-hidden="true">↗</span></button></div>${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
+ return `<figure class="zz-shot ${cls}" style="--capture-width:${dm.width}px"><div class="zz-media-viewport">${imageLink({src,displaySrc:display,alt,width:dm.width,height:dm.height,className:'zz-image'})}</div>${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
 }
 const chapter=(title,lead)=>`<header class="zz-chapter-head"><h2>${title}</h2><p>${lead}</p></header>`;
 const note=(title,text)=>`<p class="zz-note"><strong>${title}。</strong>${text}</p>`;
@@ -69,7 +70,7 @@ ${chapter('双人剧场','设定两位主角与开场情节，观看演出，再
 <p class="zz-inline-rule">剧场支持故事设定、演出控制与收藏回放。</p>
 </section>
 <footer class="zz-end"><p>桌崽 AI</p><div><button data-case-jump="zz-top">返回开头 ↑</button><button data-case-next>下一个作品 ↗</button></div></footer>
-<dialog class="zz-viewer" aria-label="界面原图查看"><div class="zz-viewer-bar"><p></p><div><button type="button" data-zz-zoom aria-pressed="false">原始大小</button><button type="button" data-zz-close aria-label="关闭原图">关闭 ×</button></div></div><div class="zz-viewer-scroll"><img alt=""></div></dialog>
+
 </div>`;}
 export function bindZhuozaiCase(host){
  const scroller=host.closest('.detail-view'),toc=host.querySelector('.zz-toc');
@@ -116,9 +117,4 @@ export function bindZhuozaiCase(host){
  resize.observe(host);resize.observe(toc);resize.observe(scroller);
  new MutationObserver(()=>{recenter=true;scheduleTrack();}).observe(scroller,{attributes:true,attributeFilter:['hidden','class']});
  scheduleTrack();
- const viewer=host.querySelector('.zz-viewer'),img=viewer.querySelector('img'),zoom=viewer.querySelector('[data-zz-zoom]');
- host.addEventListener('click',e=>{const view=e.target.closest('[data-zz-view]');if(view){img.src=view.dataset.zzView;img.alt=view.dataset.zzCaption;viewer.querySelector('.zz-viewer-bar p').textContent=view.dataset.zzCaption;viewer.classList.remove('is-zoomed');zoom.setAttribute('aria-pressed','false');zoom.textContent='原始大小';viewer.showModal();return;}if(e.target.closest('[data-zz-close]'))viewer.close();if(e.target.closest('[data-zz-zoom]')){const on=viewer.classList.toggle('is-zoomed');zoom.setAttribute('aria-pressed',String(on));zoom.textContent=on?'适应窗口':'原始大小';}});
- viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close();});
- window.addEventListener('hashchange',()=>{if(viewer.open&&location.hash!=='#zhuozai-ai')viewer.close();});
- document.addEventListener('keydown',e=>{if(viewer.open&&e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();viewer.close();}},true);
 }

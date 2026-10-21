@@ -8,7 +8,7 @@
       name="description"
       content="My Assets 交互作品集，翻阅六个产品与设计项目，支持桌面、手机和离线访问。"
     />
-    <link rel="preload" as="image" href="./cases/zhuozai/media/chengxia.png" fetchpriority="high" />
+    <link rel="preload" as="image" href="./cases/zhuozai/media/previews/chengxia.webp" fetchpriority="high" />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./cases/zhuozai/case.css" />
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./cases/zhuozai/card.css" />
     <link rel="stylesheet" href="./cases/yanshuju/case.css" />
     <link rel="stylesheet" href="./cases/yanshuju/card.css" />
+    <link rel="stylesheet" href="./loading.css" />
     <title>My Assets Three — 交互作品集</title>
   </head>
   <body>
@@ -54,7 +55,7 @@
               <span class="zz-card-art" aria-hidden="true">
                 <span class="zz-card-window"></span>
                 <svg class="zz-card-spark" viewBox="0 0 56 56"><path d="M28 2 33 22 53 28 33 34 28 54 22 34 2 28 22 22Z"/></svg>
-                <img class="zz-card-character" src="cases/zhuozai/media/chengxia.png" width="1024" height="1536" alt="" decoding="sync" fetchpriority="high">
+                <img class="zz-card-character" src="cases/zhuozai/media/previews/chengxia.webp" data-full-src="cases/zhuozai/media/chengxia.png" data-image-resolution="preview" width="1024" height="1536" alt="" decoding="sync" fetchpriority="high">
                 <span class="zz-card-message">我在呢。</span>
               </span>
               <span class="zz-card-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 5h22a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H18L8 38v-7a6 6 0 0 1-5-6V11a6 6 0 0 1 6-6Z"/><path d="M14 15v7m12-7v7"/></svg></span>
@@ -63,8 +64,8 @@
               <span class="zz-card-signoff" aria-hidden="true">陪伴，就在身边。</span>
             </button>
             <button class="project-card tone-yanshuju" data-card="1" type="button" aria-label="切换到项目：研数据" tabindex="-1">
-              <span class="yd-card-art" aria-hidden="true"><svg class="yd-card-network" viewBox="0 0 200 230"><path d="M20 36H85V90H170M85 90v90H150M20 36v130h65M150 180v35M85 90h-50"/><g><circle cx="20" cy="36" r="12"/><circle cx="85" cy="90" r="10"/><circle cx="170" cy="90" r="7"/><circle cx="150" cy="180" r="11"/><circle cx="35" cy="90" r="5"/><circle cx="150" cy="215" r="5"/></g></svg><img src="cases/yanshuju/media/ip.webp" width="1024" height="1024" alt="" decoding="async"></span>
-              <span class="card-index">02 / 07</span><span class="card-title-wrap"><span class="card-title">研数据</span><span class="card-cn-title">考研信息探索<br>与择校辅助</span></span><span class="yd-card-data" aria-hidden="true"><i></i><i></i><i></i><span>比较 · 选择</span></span>
+              <span class="yd-card-art" aria-hidden="true"><svg class="yd-card-network" viewBox="0 0 200 230"><path d="M20 36H85V90H170M85 90v90H150M20 36v130h65M150 180v35M85 90h-50"/><g><circle cx="20" cy="36" r="12"/><circle cx="85" cy="90" r="10"/><circle cx="170" cy="90" r="7"/><circle cx="150" cy="180" r="11"/><circle cx="35" cy="90" r="5"/><circle cx="150" cy="215" r="5"/></g></svg><img src="cases/yanshuju/media/previews/ip.webp" data-full-src="cases/yanshuju/media/ip.webp" data-image-resolution="preview" width="1024" height="1024" alt="" decoding="async"></span>
+              <span class="card-index">02 / 07</span><span class="card-title-wrap"><span class="card-title">研数据</span><span class="card-cn-title">考研信息探索<br>与择校辅助</span></span>
             </button>
             <button class="project-card tone-1" data-card="2" type="button" aria-label="切换到项目：Brand Atlas">
               <span class="card-mark" aria-hidden="true">A—01</span>
@@ -195,6 +196,7 @@
           </article>
         </section>
 
+        <div class="page-transition" id="page-transition" aria-hidden="true"><div class="page-transition-content"><span class="page-transition-track" aria-hidden="true"></span><p class="page-transition-label" role="status" aria-live="polite"></p></div></div>
         <p class="sr-only" id="live-status" aria-live="polite"></p>
         <noscript><p class="noscript">需要启用 JavaScript 才能体验卡片交互。</p></noscript>
       </section>
