@@ -1,11 +1,12 @@
 import { captures } from './captures.js';
-export const zhuozaiProject={number:'01',slug:'zhuozai-ai',title:'桌崽 AI',cnTitle:'AI 陪伴产品设计',category:'AI 陪伴 · 产品与交互',year:'2026',role:'产品与交互复盘',duration:'持续迭代',description:'从角色交流到日常陪伴，探索视频事件、共同记忆与桌面陪伴的产品路径。',challenge:'怎样把一次角色交流，延续成有上下文、有共同经历、也能由用户掌控节奏的陪伴？',approach:'围绕关键场景呈现界面与交互，说明角色交流、情绪回应与日常陪伴的设计。',outcomes:['连接角色交流与日常陪伴','梳理核心交互的连续性','呈现关键设计取舍'],tone:'#ffe344',coverStyle:'companion',mark:'Z—01'};
+export const zhuozaiProject={number:'01',slug:'zhuozai-ai',title:'桌崽 AI',cnTitle:'AI 陪伴产品设计',category:'AI 陪伴 · 产品与交互',year:'2026',role:'产品与交互复盘',duration:'持续迭代',description:'从角色交流到日常陪伴，探索视频事件、共同记忆与桌面陪伴的产品路径。',challenge:'怎样把一次角色交流，延续成有上下文、有共同经历、也能由用户掌控节奏的陪伴？',approach:'围绕关键场景呈现界面与交互，说明角色交流、情绪回应与日常陪伴的设计。',outcomes:['连接角色交流与日常陪伴','梳理核心交互的连续性','呈现关键设计取舍'],tone:'#ffe344',coverStyle:'companion',mark:'Z—01'}; // taste-skill-ignore: Existing portfolio project index, retained for route metadata.
 const base='cases/zhuozai/media/';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function shot(name,alt,cls='',caption=''){
  const m=captures[name];if(!m)throw Error('Missing capture: '+name);
- const src=base+'flows/'+name+'.png';
- return `<figure class="zz-shot ${cls}"><button type="button" class="zz-image" data-zz-view="${src}" data-zz-caption="${esc(alt)}" aria-label="放大查看：${esc(alt)}"><img src="${src}" width="${m.width}" height="${m.height}" alt="${esc(alt)}" loading="lazy" decoding="async"><span class="zz-enlarge" aria-hidden="true">↗</span></button>${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
+ const src=base+'flows/'+name+'.webp';
+ const focus=captures[name+'-focus'],display=focus?base+'flows/'+name+'-focus.webp':src,dm=focus||m;
+ return `<figure class="zz-shot ${cls}" style="--capture-width:${dm.width}px"><div class="zz-media-viewport" tabindex="0" role="region" aria-label="${esc(alt)}，可横向查看"><button type="button" class="zz-image" data-zz-view="${src}" data-zz-caption="${esc(alt)}" aria-label="放大查看：${esc(alt)}"><img src="${display}" width="${dm.width}" height="${dm.height}" alt="${esc(alt)}" loading="lazy" decoding="async"><span class="zz-enlarge" aria-hidden="true">↗</span></button></div>${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`;
 }
 const chapter=(title,lead)=>`<header class="zz-chapter-head"><h2>${title}</h2><p>${lead}</p></header>`;
 const note=(title,text)=>`<p class="zz-note"><strong>${title}。</strong>${text}</p>`;
@@ -13,7 +14,7 @@ const label=(n,title)=>`<div class="zz-panel-label"><span aria-hidden="true">${n
 const nav=[['context','产品定位'],['meet','角色发现'],['chat','文字对话'],['call','视频与事件'],['memory','共同记忆'],['pet','桌面陪伴'],['theater','双人剧场']];
 export function renderZhuozaiCase(){return `<div class="zz-case">
 <header class="zz-cover" id="zz-top">
- <div class="zz-cover-title"><div><p class="zz-eyebrow">AI 陪伴产品设计</p><h1 id="zz-title">桌崽 <span>AI</span></h1></div><div class="zz-cover-intro"><p>角色交流与日常陪伴</p><span>让聊天、共同经历与桌面陪伴，<br>围绕同一个角色延续。</span><button type="button" data-case-jump="zz-call">查看重点设计 <span aria-hidden="true">↗</span></button></div></div>
+ <div class="zz-cover-title"><div><h1 id="zz-title">桌崽 <span>AI</span></h1></div><div class="zz-cover-intro"><p>角色交流与日常陪伴</p><span>让聊天、共同经历与桌面陪伴，<br>围绕同一个角色延续。</span><button type="button" data-case-jump="zz-call">查看重点设计 <span aria-hidden="true">↗</span></button></div></div>
  <div class="zz-cover-stage">${shot('call-event','桌崽视频通话：角色、消息与独立事件窗口','zz-cover-ui')}</div>
  <p class="zz-cover-caption">产品与交互设计<span>点击界面可查看原图</span></p>
 </header>

@@ -1,7 +1,7 @@
 export const captures = {
   "discover": {
-    "width": 1218,
-    "height": 1102,
+    "width": 1218.0,
+    "height": 1102.0,
     "pins": [
       {
         "label": "直接开口",
@@ -21,11 +21,12 @@ export const captures = {
         "x": 93.47,
         "y": 52.79
       }
-    ]
+    ],
+    "density": 2
   },
   "role-detail": {
-    "width": 720,
-    "height": 454,
+    "width": 716.0,
+    "height": 450.0,
     "pins": [
       {
         "label": "先理解角色",
@@ -39,7 +40,8 @@ export const captures = {
         "x": 86.26,
         "y": 71.79
       }
-    ]
+    ],
+    "density": 2
   },
   "role-library": {
     "width": 285,
@@ -47,8 +49,8 @@ export const captures = {
     "pins": []
   },
   "create-look": {
-    "width": 1100,
-    "height": 632,
+    "width": 1100.0,
+    "height": 632.0,
     "pins": [
       {
         "label": "预置形象与上传",
@@ -62,16 +64,18 @@ export const captures = {
         "x": 94.39,
         "y": 1.58
       }
-    ]
+    ],
+    "density": 2
   },
   "create-validation": {
-    "width": 659,
-    "height": 687,
-    "pins": []
+    "width": 659.0,
+    "height": 687.0,
+    "pins": [],
+    "density": 2
   },
   "create-personality": {
-    "width": 1100,
-    "height": 687,
+    "width": 1100.0,
+    "height": 687.0,
     "pins": [
       {
         "label": "身份与设定",
@@ -85,11 +89,12 @@ export const captures = {
         "x": 92.67,
         "y": 70.95
       }
-    ]
+    ],
+    "density": 2
   },
   "create-confirm": {
-    "width": 1100,
-    "height": 606,
+    "width": 1100.0,
+    "height": 606.0,
     "pins": [
       {
         "label": "创建前复核",
@@ -103,12 +108,14 @@ export const captures = {
         "x": 48.84,
         "y": 63.23
       }
-    ]
+    ],
+    "density": 2
   },
   "create-first-chat": {
-    "width": 1146,
-    "height": 850,
-    "pins": []
+    "width": 1146.0,
+    "height": 818.0,
+    "pins": [],
+    "density": 2
   },
   "chat-start": {
     "width": 1146,
@@ -164,9 +171,10 @@ export const captures = {
     ]
   },
   "chat-draft": {
-    "width": 849,
-    "height": 160,
-    "pins": []
+    "width": 849.0,
+    "height": 160.0,
+    "pins": [],
+    "density": 2
   },
   "chat-cancel": {
     "width": 853,
@@ -192,14 +200,16 @@ export const captures = {
     ]
   },
   "memory-edit": {
-    "width": 720,
-    "height": 682,
-    "pins": []
+    "width": 716.0,
+    "height": 678.0,
+    "pins": [],
+    "density": 2
   },
   "memory-collection": {
-    "width": 1146,
-    "height": 256,
-    "pins": []
+    "width": 1146.0,
+    "height": 256.0,
+    "pins": [],
+    "density": 2
   },
   "memory-filter": {
     "width": 1218,
@@ -207,14 +217,16 @@ export const captures = {
     "pins": []
   },
   "memory-delete": {
-    "width": 720,
-    "height": 278,
-    "pins": []
+    "width": 716.0,
+    "height": 274.0,
+    "pins": [],
+    "density": 2
   },
   "call-connecting": {
-    "width": 1174,
-    "height": 684,
-    "pins": []
+    "width": 1174.0,
+    "height": 684.0,
+    "pins": [],
+    "density": 2
   },
   "call-normal": {
     "width": 1174,
@@ -241,8 +253,8 @@ export const captures = {
     ]
   },
   "call-event": {
-    "width": 1174,
-    "height": 684,
+    "width": 1174.0,
+    "height": 684.0,
     "pins": [
       {
         "label": "起因持续可见",
@@ -262,7 +274,8 @@ export const captures = {
         "x": 63.22,
         "y": 82.89
       }
-    ]
+    ],
+    "density": 2
   },
   "event-start": {
     "width": 304,
@@ -295,13 +308,14 @@ export const captures = {
     "pins": []
   },
   "call-ended": {
-    "width": 1174,
-    "height": 684,
-    "pins": []
+    "width": 1174.0,
+    "height": 684.0,
+    "pins": [],
+    "density": 2
   },
   "pet-overview": {
-    "width": 1146,
-    "height": 611,
+    "width": 1146.0,
+    "height": 611.0,
     "pins": [
       {
         "label": "角色与面板一起移动",
@@ -321,41 +335,48 @@ export const captures = {
         "x": 90,
         "y": 89.47
       }
-    ]
+    ],
+    "density": 2
   },
   "pet-full": {
-    "width": 308,
-    "height": 536,
-    "pins": []
+    "width": 292.0,
+    "height": 522.0,
+    "pins": [],
+    "density": 2
   },
   "pet-avatar": {
-    "width": 308,
-    "height": 433,
-    "pins": []
+    "width": 292.0,
+    "height": 419.0,
+    "pins": [],
+    "density": 2
   },
   "pet-small": {
-    "width": 308,
-    "height": 395,
-    "pins": []
+    "width": 292.0,
+    "height": 380.0,
+    "pins": [],
+    "density": 2
   },
   "pet-reply": {
-    "width": 308,
-    "height": 556,
-    "pins": []
+    "width": 292.0,
+    "height": 398.0,
+    "pins": [],
+    "density": 2
   },
   "pet-paused": {
-    "width": 1146,
-    "height": 611,
-    "pins": []
+    "width": 1146.0,
+    "height": 611.0,
+    "pins": [],
+    "density": 2
   },
   "pet-collapsed": {
-    "width": 161,
-    "height": 165,
-    "pins": []
+    "width": 145.0,
+    "height": 150.0,
+    "pins": [],
+    "density": 2
   },
   "pet-hidden": {
-    "width": 1146,
-    "height": 611,
+    "width": 1146.0,
+    "height": 611.0,
     "pins": [
       {
         "label": "保留恢复入口",
@@ -363,7 +384,8 @@ export const captures = {
         "x": 96.8,
         "y": 4.26
       }
-    ]
+    ],
+    "density": 2
   },
   "pet-drag": {
     "width": 1146,
@@ -378,9 +400,10 @@ export const captures = {
     ]
   },
   "pet-character": {
-    "width": 308,
-    "height": 556,
-    "pins": []
+    "width": 292.0,
+    "height": 380.0,
+    "pins": [],
+    "density": 2
   },
   "theater-setup": {
     "width": 1146,
@@ -407,9 +430,10 @@ export const captures = {
     ]
   },
   "theater-playing": {
-    "width": 1146,
-    "height": 728,
-    "pins": []
+    "width": 1146.0,
+    "height": 728.0,
+    "pins": [],
+    "density": 2
   },
   "theater-script": {
     "width": 783,
@@ -422,9 +446,9 @@ export const captures = {
     "pins": []
   },
   "theater-save": {
-    "width": 720,
-    "height": 614,
-    "pins": []
+    "width": 716.0,
+    "height": 610.0,
+    "density": 2
   },
   "theater-collection": {
     "width": 1218,
@@ -432,53 +456,78 @@ export const captures = {
     "pins": []
   },
   "event-start-current": {
-    "width": 304,
-    "height": 261,
-    "pins": []
+    "width": 304.0,
+    "height": 261.0,
+    "pins": [],
+    "density": 2
   },
   "event-paused": {
-    "width": 304,
-    "height": 261,
-    "pins": []
+    "width": 304.0,
+    "height": 261.0,
+    "pins": [],
+    "density": 2
   },
   "event-progress-current": {
-    "width": 304,
-    "height": 261,
-    "pins": []
+    "width": 304.0,
+    "height": 261.0,
+    "pins": [],
+    "density": 2
   },
   "event-success-current": {
-    "width": 304,
-    "height": 261,
-    "pins": []
+    "width": 304.0,
+    "height": 261.0,
+    "pins": [],
+    "density": 2
   },
   "chat-focus": {
-    "width": 853,
-    "height": 818,
-    "pins": []
+    "width": 853.0,
+    "height": 818.0,
+    "pins": [],
+    "density": 2
   },
   "chat-waiting-detail": {
-    "width": 849,
-    "height": 159,
-    "pins": []
+    "width": 849.0,
+    "height": 160.0,
+    "pins": [],
+    "density": 2
   },
   "memory-filter-controls": {
-    "width": 776,
-    "height": 111,
-    "pins": []
+    "width": 776.0,
+    "height": 111.0,
+    "pins": [],
+    "density": 2
   },
   "theater-setup-panel": {
-    "width": 320,
-    "height": 727,
-    "pins": []
+    "width": 320.0,
+    "height": 728.0,
+    "pins": [],
+    "density": 2
   },
   "theater-transcript-detail": {
-    "width": 781,
-    "height": 214,
-    "pins": []
+    "width": 781.0,
+    "height": 215.0,
+    "pins": [],
+    "density": 2
   },
   "theater-play-controls": {
-    "width": 781,
-    "height": 73,
-    "pins": []
+    "width": 781.0,
+    "height": 74.0,
+    "pins": [],
+    "density": 2
+  },
+  "create-confirm-focus": {
+    "width": 659.0,
+    "height": 606.0,
+    "density": 2
+  },
+  "create-look-focus": {
+    "width": 659.0,
+    "height": 632.0,
+    "density": 2
+  },
+  "create-personality-focus": {
+    "width": 659.0,
+    "height": 687.0,
+    "density": 2
   }
 };

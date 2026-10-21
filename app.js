@@ -1,8 +1,11 @@
 import * as THREE from "./vendor/three.module.min.js";
 import { zhuozaiProject, renderZhuozaiCase, bindZhuozaiCase } from "./cases/zhuozai/case.js";
 
+import { yanshujuProject, renderYanshujuCase, bindYanshujuCase } from "./cases/yanshuju/case.js";
+
 const projects = [
   zhuozaiProject,
+  yanshujuProject,
   {
     number: "01",
     slug: "brand-atlas",
@@ -124,8 +127,8 @@ const lowPowerDevice =
   (Number.isFinite(navigator.deviceMemory) && navigator.deviceMemory <= 4) ||
   (Number.isFinite(navigator.hardwareConcurrency) && navigator.hardwareConcurrency <= 4);
 const pixelBudget = lowPowerDevice ? 2400000 : 4200000;
-const rotations = [-6, 4, -3, 5, -1, 3];
-const xOffsets = [0, -5, 4, -3, 2, -4];
+const rotations = [-6, 4, -3, 5, -1, 3, -4];
+const xOffsets = [0, -5, 4, -3, 2, -4, 3];
 
 const metrics = {
   threeRevision: THREE.REVISION,
@@ -410,7 +413,7 @@ function initThree() {
       const lineMesh = new THREE.Mesh(lineGeometry, lineMaterials[index]);
       lineMesh.position.z = (cardGeometry.boundingBox?.max.z || 0.024) + 0.0015;
       // Bespoke covers supply their own artwork, including the no-WebGL fallback.
-      lineMesh.visible = projects[index].coverStyle !== "companion";
+      lineMesh.visible = !projects[index].coverStyle;
       lineMesh.frustumCulled = true;
       mesh.add(lineMesh);
       lineMeshes.push(lineMesh);
@@ -843,8 +846,13 @@ function fillDetail(index) {
   detailHero.classList.toggle("is-dark-text", project.slug === "civic-signal");
   const isZhuozai = project.slug === "zhuozai-ai";
   detailView.classList.toggle("is-zhuozai", isZhuozai);
-  detailHero.hidden = isZhuozai;
-  document.querySelector(".detail-content").hidden = isZhuozai;
+  const isYanshuju = project.slug === "yanshuju";
+  detailView.classList.toggle("is-yanshuju", isYanshuju);
+  detailHero.hidden = isZhuozai || isYanshuju;
+  document.querySelector(".detail-content").hidden = isZhuozai || isYanshuju;
+  const ydHost = document.querySelector("#yanshuju-case");
+  ydHost.hidden = !isYanshuju;
+  if (isYanshuju && !ydHost.hasChildNodes()) { ydHost.innerHTML = renderYanshujuCase(); bindYanshujuCase(ydHost); }
   const caseHost = document.querySelector("#zhuozai-case");
   caseHost.hidden = !isZhuozai;
   if (isZhuozai && !caseHost.hasChildNodes()) { caseHost.innerHTML = renderZhuozaiCase(); bindZhuozaiCase(caseHost); }
