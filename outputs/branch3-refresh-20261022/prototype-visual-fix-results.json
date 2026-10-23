@@ -1,0 +1,83 @@
+[
+  {
+    "bubbleBottom": 324.796875,
+    "portraitTop": 334.796875,
+    "gap": 10,
+    "width": 1440,
+    "overflow": false,
+    "mode": "full",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 488.796875,
+    "portraitTop": 498.796875,
+    "gap": 10,
+    "width": 1440,
+    "overflow": false,
+    "mode": "avatar",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 442.796875,
+    "portraitTop": 452.796875,
+    "gap": 10,
+    "width": 1440,
+    "overflow": false,
+    "mode": "compact",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 445,
+    "portraitTop": 455,
+    "gap": 10,
+    "width": 390,
+    "overflow": false,
+    "mode": "full",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 567,
+    "portraitTop": 577,
+    "gap": 10,
+    "width": 390,
+    "overflow": false,
+    "mode": "avatar",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 528,
+    "portraitTop": 538,
+    "gap": 10,
+    "width": 390,
+    "overflow": false,
+    "mode": "compact",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 435,
+    "portraitTop": 445,
+    "gap": 10,
+    "width": 320,
+    "overflow": false,
+    "mode": "full",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 557,
+    "portraitTop": 567,
+    "gap": 10,
+    "width": 320,
+    "overflow": false,
+    "mode": "avatar",
+    "passCheck": true
+  },
+  {
+    "bubbleBottom": 518,
+    "portraitTop": 528,
+    "gap": 10,
+    "width": 320,
+    "overflow": false,
+    "mode": "compact",
+    "passCheck": true
+  }
+]

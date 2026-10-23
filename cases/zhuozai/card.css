@@ -131,3 +131,7 @@
   line-height: 1.5;
   letter-spacing: .02em;
 }
+
+/* v2.24：方案 C 的透明破形立绘和点阵紫色舞台。 */
+.project-card.tone-zhuozai .zz-card-window{background-color:#8259e9;background-image:radial-gradient(#ffffff80 .8px,transparent 1.2px);background-size:7px 7px}
+.project-card.tone-zhuozai .zz-card-character{width:84%;left:33%;top:8%}

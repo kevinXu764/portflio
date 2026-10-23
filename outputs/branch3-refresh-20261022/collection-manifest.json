@@ -1,0 +1,17 @@
+{
+  "clip": {
+    "x": 0,
+    "y": 0,
+    "width": 2400,
+    "height": 1440,
+    "scale": 1
+  },
+  "viewport": {
+    "width": 2400,
+    "height": 1440,
+    "dpr": 1.5
+  },
+  "bytes": 4112714,
+  "sha256": "6e4f69bf1012e101c613770b573f3e44038d4388aedce32797c6b9c9662fe112",
+  "sources": "branch3 v0.4; all source Web viewport widths 1440 CSS px, DPR 2"
+}

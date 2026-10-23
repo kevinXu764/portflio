@@ -1,1147 +1,248 @@
-[
-  {
-    "path": "DESIGN.md",
-    "bytes": 21172,
-    "sha256": "83cdf4e0bc5111d5a6c920bc8424723a185c0b1d377c5c921af8620aedca5f03"
-  },
-  {
-    "path": "TYPOGRAPHY.md",
-    "sha256": "9fdbca7682e647dfe82088ef06f696084af54c47f7fb0c19f24ec9229b98bd1c",
-    "bytes": 3175
-  },
-  {
-    "path": "UI-REVIEW.md",
-    "sha256": "df17f6b3c0def9703f1bd5f276a044ecdbdab041dd757ba22ae4a003da6675c6",
-    "bytes": 5477
-  },
-  {
-    "path": "app.js",
-    "bytes": 42968,
-    "sha256": "785f47207a648afafcc985d596efddebf6e301771b20c8c59944179f481129ad"
-  },
-  {
-    "path": "assets/app.bundle.js",
-    "bytes": 643175,
-    "sha256": "5185845119d5b067b46133db4c1f3758585e4481a08b5ea612c4f63371e6483f"
-  },
-  {
-    "path": "build-static.cjs",
-    "bytes": 1323,
-    "sha256": "1f93be0d5619569444ede6844c87af4e047a42f0ab58732ea14d9d8d26f2cd21"
-  },
-  {
-    "path": "cases/yanshuju/captures.js",
-    "bytes": 3234,
-    "sha256": "e7d94c4cbebf0e7e91ca2f4e806e1b71b5c12da10263a1564f58241baf6a756e"
-  },
-  {
-    "path": "cases/yanshuju/card.css",
-    "bytes": 993,
-    "sha256": "71819a5fa6fb0b0b41bb1ba15577b5662dc81c14146838a77e4952aade4d78a6"
-  },
-  {
-    "path": "cases/yanshuju/case.css",
-    "bytes": 13659,
-    "sha256": "d3d0e1a9e60298175128eff163e0c95c656318ee50cbf512b6f541494538fa55"
-  },
-  {
-    "path": "cases/yanshuju/case.js",
-    "bytes": 12223,
-    "sha256": "aa85127fb16774849e8ef5c7a909a66577dc1801e829eb13720ebe829a2eb648"
-  },
-  {
-    "path": "cases/yanshuju/mechanism.js",
-    "bytes": 3548,
-    "sha256": "d2aacd2c5e864980aff6e40b98c83ce377dc32a7e2b90c5aca9736bd7ac7338c"
-  },
-  {
-    "path": "cases/yanshuju/media/budget-impact.webp",
-    "bytes": 39738,
-    "sha256": "d4628da9569a5514ad4d49a0ce35a50eae44db22628ba75f69fa8254ec5caec0"
-  },
-  {
-    "path": "cases/yanshuju/media/budget-input.webp",
-    "bytes": 18400,
-    "sha256": "f596930d8dcc6fb9cd5cdb054964d7b4cbd86688fcde0538df23d6a9a6509759"
-  },
-  {
-    "path": "cases/yanshuju/media/budget-revision.webp",
-    "bytes": 39582,
-    "sha256": "d299b687cd7c27e64045f0d025694b1a1d7d5f502921f78135e9272bba268f71"
-  },
-  {
-    "path": "cases/yanshuju/media/budget-slider.webp",
-    "bytes": 11828,
-    "sha256": "e572beb75f493ff374522a68b9f522558c3a09cd455862c7542bb5a974e13525"
-  },
-  {
-    "path": "cases/yanshuju/media/candidate-excluded.webp",
-    "bytes": 23304,
-    "sha256": "a3e040a032e5d25b57b0afe7b074b3118ffb31b55f2a9954b9ccc36f0f222ad1"
-  },
-  {
-    "path": "cases/yanshuju/media/candidate-order.webp",
-    "bytes": 15322,
-    "sha256": "b3f6b6746dcec69280cee9827ca0f9798f074cb09ff5db264e1ee685fba444c5"
-  },
-  {
-    "path": "cases/yanshuju/media/candidate-reason.webp",
-    "bytes": 23734,
-    "sha256": "4b9ac6b6caefd531dc2014bee7f59ea7780b6ad45419ce06711adf8594943386"
-  },
-  {
-    "path": "cases/yanshuju/media/candidate-saved.webp",
-    "bytes": 24164,
-    "sha256": "8ad8c3a53a8da25aa0d3b59b852a6d53f0bfe87655049253b5bf0dbeed126503"
-  },
-  {
-    "path": "cases/yanshuju/media/chat-compare.webp",
-    "bytes": 36234,
-    "sha256": "9e399e629dc93ddd48d2beb7532b4f349d7bdea334c74cf2df95f0b890e1723c"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-cost-main.webp",
-    "bytes": 61418,
-    "sha256": "6e3e0f8b3f56899fc8db6fff3d4f15e759c311a7a2b18cfe522e4009cc543c68"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-matrix.webp",
-    "bytes": 140220,
-    "sha256": "90bef3de1a1cd29eb305718f9aa653c204f7ef31495566bc9a84a70504ca367a"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-requirements-main.webp",
-    "bytes": 76912,
-    "sha256": "652db950161ef9ceba7a5eb679ba574632ae0e86c053b7050b3d23939f64fe7a"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-retest-main.webp",
-    "bytes": 85792,
-    "sha256": "e24a0d39e06d47c265b4782a93f4ef7a2875b51f6962e207ea1c902210f5c98e"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-seats-main.webp",
-    "bytes": 67482,
-    "sha256": "c3a5c063231bf2c4c29c6114ab8deae3a0da1d2b31e170c97b3a2020235211e5"
-  },
-  {
-    "path": "cases/yanshuju/media/compare-trend-main.webp",
-    "bytes": 71576,
-    "sha256": "7c8c1708954019b94a2a9478494bc1e4f209b706c004b8bd0ac68f6704815588"
-  },
-  {
-    "path": "cases/yanshuju/media/cost-discuss.webp",
-    "bytes": 23438,
-    "sha256": "46edac94058c009cc08d5466a8bc8fd39fb9d950790c152d1f8c368fae59a714"
-  },
-  {
-    "path": "cases/yanshuju/media/discussion.webp",
-    "bytes": 111902,
-    "sha256": "31227a754df72623de0130af3f829c61ff8d95645d8fa5f8e67f18528b752c74"
-  },
-  {
-    "path": "cases/yanshuju/media/document-evidence.webp",
-    "bytes": 3184,
-    "sha256": "61d8961f59b79705bd2c308dc4023de88a7fc6169d0ef52182ce1e2504a35e7d"
-  },
-  {
-    "path": "cases/yanshuju/media/evidence-result.webp",
-    "bytes": 7000,
-    "sha256": "51bf34ff04f5b7c0fa3a418827f74b64a5c9afcfabe72b8138877a77feda623e"
-  },
-  {
-    "path": "cases/yanshuju/media/graph-definition.webp",
-    "bytes": 34794,
-    "sha256": "ac3a50c2d0a72f9eb867688caecac9150b73f337f73f9d0d5bbae9f1503afa95"
-  },
-  {
-    "path": "cases/yanshuju/media/graph-focus.webp",
-    "bytes": 37712,
-    "sha256": "6d28da15f2711c8bcb4e968511bc4601a1907c59621c6fda444736d2773db511"
-  },
-  {
-    "path": "cases/yanshuju/media/graph-overview.webp",
-    "bytes": 89200,
-    "sha256": "9c2e69221cbef8c2127e42a671f910e02fee5d361796128abed1fa3020780de6"
-  },
-  {
-    "path": "cases/yanshuju/media/graph-search.webp",
-    "bytes": 16082,
-    "sha256": "832ffcd12bbc5be8042f584f591272044d4605ff6135e6f56b45889905208862"
-  },
-  {
-    "path": "cases/yanshuju/media/graph-selected.webp",
-    "bytes": 105558,
-    "sha256": "384b296b244ec2e000e83c9ec69a081b7b727f5ea1dd0a5a79e6d166fae9050f"
-  },
-  {
-    "path": "cases/yanshuju/media/home.webp",
-    "bytes": 457778,
-    "sha256": "52db7a0e5d3b324a7d18ae3c4e9fef5f99d93e61cf31b8732d69f65dc8c40ca3"
-  },
-  {
-    "path": "cases/yanshuju/media/interest-choices.webp",
-    "bytes": 21600,
-    "sha256": "ad1ea9622356aa5037752dfc80d39ff758fa94216425ac4893ca6af62ef8a0bf"
-  },
-  {
-    "path": "cases/yanshuju/media/ip.webp",
-    "bytes": 121714,
-    "sha256": "c8b57e37946ae1898b53a40a39cc81f646b45ecf743c2225ba743bd918fe179e"
-  },
-  {
-    "path": "cases/yanshuju/media/knowledge-demo.mp4",
-    "bytes": 175957,
-    "sha256": "0547e4bbe00d800ea9bf0f471e47899b9ec5d6d15bd518880887cfc96ee6087f"
-  },
-  {
-    "path": "cases/yanshuju/media/mechanism-chart.webp",
-    "bytes": 13574,
-    "sha256": "235c2cce5f2ee6867b8a848c40df5de328f04f4e6bf9eddb92c94475a8624eec"
-  },
-  {
-    "path": "cases/yanshuju/media/prep-confirm.webp",
-    "bytes": 29424,
-    "sha256": "cba130684e9ff9a134c976c1eb63d4f28f819223d438e002277585dfc8429b0b"
-  },
-  {
-    "path": "cases/yanshuju/media/prep-item.webp",
-    "bytes": 14796,
-    "sha256": "7e4821e13e459c27b0ddabbf93144e493461c6755e9509646fd422f8faef9ffa"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/budget-impact.webp",
-    "bytes": 4972,
-    "sha256": "33eddf06d5f11b428247ba8df0fc2b84127da8d45d989a3b5e135540501f9181"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/budget-input.webp",
-    "bytes": 2418,
-    "sha256": "8b8bc97dceedb37abf3a993b0be137e1f9925db51e47d0916c9bd65a1a6b0fd7"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/budget-revision.webp",
-    "bytes": 4802,
-    "sha256": "46fe97110011598b21092de98e383c6796c0a173e5ebda63da8e9fa2e3eef7c4"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/budget-slider.webp",
-    "bytes": 1498,
-    "sha256": "a05e4202bbfa63e90f097f5f4d3118ce6f4e844596131a08aa65b42494186f41"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/candidate-excluded.webp",
-    "bytes": 3320,
-    "sha256": "d148c2c7a5bf052a2f4f4d4019b42669750a4a0cc918afa6fe13ec693f7a54e2"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/candidate-order.webp",
-    "bytes": 3376,
-    "sha256": "fade8aa69dfd7822d5e89a22c957cef6e07863f2564c46fbd8d3f933f417e826"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/candidate-reason.webp",
-    "bytes": 9752,
-    "sha256": "ea6e5b5513f5b28270d2861e4f7228e42f6afd8f976d751f47ab48f7bbfea0d3"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/candidate-saved.webp",
-    "bytes": 3380,
-    "sha256": "ad6e9124e14dd828fb6f4dd792218342ddc80dae612d46450dfbe40cd32efc65"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/chat-compare.webp",
-    "bytes": 4824,
-    "sha256": "46c32c4b37fd9366967e93a8c2c8a425be022b7d722da18fc52af5785e87d5af"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-cost-main.webp",
-    "bytes": 6406,
-    "sha256": "896b70b9f739732724a0b1b2e5ee19ba9fa7a696762ac627bac59f1bba90768f"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-matrix.webp",
-    "bytes": 9836,
-    "sha256": "4f8fe1c252ff90df1a4b46886bfc65428b46e074da97d85328547a7ff7bee2dc"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-requirements-main.webp",
-    "bytes": 8876,
-    "sha256": "80136f00fc216ffe17a751b26385fc540ae755656c94009fb890b569d8d52a74"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-retest-main.webp",
-    "bytes": 10432,
-    "sha256": "b74530cfc9a5f52f7b8fb94c9a92e466776243d927dcd37988a17dff765ebc17"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-seats-main.webp",
-    "bytes": 7566,
-    "sha256": "ccbf91c761a1cb1dd2eb2b677ac41bb1f9fa779a0c5a47d6d972900cebb7bd9f"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/compare-trend-main.webp",
-    "bytes": 7910,
-    "sha256": "0b9b0a1e7e5e04845494de0014c2b9c62aee9f2adeda0c8306e1d1154481c1df"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/cost-discuss.webp",
-    "bytes": 3136,
-    "sha256": "7d7d94afc0c5fc5e701340d6f7dcf2c90b988a0d717004353ee786dc7182df88"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/discussion.webp",
-    "bytes": 12054,
-    "sha256": "716d5752adc3c8753f2ab2fc51b10236ad9401f993f06d008024b2385981a07e"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/document-evidence.webp",
-    "bytes": 1070,
-    "sha256": "bc7797ea3b43146e29d0cf1eebcf6d1acaf8f146331a5d10663c96342c375b29"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/evidence-result.webp",
-    "bytes": 1650,
-    "sha256": "eaefdddda5eb66e549081da8749c01bbab930c56d379ca1dffa2014c32ad5a58"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/graph-definition.webp",
-    "bytes": 14040,
-    "sha256": "0b697bb8d8caec481fb9ea8e15ae1ab78b67587128840c56f466377d467e33e8"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/graph-focus.webp",
-    "bytes": 3128,
-    "sha256": "38e4cb7468c9a1bf231963ae96ccdc3d84d17605d7aced2e4f5272d1c8130006"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/graph-overview.webp",
-    "bytes": 4192,
-    "sha256": "f09bddc492e7340e88d5082eacd40c8d8e53017180e1aa47fcc0656428e01c26"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/graph-search.webp",
-    "bytes": 7226,
-    "sha256": "bcde5c7b0ab0792ac23062740288187be52a325a4573525332ecf9eb0683c273"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/graph-selected.webp",
-    "bytes": 4380,
-    "sha256": "6d393b2530474266e76583a0c41f7eceedd647360c6275a91dc580ef43b582e9"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/home.webp",
-    "bytes": 6960,
-    "sha256": "d00b1287c6a267bfa8b68d280522833f6ec97a6d1ce87aed2a57c280a3d30b9b"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/interest-choices.webp",
-    "bytes": 2746,
-    "sha256": "14979807bf865739faaafdbf72f0520a1ed467f7966752ce84e5632ed99af22f"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/ip.webp",
-    "bytes": 20596,
-    "sha256": "8de1ad4f3d2e43d906d7aad093289ca893873f68cbd68984fed64b2981ee5aa8"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/mechanism-chart.webp",
-    "bytes": 2020,
-    "sha256": "bb4ed8ee7415ee198091986bb2becd05b748b2ed6270e5e4943683ceaf956e2e"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/prep-confirm.webp",
-    "bytes": 8056,
-    "sha256": "2c0c3987493b8f4217a9220c862a25174dbab2e73bfe4e4a69bc708abc757aa2"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/prep-item.webp",
-    "bytes": 5768,
-    "sha256": "ea016680d58849160d2b582a4ca5de2525a6947a3a77c10ed03ef8aaee8b9512"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/program-expanded.webp",
-    "bytes": 6870,
-    "sha256": "9211567749554ce971d1970b64022dbe99c2e74d7e80df2dbb9a7f228e77b855"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/ratings.webp",
-    "bytes": 6194,
-    "sha256": "b99a09200ac79204c34adcbc2b10ffe9b0b5a48e7e0b7b33e2b0b504dff3de51"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/training-evidence.webp",
-    "bytes": 4892,
-    "sha256": "5e50ac136d1e7d3a95ddb1252becbde497003f420ae7cd837c2dedd5f0df18f7"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/tree-overview.webp",
-    "bytes": 3594,
-    "sha256": "004da3eda7a0ab78914fdfe8e2b969839377be9b057729a5764bd51eba820198"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/tree-search.webp",
-    "bytes": 3800,
-    "sha256": "4f60b897b2b0c9db4f52faca34b42f8267dd1934fb5dace775fe5688ba2b45a8"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/tree-selected.webp",
-    "bytes": 1380,
-    "sha256": "e68a5cf63978163353d21b0fe0c8839579c8cda93a5a3af30460bc84831d1132"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/tree-trend.webp",
-    "bytes": 3750,
-    "sha256": "016323ccfc3ff3aef9e89ec5932a3eb3e0089f41c67310c5a687a83d66aecdb5"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/tree-tuition.webp",
-    "bytes": 3586,
-    "sha256": "bbd80b1129a68bea06382496bb416733012da8ed4f37b1e1e6b13b6ee64a72eb"
-  },
-  {
-    "path": "cases/yanshuju/media/program-expanded.webp",
-    "bytes": 42402,
-    "sha256": "e811d00101c98c8214effd3101d1e8bf4553f8ce66f8708f342b40dc68426f83"
-  },
-  {
-    "path": "cases/yanshuju/media/ratings.webp",
-    "bytes": 25820,
-    "sha256": "45ba3f09ce428ff6c6db7303aca9191dd034b212356c1267a6c29ec983d320b4"
-  },
-  {
-    "path": "cases/yanshuju/media/training-evidence.webp",
-    "bytes": 28684,
-    "sha256": "29a8144584b92fea4afe645bc24f16b69711a1ac5d773185faf17dfb016538e2"
-  },
-  {
-    "path": "cases/yanshuju/media/tree-overview.webp",
-    "bytes": 38982,
-    "sha256": "a6de24d534eabca688fedeb250b98eae658b4b8996cdef823b39c1fe06244d13"
-  },
-  {
-    "path": "cases/yanshuju/media/tree-search.webp",
-    "bytes": 46674,
-    "sha256": "b26cdf013fb57b78f9fdea444bff2fd287668445735aa7ba20b1ec6c1c7a203a"
-  },
-  {
-    "path": "cases/yanshuju/media/tree-selected.webp",
-    "bytes": 8016,
-    "sha256": "78934de49bbb75e3f7c24ee90934118c7094ce3c4b144131001be3f65c27e9a8"
-  },
-  {
-    "path": "cases/yanshuju/media/tree-trend.webp",
-    "bytes": 40386,
-    "sha256": "b291e3a3b984c13ba41c754910d2519822dbb6fc764ab09ac4aced2e3475a61d"
-  },
-  {
-    "path": "cases/yanshuju/media/tree-tuition.webp",
-    "bytes": 40502,
-    "sha256": "a6289e37fbf8bdd53c7e8542b00d81704f7acb8128a02a71d5bceb80b51c343e"
-  },
-  {
-    "path": "cases/yanshuju/案例编排说明.md",
-    "bytes": 10095,
-    "sha256": "a1dfbf3a08f6b5b761dd16a3ca3d89799a4d19ebb15b9deeb408ce39efa91040"
-  },
-  {
-    "path": "cases/zhuozai/captures.js",
-    "bytes": 11142,
-    "sha256": "8d32b1c754fbf489906f9803ba161de0cf27902569e90a270f58c0be64ebec7d"
-  },
-  {
-    "path": "cases/zhuozai/card.css",
-    "bytes": 3411,
-    "sha256": "307b1b7fb39914c577197d3a4596c5bec9702e2afa4863a6d3bfcbf837006f8f"
-  },
-  {
-    "path": "cases/zhuozai/case.css",
-    "bytes": 24435,
-    "sha256": "90d6afad077fc7ab10acc64cd3549bae19fd916fdc1ad16960c690bd74313f87"
-  },
-  {
-    "path": "cases/zhuozai/case.js",
-    "bytes": 16297,
-    "sha256": "243fe45d7b20e06c473b7b1ae3d785310731fa77c7182f102e4c2d1fce03f3e9"
-  },
-  {
-    "path": "cases/zhuozai/media/chengxia.png",
-    "bytes": 1637842,
-    "sha256": "a6a69addc12ac236f96b6d2e32781fa1382e494e0d16770a34d151d8693f0f16"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-connecting.webp",
-    "bytes": 475948,
-    "sha256": "2c94f397d7c5f448444d6276e12e92089ad91d5fe8b414805e7b9ddcffc39bdc"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-ended.webp",
-    "bytes": 443452,
-    "sha256": "324141d4f72adf87d8e2d99e3a78dc4d7b37a8fdd67eeeb796e7187735d848ae"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-event.webp",
-    "bytes": 472610,
-    "sha256": "0df62c0e56d980bcf922d3ed4f7fa25af4fc694aeb1996647a00102b0d00a747"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-normal.png",
-    "bytes": 257576,
-    "sha256": "e2cd57149875b8d47f4d9c6d372a1a9b891917062f81e01958258a02e90928f3"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-return.png",
-    "bytes": 259092,
-    "sha256": "35e1059ecb30f959ab59885e571cb61c96e6bcb2a30c26ebef14dc9f72e1caf9"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/call-success.png",
-    "bytes": 268278,
-    "sha256": "5ab1c44622f67db972b2ad86d0111c1c6265b59d2abfb812de4443fc898461bc"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-cancel.png",
-    "bytes": 71127,
-    "sha256": "c69e10bd0bc702a85cb55bea1f78b6822de46db58b28e360b6fa0ef5f7892333"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-draft.webp",
-    "bytes": 8844,
-    "sha256": "d74d2a88d2be8ceeaefbc03923dbce5d40f5ae282cc54dfca72fbc58632a42d6"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-focus.webp",
-    "bytes": 59498,
-    "sha256": "711c883394dd92e9f686569eafe465b138f4495fa94c2517a7abacb39c16847b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-reply.png",
-    "bytes": 142262,
-    "sha256": "dc1d557888869e2b04fd028d34943c6a32e3c1602faa852471b3e9c03074c034"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-start.png",
-    "bytes": 120109,
-    "sha256": "5ec1df24bd828035e53beed17a34299087d2fbcc6624264c2d3ba0bf71c436ca"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-thinking.png",
-    "bytes": 54483,
-    "sha256": "26074d8c096fdf2beaf45bbd4b1aa10cba0cd615ac92db137696c4fa5bcbb0fc"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/chat-waiting-detail.webp",
-    "bytes": 9522,
-    "sha256": "b443d42dd17d715d9497819cb82e6b0f21f50f5883aa313eb1310f5b1c6e46fd"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-confirm-focus.webp",
-    "bytes": 38814,
-    "sha256": "630a80cc7c26d7756ddd198fc5e48dbfe057345ba14df4d079d95f92f0cf55b5"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-confirm.webp",
-    "bytes": 205404,
-    "sha256": "f493c25dca69ed89d18ac933cb43ec4ab9cfc383edb7436ee8c33241ea63b277"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-first-chat.webp",
-    "bytes": 197248,
-    "sha256": "78340c1669ffccb3f15767b3683c099098affdddf58e82e0762c13e0d0ed35e5"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-look-focus.webp",
-    "bytes": 163380,
-    "sha256": "fd066700d9eb763712c6d7e655dded080dbd2fdbe17a3c531abf6e9deb99d79f"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-look.webp",
-    "bytes": 313692,
-    "sha256": "1b7626266d757dc4d088c9af711b9c0bcf6211b5671f0bd371db28b271c2fe5f"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-personality-focus.webp",
-    "bytes": 29566,
-    "sha256": "22dc76f95f7cca65153b7de46d3ad3e7351fd8ff7fea49d1b3963d822116cf77"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-personality.webp",
-    "bytes": 194018,
-    "sha256": "0b21c80fe870fef710f46a1d3e409805639e3614db9f87fe9fff32614f6bc0e9"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/create-validation.webp",
-    "bytes": 33716,
-    "sha256": "723d12be6c78cfd86cb4ce0e740318c770d5d5e719b234e6783e34864927fafd"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/discover.webp",
-    "bytes": 930826,
-    "sha256": "352e1faf3fcc1d593cc64d81710c0e10d428a1172df702998880fb29ebac137c"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-failed.png",
-    "bytes": 17806,
-    "sha256": "e4086d7335e29d0ad4e47c1f31bd81574b925d0690a2dec9668d369ac44ea30d"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-paused.webp",
-    "bytes": 18602,
-    "sha256": "1bf8e07e270606008980b801c177dba90c8c780a6ce112dc01113e487a65af16"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-progress-current.webp",
-    "bytes": 17766,
-    "sha256": "1b4a5c220da3b3cc22013de0ab0801d7dece32fc1b14783676d35da13a3579ef"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-progress.png",
-    "bytes": 17590,
-    "sha256": "6bff73865c9e62d98b49e6edc0e0cf8b7e1cf4870db5d20c7172c5e0c663dc52"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-start-current.webp",
-    "bytes": 17248,
-    "sha256": "9b6143daa17f01939454c3d458c40694edcbc2a9e129f054369280bcf7730101"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-start.png",
-    "bytes": 17504,
-    "sha256": "9a5ea70821b58b5ce00f09bcaf4d49376098b72c10b25d176be5b6030c5ac0c8"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-success-current.webp",
-    "bytes": 16024,
-    "sha256": "9e738739c062d2700dc51ab80ff6aeaa79e1eeaf86a45f6ad2c7f234cb3c8f18"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/event-success.png",
-    "bytes": 15799,
-    "sha256": "556c698f3aabbc219472acc5ee1760ce23b363c1b758738a17a07af75ca593cd"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-collection.webp",
-    "bytes": 55270,
-    "sha256": "b1b47f0cc1691a3be11765f58257db8bcbd0d1e30a3e87db08b73423c6a331d7"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-delete.webp",
-    "bytes": 16202,
-    "sha256": "9017bfe08aa1ee44fc8c111e6b3a5dc9b654887857adbc514fd1e1cf27f99b27"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-edit.webp",
-    "bytes": 30600,
-    "sha256": "645bf0b80a235389b019ba9e3faa90eb4946c3ed5ebbf1fc43f06a8ff8a3d6d2"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-filter-controls.webp",
-    "bytes": 9940,
-    "sha256": "3e5650204137e4f74893e6e5aa2f70a413f8c1964eb74b31c50700c6784fc433"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-filter.png",
-    "bytes": 100007,
-    "sha256": "bbeb8141b9256644301af441ad55da635afbf5015890e52fbf174bd52a570c3d"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/memory-from-chat.png",
-    "bytes": 104010,
-    "sha256": "c9f701ed1ba42bcb31ec5e2e757698a26e14b7b750e35f0fe16646ac6367cfba"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-avatar.webp",
-    "bytes": 99424,
-    "sha256": "9b6cfc89e32f21ce4965ded85858907c80190ac3eb9c43a03b1d1eb3207e1fee"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-character.webp",
-    "bytes": 43058,
-    "sha256": "76e88d18a22ba8ad580bd92e64bc6548e675ee790238e93184191fb401f3f317"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-collapsed.webp",
-    "bytes": 19290,
-    "sha256": "7cc4b0408996312b24ee280b13facfc38f62a6f29fe3a2874fe7f342497364cc"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-drag.png",
-    "bytes": 120206,
-    "sha256": "fcb6efe07cd5f4e994827b1e58036f4d7b07b98d35025768a0ee0f8e7071a620"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-full.webp",
-    "bytes": 108916,
-    "sha256": "af4e0e4bc4724e7c4174528377f2d09c56595a158906b43b5a7f07685ab1d64e"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-hidden.webp",
-    "bytes": 111460,
-    "sha256": "267965f41aea56ea7f86b87fe01887886db47fbcf1c426289f2b7029a3c5a08b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-overview.webp",
-    "bytes": 200338,
-    "sha256": "2c26c2c79a4f97f2883070d72557ea0de4f1eeaaff86d803d61035a91fcbd039"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-paused.webp",
-    "bytes": 125252,
-    "sha256": "7d52dc7de6adb2613a95e5fb92b4bd436fc3c5831c6228402a8cb266468d47c8"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-reply.webp",
-    "bytes": 51102,
-    "sha256": "736e9bbb8e7aef43929c0e41db0e42c0c9fc98b3a414969994eeeedf02a0097f"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/pet-small.webp",
-    "bytes": 46922,
-    "sha256": "c2e8d17623a0cbd2001282ca2cf7947549ac7565e8c7f0faf789bedb496e460e"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-connecting.webp",
-    "bytes": 6984,
-    "sha256": "868b0ba1671a2e63e248ba7c95fc89f575c82459b59c4d57426b95aadaeb5b37"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-ended.webp",
-    "bytes": 5718,
-    "sha256": "55dd432a9c0f42ed0477cdf4b9bb18295fec1936ac2a5d20fa4b1e6129f18695"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-event.webp",
-    "bytes": 7730,
-    "sha256": "b385fda103c9a83f61998818afcb3ac90c85ce9aff9dd957b07daf46085f8564"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-normal.webp",
-    "bytes": 7156,
-    "sha256": "08e63071793372ab6b038a25ed16fbcfcea9960842ab4408061bbce65faed933"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-return.webp",
-    "bytes": 7356,
-    "sha256": "7f06fe467b9548b9540c6b3f7795819b2147be532dbe488eff771711da50b10d"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/call-success.webp",
-    "bytes": 7878,
-    "sha256": "9410be6fd35c5637f082cf820465cd076521a9744d85246fe9f38a5ce5467432"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-cancel.webp",
-    "bytes": 5878,
-    "sha256": "8f713c2e09f58fbd403c3bc98c4edfc5d406687f28a227c1e87c5ac69fef09f6"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-draft.webp",
-    "bytes": 1192,
-    "sha256": "38a1e59238e7582ee0972c07acdd2e0d146ef680952866251b4975b73b361fb2"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-focus.webp",
-    "bytes": 5582,
-    "sha256": "5750816e2e19da75955b6964e45c88b67b59df0aeb1d71c10f25e599f98b8d77"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-reply.webp",
-    "bytes": 5626,
-    "sha256": "0c221b33bbf54a40459a671c5f05194369766dccf29a5b34c3bc3a4cb3d43a82"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-start.webp",
-    "bytes": 4646,
-    "sha256": "7642f54910ac72c49f3ba3a094c5aae985227dc6bea76170835bddb49f8868bf"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-thinking.webp",
-    "bytes": 4526,
-    "sha256": "fb3160019a29cbb4f5c6f6dfc4f7f07440b1dfb35b5d8157d30388692ba345e4"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/chat-waiting-detail.webp",
-    "bytes": 1178,
-    "sha256": "4c50d638bb1807d5c1938efe55f91e96768e5ebad3a2355c119707c47e90fce6"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-confirm-focus.webp",
-    "bytes": 6134,
-    "sha256": "a251f43ba2f5bcbcdef66dc745df217b22545c2d12915de919cf0b1f457ece0e"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-confirm.webp",
-    "bytes": 4906,
-    "sha256": "87289b02f32c2c5a534422889dfdbaff21adddfba9097d6a74b436b291ebd364"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-first-chat.webp",
-    "bytes": 4432,
-    "sha256": "6639ee5544e085128f038a44eb4b8d2b69c93ff3bf00cc93c7ee4ec9a657278d"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-look-focus.webp",
-    "bytes": 9274,
-    "sha256": "da48742ed1ee331457c7b2d8d9b01fade1ef86eb78337e3e25b4853ea89a0a45"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-look.webp",
-    "bytes": 6552,
-    "sha256": "b9f6900df60ab914a8621d308a13d6ea97646021afa3729eedab804e4171d76c"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-personality-focus.webp",
-    "bytes": 5202,
-    "sha256": "9ec598376a915c048b5aa67aa99fb83fd04d6a909f39302334f2b008a3e6bf84"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-personality.webp",
-    "bytes": 4640,
-    "sha256": "feb671326e95c17cd0f3b76d63c3fdb4909eed9a6e58d6ab519acfc36c82c2cf"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/create-validation.webp",
-    "bytes": 5726,
-    "sha256": "676101eee27757738fec18e4fea03b9d6ceb78659396dc821e3954a8d4311b1e"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/discover.webp",
-    "bytes": 15706,
-    "sha256": "6c3a18c98071ee23ba5b8cf9e982b23051f1f705a5ff33b698b35f52ffc0377b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-failed.webp",
-    "bytes": 4324,
-    "sha256": "5b1e341824e37e40eedae733e0ec2672a17026a48a2424aa2de4b0f4a21facf4"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-paused.webp",
-    "bytes": 8394,
-    "sha256": "6c9b3cc4ac5187f3ba52bd90ea34fd04158bbab3ad47e1346176772a9c4e0343"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-progress-current.webp",
-    "bytes": 7958,
-    "sha256": "e3cf9079d7afc2aed42cc8bdf635bbcea707e1b29baeded329ca09549d38be1b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-progress.webp",
-    "bytes": 4292,
-    "sha256": "28473a28c1cf0cf7359877e92cee93606c61198ef8f84f9185f536eeb91415c6"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-start-current.webp",
-    "bytes": 7944,
-    "sha256": "a92564f00208d54b8cd339a3d79b17f00eb662668c22ec1a71cf4105f6ec62c6"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-start.webp",
-    "bytes": 4228,
-    "sha256": "0932275a3632427984d0f6a0d948a53141c87e92e2d506dbded6132d480544a0"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-success-current.webp",
-    "bytes": 6956,
-    "sha256": "0d3b4c8913404c557d51aadaf4162c923dd1cab94199a6fbe2f16b3080ee32ba"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/event-success.webp",
-    "bytes": 3914,
-    "sha256": "774281488d1f9d92c6f9a438e0849acc5d80d4df460eacd69643841c198b5c62"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-collection.webp",
-    "bytes": 2714,
-    "sha256": "3c07a65a1ded36fc6388752b20bfab7fd06c0f34f9731aa1062085f47b6c3ae0"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-delete.webp",
-    "bytes": 2580,
-    "sha256": "8075363334614cad9adb9b2e51dc231110d196dc4862082d048dd5391c5df509"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-edit.webp",
-    "bytes": 5322,
-    "sha256": "415d72a8dee08d7beb049df38fa39f0ab6afbdb682d46d81a0fb3b0a10b91fca"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-filter-controls.webp",
-    "bytes": 1638,
-    "sha256": "de1169cb02264e32e7c0672662464792d97422b2e0d7fb1b3b41ad9af2d4e53a"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-filter.webp",
-    "bytes": 5896,
-    "sha256": "d699694b9bdc8712b274f933980963bf72ac143b066172cec3d97dba006f4e6d"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/memory-from-chat.webp",
-    "bytes": 5986,
-    "sha256": "5710c7899eb4e591958b9721ad414b68aed8cd54369daffb2d3b8a667adeede7"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-avatar.webp",
-    "bytes": 15804,
-    "sha256": "e75b584d33c218bb8601f0d8b8c6c350652336ee540ec9779d147d9a19faf56b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-character.webp",
-    "bytes": 11254,
-    "sha256": "dd2c547f72432f5195e80c0f4d564d1561718e764761441a5d6dad98cca52a49"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-collapsed.webp",
-    "bytes": 3464,
-    "sha256": "c799d5a79a14963fb5454deb45c4e36917ea4700a3e2d040c674bb5d4a08e166"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-drag.webp",
-    "bytes": 9530,
-    "sha256": "774936fda834051f32f50a28b5fb53cfa7c36e045bdbb22595ebdd40cf6d2af1"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-full.webp",
-    "bytes": 16078,
-    "sha256": "e21b99d13b5ffb89e1009f65e1359df3132d12f01307c25c469e2906417df051"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-hidden.webp",
-    "bytes": 8452,
-    "sha256": "524ad533fed3c72799a979a7ecfab06d7ca9bfab5d7e8b03389d85e1996061f3"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-overview.webp",
-    "bytes": 9766,
-    "sha256": "9e32809591fd6acd12370040f616dc318226e5bf8c0a777add3bf0d125a36163"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-paused.webp",
-    "bytes": 9054,
-    "sha256": "7406c2ee2c7876c34a702e1ab400a94c4e129a27b981b70c89aa134af9d8fd19"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-reply.webp",
-    "bytes": 12958,
-    "sha256": "9a3b956ec54f8ff3c417f5871a22306367f83829d5d02771d0a905df969d2bed"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/pet-small.webp",
-    "bytes": 10918,
-    "sha256": "f5964e36b92d470bb88a522e846f15a70a603dca5b341377f1bd2914dc34a372"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/role-detail.webp",
-    "bytes": 5948,
-    "sha256": "94a275836a76c0c08441783a06658f2e0a44a9b129bfcca1a9e867cdb0f0fd49"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/role-library.webp",
-    "bytes": 6912,
-    "sha256": "17783c25e14852045e4b6d3753a6ade09823d75d44b3ab1ad5df2337eb5a3a5a"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-collection.webp",
-    "bytes": 6794,
-    "sha256": "1ccee27cbe9d0788d7bd184be798843501082535d39025dc8f4322abebb6e5d1"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-finished.webp",
-    "bytes": 8838,
-    "sha256": "aaea5e4782c116f8bcaef68cc3ad349b7e55fb421dc9c6389ba5a4e865beb1ab"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-play-controls.webp",
-    "bytes": 680,
-    "sha256": "4843184ab5064c28d7abc15301a1c08a568189020a07b05d4e33f6e8f3f558a9"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-playing.webp",
-    "bytes": 7370,
-    "sha256": "082cb5d8a157421a9f074f1439c25d7b77508451fc9c7647ac7f30d34792914b"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-save.webp",
-    "bytes": 5134,
-    "sha256": "a6a2673c31753c96adb6f2a25912fa13186d70d9920dc6c69ce464213b9bae44"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-script.webp",
-    "bytes": 7588,
-    "sha256": "0d9b23732e571470de551028f4724e0396a1b2dfb9b7bb3b764b655ac87e3239"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-setup-panel.webp",
-    "bytes": 17458,
-    "sha256": "b358da51f191db57f0b95c8dbcf8b3e6b7ad5987a4536e37258a4bd4260ae6f0"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-setup.webp",
-    "bytes": 8460,
-    "sha256": "4208d750006e0cb41cd5751d3e5721fd8ea91285c19ab97b7c3f0a23975c76c9"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/previews/theater-transcript-detail.webp",
-    "bytes": 2098,
-    "sha256": "ff9f1260439ac3d7170f3384f08b902e8e6179fc3f268386ce512f3574eb0cc7"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/role-detail.webp",
-    "bytes": 167880,
-    "sha256": "7cc37c8c473837764212af00415df1aa043505a34a9c7cbf164bb01324f05a4a"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/role-library.png",
-    "bytes": 58862,
-    "sha256": "48f43c1b29c64f0d2850de411f0fb4d4317d39b45c1c2b1a808d7414b209d9b2"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-collection.png",
-    "bytes": 187972,
-    "sha256": "66cfde32872a20c45bea65826dd346062c8c6205bd643e116fb63a4f1fc2a580"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-finished.png",
-    "bytes": 317112,
-    "sha256": "3b7c1714f1353c0f447553aabce94706dfd77f33c8ecc7eb44ea25bb8dd8b4cb"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-play-controls.webp",
-    "bytes": 4292,
-    "sha256": "9573057ff12c3f90ab0680caf6bebc0c69f78a316a32bfdc4d1aca94c3f11ddf"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-playing.webp",
-    "bytes": 856510,
-    "sha256": "c0a69fb0a7d36faa488f9c8288a8b4112b8ccf3716a490bc0bbcbe7c87ee35e9"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-save.webp",
-    "bytes": 34732,
-    "sha256": "64e51db7325aced41bab438b26a4748fb8ed9dbbce996c1e3b4e51e4f32dc4d2"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-script.png",
-    "bytes": 302603,
-    "sha256": "1922e1e3ea154c5b8a4701b0caa6401ca17edef498f3a831f6819604c4d74a02"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-setup-panel.webp",
-    "bytes": 150564,
-    "sha256": "7df929be6eb9a259c652a380e767571da642f1e3c4053e54268076ec8c6b90a1"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-setup.png",
-    "bytes": 516475,
-    "sha256": "1351ed503474da36e6d5593c21a4cfac5c7619117c76d485ee1ad7566818f1e5"
-  },
-  {
-    "path": "cases/zhuozai/media/flows/theater-transcript-detail.webp",
-    "bytes": 19002,
-    "sha256": "9fb421d642a1de6e5a8173cd24c2db2efd6a1b348f9d244372c19580808ba861"
-  },
-  {
-    "path": "cases/zhuozai/media/previews/chengxia.webp",
-    "bytes": 26086,
-    "sha256": "c675fe69f3ad90b050372b1c761758a2b311a6e2bc4e5be854207e49a670c5f1"
-  },
-  {
-    "path": "cases/zhuozai/文字排版规范.md",
-    "bytes": 2849,
-    "sha256": "dc06df0515755f0ee6af6d011a1c6463ca955ed9c3e79c4ebd4adcca6a94362a"
-  },
-  {
-    "path": "cases/zhuozai/案例编排说明.md",
-    "bytes": 6910,
-    "sha256": "3098d4ffcc587bf2e3fbec6122fe4b775f5380feb787806289f84d3c991665f6"
-  },
-  {
-    "path": "favicon.svg",
-    "bytes": 476,
-    "sha256": "ea733f5c06f4a3cce2f7903490c35e3f2fa5a763171e4c622a056774fe11fa6a"
-  },
-  {
-    "path": "index.html",
-    "bytes": 11798,
-    "sha256": "b2b48bcdd777a59c671d2e9523575b412eb17c09f44b726eac5e54f64926b8b0"
-  },
-  {
-    "path": "loading.css",
-    "bytes": 3755,
-    "sha256": "4caa322b56b21d8dfba37aa696bd016762b2bb36881fbb088c2674bb25e66d16"
-  },
-  {
-    "path": "media.js",
-    "bytes": 14320,
-    "sha256": "b3e540ad65e145a82237eeb222fd3625330297c9684b15873e3c8c06d981bb9d"
-  },
-  {
-    "path": "package.json",
-    "bytes": 294,
-    "sha256": "c6408957be2a31474bd426b0dc66b4cddcc598e16b1700d1d3171dee9e73d8c0"
-  },
-  {
-    "path": "styles.css",
-    "bytes": 23951,
-    "sha256": "eb34a3d7294f3571565e3735357768c3e5a493508cd3f30f894c9b2bd7728151"
-  },
-  {
-    "path": "typography.css",
-    "bytes": 9787,
-    "sha256": "585176447a3fb23aa968ee140db3f94526d39d0811abf3b5bfcdac50aec5b77c"
-  },
-  {
-    "path": "vendor/THREE-LICENSE.txt",
-    "bytes": 1081,
-    "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-  },
-  {
-    "path": "vendor/three.core.min.js",
-    "bytes": 385390,
-    "sha256": "0e9dd2793e01d0d9eb4f2ab00b4ffcdd4488275ebebee5c31fa8d347bc29f0bf"
-  },
-  {
-    "path": "vendor/three.module.min.js",
-    "bytes": 365552,
-    "sha256": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6"
-  },
-  {
-    "path": "启动网站.cmd",
-    "sha256": "0edbd8f5b22789c3f11971244871f1b36e23f9e710fdc8b25ca6429165ec81be",
-    "bytes": 39
-  },
-  {
-    "path": "本地使用说明.txt",
-    "bytes": 7409,
-    "sha256": "4a7a3254cdc18e4a682fa83b347f9cfe42a01e7115874e87a1163f49f8969571"
-  },
-  {
-    "path": "cases/zhuozai/media/ui-collection.png",
-    "bytes": 3971615,
-    "sha256": "b50dfce5b4c9727e3afc6226f37603ed0048b5e172dd642967b542df0b9764a3"
-  },
-  {
-    "path": "cases/zhuozai/media/ui-collection.webp",
-    "bytes": 677912,
-    "sha256": "a0937e531d8fa34a7de22657d6ae5f9cbd48655478e8da34e24b48df584162e5"
-  },
-  {
-    "path": "cases/zhuozai/media/previews/ui-collection.webp",
-    "bytes": 117544,
-    "sha256": "037305045d3583800f7329d341963f473764b319012f74628b0ee2b0d70d4a86"
-  },
-  {
-    "path": "cases/yanshuju/media/ui-collection.png",
-    "bytes": 1776863,
-    "sha256": "e769026fd8e12c05fd630cd3e4ef942ce5613c616e826624ae0fe6270650eb02"
-  },
-  {
-    "path": "cases/yanshuju/media/ui-collection.webp",
-    "bytes": 308256,
-    "sha256": "09000a5d43309bd60cba953c5937bfb937cc1517246f50953c2120cc93444e29"
-  },
-  {
-    "path": "cases/yanshuju/media/previews/ui-collection.webp",
-    "bytes": 48916,
-    "sha256": "f7dd67a386eb5556ffe07686c764fa6fa39b24d1c28281ce2c193a9c668a142b"
-  }
-]
+{
+  ".gitignore": "E4A27348F44F1971B3DCFAE7B01FA5A87AA90481267B9AF1AA6552036C5B759E",
+  "DESIGN.md": "4E38DA34D6713857CE9935CD1EEB8E9C875DB0D81DF4E90AD05B193B6585395D",
+  "TYPOGRAPHY.md": "9FDBCA7682E647DFE82088EF06F696084AF54C47F7FB0C19F24EC9229B98BD1C",
+  "UI-REVIEW.md": "81A2DE0CF8E0ACCF46DA78317A117DCC109A9B555036043E45D2C06F2F95AA7A",
+  "app.js": "5FEB5EABA2BE3CBB0006ADE9E4D8EC86464875224FDE68B5F3D55F6AF9E6C70A",
+  "assets/app.bundle.js": "AC7854026DC7F47BC9791ADACC59B3883FAC5DB0EE9BF4DD6ED47FCABBE317BC",
+  "build-static.cjs": "1F93BE0D5619569444EDE6844C87AF4E047A42F0AB58732EA14D9D8D26F2CD21",
+  "cases/yanshuju/captures.js": "E7D94C4CBEBF0E7E91CA2F4E806E1B71B5C12DA10263A1564F58241BAF6A756E",
+  "cases/yanshuju/card.css": "71819A5FA6FB0B0B41BB1BA15577B5662DC81C14146838A77E4952AADE4D78A6",
+  "cases/yanshuju/case.css": "D3D0E1A9E60298175128EFF163E0C95C656318EE50CBF512B6F541494538FA55",
+  "cases/yanshuju/case.js": "AA85127FB16774849E8EF5C7A909A66577DC1801E829EB13720EBE829A2EB648",
+  "cases/yanshuju/mechanism.js": "D2AACD2C5E864980AFF6E40B98C83CE377DC32A7E2B90C5ACA9736BD7AC7338C",
+  "cases/yanshuju/media/budget-impact.webp": "D4628DA9569A5514AD4D49A0CE35A50EAE44DB22628BA75F69FA8254EC5CAEC0",
+  "cases/yanshuju/media/budget-input.webp": "F596930D8DCC6FB9CD5CDB054964D7B4CBD86688FCDE0538DF23D6A9A6509759",
+  "cases/yanshuju/media/budget-revision.webp": "D299B687CD7C27E64045F0D025694B1A1D7D5F502921F78135E9272BBA268F71",
+  "cases/yanshuju/media/budget-slider.webp": "E572BEB75F493FF374522A68B9F522558C3A09CD455862C7542BB5A974E13525",
+  "cases/yanshuju/media/candidate-excluded.webp": "A3E040A032E5D25B57B0AFE7B074B3118FFB31B55F2A9954B9CCC36F0F222AD1",
+  "cases/yanshuju/media/candidate-order.webp": "B3F6B6746DCEC69280CEE9827CA0F9798F074CB09FF5DB264E1EE685FBA444C5",
+  "cases/yanshuju/media/candidate-reason.webp": "4B9AC6B6CAEFD531DC2014BEE7F59EA7780B6AD45419CE06711ADF8594943386",
+  "cases/yanshuju/media/candidate-saved.webp": "8AD8C3A53A8DA25AA0D3B59B852A6D53F0BFE87655049253B5BF0DBEED126503",
+  "cases/yanshuju/media/chat-compare.webp": "9E399E629DC93DDD48D2BEB7532B4F349D7BDEA334C74CF2DF95F0B890E1723C",
+  "cases/yanshuju/media/compare-cost-main.webp": "6E3E0F8B3F56899FC8DB6FFF3D4F15E759C311A7A2B18CFE522E4009CC543C68",
+  "cases/yanshuju/media/compare-matrix.webp": "90BEF3DE1A1CD29EB305718F9AA653C204F7EF31495566BC9A84A70504CA367A",
+  "cases/yanshuju/media/compare-requirements-main.webp": "652DB950161EF9CEBA7A5EB679BA574632AE0E86C053B7050B3D23939F64FE7A",
+  "cases/yanshuju/media/compare-retest-main.webp": "E24A0D39E06D47C265B4782A93F4EF7A2875B51F6962E207EA1C902210F5C98E",
+  "cases/yanshuju/media/compare-seats-main.webp": "C3A5C063231BF2C4C29C6114AB8DEAE3A0DA1D2B31E170C97B3A2020235211E5",
+  "cases/yanshuju/media/compare-trend-main.webp": "7C8C1708954019B94A2A9478494BC1E4F209B706C004B8BD0AC68F6704815588",
+  "cases/yanshuju/media/cost-discuss.webp": "46EDAC94058C009CC08D5466A8BC8FD39FB9D950790C152D1F8C368FAE59A714",
+  "cases/yanshuju/media/discussion.webp": "31227A754DF72623DE0130AF3F829C61FF8D95645D8FA5F8E67F18528B752C74",
+  "cases/yanshuju/media/document-evidence.webp": "61D8961F59B79705BD2C308DC4023DE88A7FC6169D0EF52182CE1E2504A35E7D",
+  "cases/yanshuju/media/evidence-result.webp": "51BF34FF04F5B7C0FA3A418827F74B64A5C9AFCFABE72B8138877A77FEDA623E",
+  "cases/yanshuju/media/graph-definition.webp": "AC3A50C2D0A72F9EB867688CAECAC9150B73F337F73F9D0D5BBAE9F1503AFA95",
+  "cases/yanshuju/media/graph-focus.webp": "6D28DA15F2711C8BCB4E968511BC4601A1907C59621C6FDA444736D2773DB511",
+  "cases/yanshuju/media/graph-overview.webp": "9C2E69221CBEF8C2127E42A671F910E02FEE5D361796128ABED1FA3020780DE6",
+  "cases/yanshuju/media/graph-search.webp": "832FFCD12BBC5BE8042F584F591272044D4605FF6135E6F56B45889905208862",
+  "cases/yanshuju/media/graph-selected.webp": "384B296B244EC2E000E83C9EC69A081B7B727F5EA1DD0A5A79E6D166FAE9050F",
+  "cases/yanshuju/media/home.webp": "52DB7A0E5D3B324A7D18AE3C4E9FEF5F99D93E61CF31B8732D69F65DC8C40CA3",
+  "cases/yanshuju/media/interest-choices.webp": "AD1EA9622356AA5037752DFC80D39FF758FA94216425AC4893CA6AF62EF8A0BF",
+  "cases/yanshuju/media/ip.webp": "C8B57E37946AE1898B53A40A39CC81F646B45ECF743C2225BA743BD918FE179E",
+  "cases/yanshuju/media/knowledge-demo.mp4": "0547E4BBE00D800EA9BF0F471E47899B9EC5D6D15BD518880887CFC96EE6087F",
+  "cases/yanshuju/media/mechanism-chart.webp": "235C2CCE5F2EE6867B8A848C40DF5DE328F04F4E6BF9EDDB92C94475A8624EEC",
+  "cases/yanshuju/media/prep-confirm.webp": "CBA130684E9FF9A134C976C1EB63D4F28F819223D438E002277585DFC8429B0B",
+  "cases/yanshuju/media/prep-item.webp": "7E4821E13E459C27B0DDABBF93144E493461C6755E9509646FD422F8FAEF9FFA",
+  "cases/yanshuju/media/previews/budget-impact.webp": "33EDDF06D5F11B428247BA8DF0FC2B84127DA8D45D989A3B5E135540501F9181",
+  "cases/yanshuju/media/previews/budget-input.webp": "8B8BC97DCEEDB37ABF3A993B0BE137E1F9925DB51E47D0916C9BD65A1A6B0FD7",
+  "cases/yanshuju/media/previews/budget-revision.webp": "46FE97110011598B21092DE98E383C6796C0A173E5EBDA63DA8E9FA2E3EEF7C4",
+  "cases/yanshuju/media/previews/budget-slider.webp": "A05E4202BBFA63E90F097F5F4D3118CE6F4E844596131A08AA65B42494186F41",
+  "cases/yanshuju/media/previews/candidate-excluded.webp": "D148C2C7A5BF052A2F4F4D4019B42669750A4A0CC918AFA6FE13EC693F7A54E2",
+  "cases/yanshuju/media/previews/candidate-order.webp": "FADE8AA69DFD7822D5E89A22C957CEF6E07863F2564C46FBD8D3F933F417E826",
+  "cases/yanshuju/media/previews/candidate-reason.webp": "EA6E5B5513F5B28270D2861E4F7228E42F6AFD8F976D751F47AB48F7BBFEA0D3",
+  "cases/yanshuju/media/previews/candidate-saved.webp": "AD6E9124E14DD828FB6F4DD792218342DDC80DAE612D46450DFBE40CD32EFC65",
+  "cases/yanshuju/media/previews/chat-compare.webp": "46C32C4B37FD9366967E93A8C2C8A425BE022B7D722DA18FC52AF5785E87D5AF",
+  "cases/yanshuju/media/previews/compare-cost-main.webp": "896B70B9F739732724A0B1B2E5EE19BA9FA7A696762AC627BAC59F1BBA90768F",
+  "cases/yanshuju/media/previews/compare-matrix.webp": "4F8FE1C252FF90DF1A4B46886BFC65428B46E074DA97D85328547A7FF7BEE2DC",
+  "cases/yanshuju/media/previews/compare-requirements-main.webp": "80136F00FC216FFE17A751B26385FC540AE755656C94009FB890B569D8D52A74",
+  "cases/yanshuju/media/previews/compare-retest-main.webp": "B74530CFC9A5F52F7B8FB94C9A92E466776243D927DCD37988A17DFF765EBC17",
+  "cases/yanshuju/media/previews/compare-seats-main.webp": "CCBF91C761A1CB1DD2EB2B677AC41BB1F9FA779A0C5A47D6D972900CEBB7BD9F",
+  "cases/yanshuju/media/previews/compare-trend-main.webp": "0B9B0A1E7E5E04845494DE0014C2B9C62AEE9F2ADEDA0C8306E1D1154481C1DF",
+  "cases/yanshuju/media/previews/cost-discuss.webp": "7D7D94AFC0C5FC5E701340D6F7DCF2C90B988A0D717004353EE786DC7182DF88",
+  "cases/yanshuju/media/previews/discussion.webp": "716D5752ADC3C8753F2AB2FC51B10236AD9401F993F06D008024B2385981A07E",
+  "cases/yanshuju/media/previews/document-evidence.webp": "BC7797EA3B43146E29D0CF1EEBCF6D1ACAF8F146331A5D10663C96342C375B29",
+  "cases/yanshuju/media/previews/evidence-result.webp": "EAEFDDDDA5EB66E549081DA8749C01BBAB930C56D379CA1DFFA2014C32AD5A58",
+  "cases/yanshuju/media/previews/graph-definition.webp": "0B697BB8D8CAEC481FB9EA8E15AE1AB78B67587128840C56F466377D467E33E8",
+  "cases/yanshuju/media/previews/graph-focus.webp": "38E4CB7468C9A1BF231963AE96CCDC3D84D17605D7ACED2E4F5272D1C8130006",
+  "cases/yanshuju/media/previews/graph-overview.webp": "F09BDDC492E7340E88D5082EACD40C8D8E53017180E1AA47FCC0656428E01C26",
+  "cases/yanshuju/media/previews/graph-search.webp": "BCDE5C7B0AB0792AC23062740288187BE52A325A4573525332ECF9EB0683C273",
+  "cases/yanshuju/media/previews/graph-selected.webp": "6D393B2530474266E76583A0C41F7ECEEDD647360C6275A91DC580EF43B582E9",
+  "cases/yanshuju/media/previews/home.webp": "D00B1287C6A267BFA8B68D280522833F6EC97A6D1CE87AED2A57C280A3D30B9B",
+  "cases/yanshuju/media/previews/interest-choices.webp": "14979807BF865739FAAAFDBF72F0520A1ED467F7966752CE84E5632ED99AF22F",
+  "cases/yanshuju/media/previews/ip.webp": "8DE1AD4F3D2E43D906D7AAD093289CA893873F68CBD68984FED64B2981EE5AA8",
+  "cases/yanshuju/media/previews/mechanism-chart.webp": "BB4ED8EE7415EE198091986BB2BECD05B748B2ED6270E5E4943683CEAF956E2E",
+  "cases/yanshuju/media/previews/prep-confirm.webp": "2C0C3987493B8F4217A9220C862A25174DBAB2E73BFE4E4A69BC708ABC757AA2",
+  "cases/yanshuju/media/previews/prep-item.webp": "EA016680D58849160D2B582A4CA5DE2525A6947A3A77C10ED03EF8AAEE8B9512",
+  "cases/yanshuju/media/previews/program-expanded.webp": "9211567749554CE971D1970B64022DBE99C2E74D7E80DF2DBB9A7F228E77B855",
+  "cases/yanshuju/media/previews/ratings.webp": "B99A09200AC79204C34ADCBC2B10FFE9B0B5A48E7E0B7B33E2B0B504DFF3DE51",
+  "cases/yanshuju/media/previews/training-evidence.webp": "5E50AC136D1E7D3A95DDB1252BECBDE497003F420AE7CD837C2DEDD5F0DF18F7",
+  "cases/yanshuju/media/previews/tree-overview.webp": "004DA3EDA7A0AB78914FDFE8E2B969839377BE9B057729A5764BD51EBA820198",
+  "cases/yanshuju/media/previews/tree-search.webp": "4F60B897B2B0C9DB4F52FACA34B42F8267DD1934FB5DACE775FE5688BA2B45A8",
+  "cases/yanshuju/media/previews/tree-selected.webp": "E68A5CF63978163353D21B0FE0C8839579C8CDA93A5A3AF30460BC84831D1132",
+  "cases/yanshuju/media/previews/tree-trend.webp": "016323CCFC3FF3AEF9E89EC5932A3EB3E0089F41C67310C5A687A83D66AECDB5",
+  "cases/yanshuju/media/previews/tree-tuition.webp": "BBD80B1129A68BEA06382496BB416733012DA8ED4F37B1E1E6B13B6EE64A72EB",
+  "cases/yanshuju/media/previews/ui-collection.webp": "F7DD67A386EB5556FFE07686C764FA6FA39B24D1C28281CE2C193A9C668A142B",
+  "cases/yanshuju/media/program-expanded.webp": "E811D00101C98C8214EFFD3101D1E8BF4553F8CE66F8708F342B40DC68426F83",
+  "cases/yanshuju/media/ratings.webp": "45BA3F09CE428FF6C6DB7303ACA9191DD034B212356C1267A6C29EC983D320B4",
+  "cases/yanshuju/media/training-evidence.webp": "29A8144584B92FEA4AFE645BC24F16B69711A1AC5D773185FAF17DFB016538E2",
+  "cases/yanshuju/media/tree-overview.webp": "A6DE24D534EABCA688FEDEB250B98EAE658B4B8996CDEF823B39C1FE06244D13",
+  "cases/yanshuju/media/tree-search.webp": "B26CDF013FB57B78F9FDEA444BFF2FD287668445735AA7BA20B1EC6C1C7A203A",
+  "cases/yanshuju/media/tree-selected.webp": "78934DE49BBB75E3F7C24EE90934118C7094CE3C4B144131001BE3F65C27E9A8",
+  "cases/yanshuju/media/tree-trend.webp": "B291E3A3B984C13BA41C754910D2519822DBB6FC764AB09AC4ACED2E3475A61D",
+  "cases/yanshuju/media/tree-tuition.webp": "A6289E37FBF8BDD53C7E8542B00D81704F7ACB8128A02A71D5BCEB80B51C343E",
+  "cases/yanshuju/media/ui-collection.png": "E769026FD8E12C05FD630CD3E4EF942CE5613C616E826624AE0FE6270650EB02",
+  "cases/yanshuju/media/ui-collection.webp": "09000A5D43309BD60CBA953C5937BFB937CC1517246F50953C2120CC93444E29",
+  "cases/yanshuju/案例编排说明.md": "A1DFBF3A08F6B5B761DD16A3CA3D89799A4D19EBB15B9DEEB408CE39EFA91040",
+  "cases/zhuozai/captures.js": "A3B5212C30C78862B9EBD4C08DA24E1D18CEB1A0D151418FE720AA2EFF3051A5",
+  "cases/zhuozai/card.css": "AF4B0BCA21FC03FC822215E9A00BC7946D0AEFC00DD938C82FF25A8C4983170C",
+  "cases/zhuozai/case.css": "8E086F074A8EF77B991A17A16A17710F66F89C034A803D1180AFC21A4AFE28D1",
+  "cases/zhuozai/case.js": "01636D67B04A4782E545F611D02974C50C71218F340D9E6B83E71EBE65F52A6F",
+  "cases/zhuozai/media/chengxia.png": "1EE3417D9EF0BEDF31BA6DE1B7A480738F13B9E7658B1A5E5D3E5E20C7090AE1",
+  "cases/zhuozai/media/flows/call-connecting.webp": "0E622F108849BD8894D6986EAF55CA366AE327EFC60517D87C618C11DFD3B351",
+  "cases/zhuozai/media/flows/call-ended.webp": "335B2FF89A4FB02DB4664F9B1AE32378D705CA0FA76B3F7E2655FE709D435525",
+  "cases/zhuozai/media/flows/call-event.webp": "5244140B2DA269935A71822102EAA7CA64C69605B55D977AD788EA5DA889D5FC",
+  "cases/zhuozai/media/flows/call-normal.png": "E2CD57149875B8D47F4D9C6D372A1A9B891917062F81E01958258A02E90928F3",
+  "cases/zhuozai/media/flows/call-return.png": "35E1059ECB30F959AB59885E571CB61C96E6BCB2A30C26EBEF14DC9F72E1CAF9",
+  "cases/zhuozai/media/flows/call-success.png": "5AB1C44622F67DB972B2AD86D0111C1C6265B59D2ABFB812DE4443FC898461BC",
+  "cases/zhuozai/media/flows/chat-cancel.png": "C69E10BD0BC702A85CB55BEA1F78B6822DE46DB58B28E360B6FA0EF5F7892333",
+  "cases/zhuozai/media/flows/chat-cancel.webp": "FD5CB8DB273AC329A68F80CF5416A39A4482E743DF03724B5D191A4B769F78A5",
+  "cases/zhuozai/media/flows/chat-draft.webp": "56B5C5223C1DC72BF5D39E38E47740D4F6D8D6D7F6D895D48594A6347403428B",
+  "cases/zhuozai/media/flows/chat-focus.webp": "23330D12F5126370D0833C5CEC67AE6EA8FFEB001889493AEA480B883ADD5A60",
+  "cases/zhuozai/media/flows/chat-reply.png": "DC1D557888869E2B04FD028D34943C6A32E3C1602FAA852471B3E9C03074C034",
+  "cases/zhuozai/media/flows/chat-start.png": "5EC1DF24BD828035E53BEED17A34299087D2FBCC6624264C2D3BA0BF71C436CA",
+  "cases/zhuozai/media/flows/chat-thinking.png": "26074D8C096FDF2BEAF45BBD4B1AA10CBA0CD615AC92DB137696C4FA5BCBB0FC",
+  "cases/zhuozai/media/flows/chat-waiting-detail.webp": "8EEBC04FB31CFFD9E627F6EFC68D6B04D1855E8BA8EB40040FA596D00AFB9509",
+  "cases/zhuozai/media/flows/community-home.webp": "CED3F6239BAECC8417960D6DC854E95D7A5D10D638103254B37F449DDC256D11",
+  "cases/zhuozai/media/flows/community-replay.webp": "1D8B7851241BA8B27D5408A1E0F1CCE684060E6186B0D408FF0DE581F01C231E",
+  "cases/zhuozai/media/flows/create-confirm-focus.webp": "630A80CC7C26D7756DDD198FC5E48DBFE057345BA14DF4D079D95F92F0CF55B5",
+  "cases/zhuozai/media/flows/create-confirm.webp": "F687774C4606228DF3277839B9BFF2B173C850AC0A0A6B5BA2168B3AA845ABFE",
+  "cases/zhuozai/media/flows/create-first-chat.webp": "E67D9CB13C322E788AD4CF5E990A7977252B3C98F06C3B96AEEA46DCB9A906D8",
+  "cases/zhuozai/media/flows/create-look-focus.webp": "FD066700D9EB763712C6D7E655DDED080DBD2FDBE17A3C531ABF6E9DEB99D79F",
+  "cases/zhuozai/media/flows/create-look.webp": "11C1C5659DAA0949F606EA8EEDB1803DF49EF80724F7633C5E866E134A5682B4",
+  "cases/zhuozai/media/flows/create-personality-focus.webp": "22DC76F95F7CCA65153B7DE46D3AD3E7351FD8FF7FEA49D1B3963D822116CF77",
+  "cases/zhuozai/media/flows/create-personality.webp": "D8035DC0B6A61A6BECAE1DBC84FAB41CFAA375D94D7BBE06FF39F54D8DA6ACF4",
+  "cases/zhuozai/media/flows/create-validation.webp": "4C5CA97B68386421A667AA8D0AC965DDB7AB0EAE90BCCB284F5D70DF54983267",
+  "cases/zhuozai/media/flows/discover.webp": "6A25F33AFBE66F7FE92AD267241B362D4B57D2654248F86604C0423D9CE53B3B",
+  "cases/zhuozai/media/flows/event-failed.png": "E4086D7335E29D0AD4E47C1F31BD81574B925D0690A2DEC9668D369AC44EA30D",
+  "cases/zhuozai/media/flows/event-paused.webp": "597134F5369B62FE636C372F7D90F4DD6019D6D5252F2EA57C96202ED134F057",
+  "cases/zhuozai/media/flows/event-progress-current.webp": "12D5A9511557CD14FE82C30833414293F806AFD9C3647E662493A22A865DA453",
+  "cases/zhuozai/media/flows/event-progress.png": "6BFF73865C9E62D98B49E6EDC0E0CF8B7E1CF4870DB5D20C7172C5E0C663DC52",
+  "cases/zhuozai/media/flows/event-start-current.webp": "DE72F8C3E7170E7F7EAB4FCF772F12AF00834300A1026F380A86FDCD66439EEB",
+  "cases/zhuozai/media/flows/event-start.png": "9A5EA70821B58B5CE00F09BCAF4D49376098B72C10B25D176BE5B6030C5AC0C8",
+  "cases/zhuozai/media/flows/event-success-current.webp": "B98B6A4EC69C1A8A8EC6619FC76CA605C705AA31EA7464B7626F276C3A7289BB",
+  "cases/zhuozai/media/flows/event-success.png": "556C698F3AABBC219472ACC5EE1760CE23B363C1B758738A17A07AF75CA593CD",
+  "cases/zhuozai/media/flows/memory-collection.webp": "07312BC30F0033C591A74DE8C722EF8ADD09BDF3C6AC233C96E8D006156C9CCD",
+  "cases/zhuozai/media/flows/memory-delete.webp": "542156EC649775AF627F665C8ADAEA54715ABFB0D1CB6FEF5FC73E5E5311DAF0",
+  "cases/zhuozai/media/flows/memory-edit.webp": "5DEE27B6BC6B08AB0984F05524E21A767D65F7256421DE320E93247828AFBC63",
+  "cases/zhuozai/media/flows/memory-filter-controls.webp": "3F2393B21FE39E62881D95BEC9AF2CCE221E1F23E6AD5875074963EB16E1A210",
+  "cases/zhuozai/media/flows/memory-filter.png": "BBEB8141B9256644301AF441AD55DA635AFBF5015890E52FBF174BD52A570C3D",
+  "cases/zhuozai/media/flows/memory-from-chat.png": "C9F701ED1BA42BCB31EC5E2E757698A26E14B7B750E35F0FE16646AC6367CFBA",
+  "cases/zhuozai/media/flows/memory-from-chat.webp": "09A965EA91A5209F4364AB78390AFDCAF8A32E7564BCACDAA6D21740211C5441",
+  "cases/zhuozai/media/flows/memory-types.webp": "EBFDEA4F409672851A065441B186299EF6F0D217D4316791E84A645E176F0863",
+  "cases/zhuozai/media/flows/pet-avatar.webp": "FB400B399296A1887C851065F8D58B7728D32408D14D1425BD73AA1709AE44D1",
+  "cases/zhuozai/media/flows/pet-character.webp": "27AC96EA278A10531E928D6E346AA15504299AE8EEBF180DE3764694C3A0A39A",
+  "cases/zhuozai/media/flows/pet-collapsed.webp": "5392161F74EDC44A18D2647168D026D7ABF17B80AB0A33E29114C3EE13FAD404",
+  "cases/zhuozai/media/flows/pet-drag.png": "FCB6EFE07CD5F4E994827B1E58036F4D7B07B98D35025768A0EE0F8E7071A620",
+  "cases/zhuozai/media/flows/pet-full.webp": "1236E42FA660C344677E2003BF19CFEB8044BFBDB51201564198AE1610BBFB7E",
+  "cases/zhuozai/media/flows/pet-hidden.webp": "2FAE90A13D079EACB2CDE70953BB237534C3B75515DC13F2174229D0B293EC3D",
+  "cases/zhuozai/media/flows/pet-overview.webp": "E50188BF8106DBCE895D728DD2EC368B3CE2E9CD1DE4146EF876147ECCEFE1BC",
+  "cases/zhuozai/media/flows/pet-paused.webp": "EEE2938C4D8C6DB616E20CE048FE4671DBE841F609D4F75E1F90BB8BBA51663E",
+  "cases/zhuozai/media/flows/pet-reply.webp": "3D81C8A50BF65AD25EF99DF1CD19B5E20E543EE927E1CC2596C5D1599E962005",
+  "cases/zhuozai/media/flows/pet-small.webp": "16ED486CFEF99DD3FEAEA645EC1D88DDE8798ED38042CA6887EBFCBE59E2F2B7",
+  "cases/zhuozai/media/flows/previews/call-connecting.webp": "0577D7572A8BC6D3388C8C716268FE07EDF7746CDE9F656E9DF58A272DFD76E4",
+  "cases/zhuozai/media/flows/previews/call-ended.webp": "4518718AC2CBA08C8824655134D8A9E783AD86560E637CD45A55A8054A1599D3",
+  "cases/zhuozai/media/flows/previews/call-event.webp": "B4B438EAA9FC19FAF365D8BBE5D9F72C85441153AE5C1952D9BAB2DA74ED105F",
+  "cases/zhuozai/media/flows/previews/call-normal.webp": "08E63071793372AB6B038A25ED16FBCFCEA9960842AB4408061BBCE65FAED933",
+  "cases/zhuozai/media/flows/previews/call-return.webp": "7F06FE467B9548B9540C6B3F7795819B2147BE532DBE488EFF771711DA50B10D",
+  "cases/zhuozai/media/flows/previews/call-success.webp": "9410BE6FD35C5637F082CF820465CD076521A9744D85246FE9F38A5CE5467432",
+  "cases/zhuozai/media/flows/previews/chat-cancel.webp": "35C25E45FC0D734BFADD98323E37C9BB9B2663ECEE0DB4B38AB2F1F199E0BD33",
+  "cases/zhuozai/media/flows/previews/chat-draft.webp": "23479C826AF83B93E98829EF17E58859488C90484A8AB1C0C5DAE1E48E5C3EEC",
+  "cases/zhuozai/media/flows/previews/chat-focus.webp": "B4E273FBF4F919BD963F1FEFDDBE040CF2BED34BABEEB8E3530CDA1552A9319F",
+  "cases/zhuozai/media/flows/previews/chat-reply.webp": "0C221B33BBF54A40459A671C5F05194369766DCCF29A5B34C3BC3A4CB3D43A82",
+  "cases/zhuozai/media/flows/previews/chat-start.webp": "7642F54910AC72C49F3BA3A094C5AAE985227DC6BEA76170835BDDB49F8868BF",
+  "cases/zhuozai/media/flows/previews/chat-thinking.webp": "FB3160019A29CBB4F5C6F6DFC4F7F07440B1DFB35B5D8157D30388692BA345E4",
+  "cases/zhuozai/media/flows/previews/chat-waiting-detail.webp": "C915E9D2F92B66856456C82E7BFB88BAAE6C8A2E924A47C6E87FDBC2CD2189DD",
+  "cases/zhuozai/media/flows/previews/community-home.webp": "107E56F627CD8957B0CA6F9C10AAB52CA10489D5842AB7A407E605FD23C360F3",
+  "cases/zhuozai/media/flows/previews/community-replay.webp": "CFA7905799B928E3A0845B4E7F75B5B3ED25507D852E2DB5926054D12B678784",
+  "cases/zhuozai/media/flows/previews/create-confirm-focus.webp": "A251F43BA2F5BCBCDEF66DC745DF217B22545C2D12915DE919CF0B1F457ECE0E",
+  "cases/zhuozai/media/flows/previews/create-confirm.webp": "377769D02E5CFD1740A80321CF092EAF020AEF7F6478C61E082B1DB779155AEF",
+  "cases/zhuozai/media/flows/previews/create-first-chat.webp": "9E6EE8645667CDE51BFE614A356E458A307C799B16BE34EC1AB474E65C1F5620",
+  "cases/zhuozai/media/flows/previews/create-look-focus.webp": "DA48742ED1EE331457C7B2D8D9B01FADE1EF86EB78337E3E25B4853EA89A0A45",
+  "cases/zhuozai/media/flows/previews/create-look.webp": "1954D74730815B799DB2E45097D160C4355B62B777521EC096C6E0E1193D4742",
+  "cases/zhuozai/media/flows/previews/create-personality-focus.webp": "9EC598376A915C048B5AA67AA99FB83FD04D6A909F39302334F2B008A3E6BF84",
+  "cases/zhuozai/media/flows/previews/create-personality.webp": "1BEB9B40E9E0C9254ACAF3A4041CF483B8F90C5BE3776A8C25645E14AB9C3D05",
+  "cases/zhuozai/media/flows/previews/create-validation.webp": "7177A6550C22E50D43C449D109A421EA32760560B1BCCF590F1802EB7A7BC1BF",
+  "cases/zhuozai/media/flows/previews/discover.webp": "57B932AA38A7E804AFADDFE641FF106D7C7AA0D9512162D8814C0173F256B480",
+  "cases/zhuozai/media/flows/previews/event-failed.webp": "5B1E341824E37E40EEDAE733E0EC2672A17026A48A2424AA2DE4B0F4A21FACF4",
+  "cases/zhuozai/media/flows/previews/event-paused.webp": "5BCB9BA402B044CA3C6B286801E75508FBFAA886B703923EB4EA3DA3F9A8EC59",
+  "cases/zhuozai/media/flows/previews/event-progress-current.webp": "BCD85BEF56010B1C854210E596E55306332839976176E1C90E52AFFF36FE41BD",
+  "cases/zhuozai/media/flows/previews/event-progress.webp": "28473A28C1CF0CF7359877E92CEE93606C61198EF8F84F9185F536EEB91415C6",
+  "cases/zhuozai/media/flows/previews/event-start-current.webp": "F3CFEE0E5AE7BD111A2DC4D277D0EB8C993966ED6C7CFE5DD27776661A461637",
+  "cases/zhuozai/media/flows/previews/event-start.webp": "0932275A3632427984D0F6A0D948A53141C87E92E2D506DBDED6132D480544A0",
+  "cases/zhuozai/media/flows/previews/event-success-current.webp": "24C9DEA67BEEA8FCA4C7CA213A24670C89F3F6A0DBE92ABFC70C66B473F27255",
+  "cases/zhuozai/media/flows/previews/event-success.webp": "774281488D1F9D92C6F9A438E0849ACC5D80D4DF460EACD69643841C198B5C62",
+  "cases/zhuozai/media/flows/previews/memory-collection.webp": "1BADEB82993F1C574B9B2C47884BDCC5C65E137B2B84C0B2F1962F5AC4682E74",
+  "cases/zhuozai/media/flows/previews/memory-delete.webp": "5E41BCE9D801B2A5BD476F6ECA215701479BC7E6BC6595F66C28B7211A8313F3",
+  "cases/zhuozai/media/flows/previews/memory-edit.webp": "044B41AC4DCB270B6492D0C29C99DCE17C9299674A074397026AC65ED03F88AD",
+  "cases/zhuozai/media/flows/previews/memory-filter-controls.webp": "8D5B252047E43CE72540204422480B25A3574EB8F075D21C56785A1F90F1E216",
+  "cases/zhuozai/media/flows/previews/memory-filter.webp": "D699694B9BDC8712B274F933980963BF72AC143B066172CEC3D97DBA006F4E6D",
+  "cases/zhuozai/media/flows/previews/memory-from-chat.webp": "948B554F1EDAD234980A283B2A92F197BB49AE32907C38024BD4DCB2CFD25CD1",
+  "cases/zhuozai/media/flows/previews/memory-types.webp": "6EEB89C08D9DEEC818F46BE0E7C7F7F9BDD4C07F6CDD3542184EEBCFF3A564D5",
+  "cases/zhuozai/media/flows/previews/pet-avatar.webp": "7BC4414D2A827C1552C49770C8BB4A67F38716451A1C1196F19433625B369E8D",
+  "cases/zhuozai/media/flows/previews/pet-character.webp": "30C03587BCD417110C541952D3AE694AD1436F1D17209569FD2332030406D0E6",
+  "cases/zhuozai/media/flows/previews/pet-collapsed.webp": "117C2E423507CE0B51AD892EAFBD509E469DEBB85AEAA0119536B3B09CB1140D",
+  "cases/zhuozai/media/flows/previews/pet-drag.webp": "774936FDA834051F32F50A28B5FB53CFA7C36E045BDBB22595EBDD40CF6D2AF1",
+  "cases/zhuozai/media/flows/previews/pet-full.webp": "152D2B07354D5EF93095CDD5FFD52508F4AC76763E2C2BA1029CD055891E2C56",
+  "cases/zhuozai/media/flows/previews/pet-hidden.webp": "C93F5796C3A6EACB70CBD6D79DE423743743A249EA15840AF4C76AD2FB2AAD9D",
+  "cases/zhuozai/media/flows/previews/pet-overview.webp": "F535CD6AC72D977C86C3148AEF44F9B5CE3B573C01A827DA58FC113FDBBEC549",
+  "cases/zhuozai/media/flows/previews/pet-paused.webp": "3CA0144D84E005E5DD6F7AC758F0563EE252AB69F4C1CFF951898AD76E2B7C5C",
+  "cases/zhuozai/media/flows/previews/pet-reply.webp": "B086DDFC6F31D6E70EB875D510AB948F470959B00C3D7AD1F9D8F70D7A484D1D",
+  "cases/zhuozai/media/flows/previews/pet-small.webp": "C4FDDA57064545A83950A0EDAA583556EA9706554B13001E13BF91C47D02974B",
+  "cases/zhuozai/media/flows/previews/role-detail.webp": "5F240554F8E3730A27C2042F7689F4B0886997396C4DAAB073E061C4DA340D9A",
+  "cases/zhuozai/media/flows/previews/role-library.webp": "17783C25E14852045E4B6D3753A6ADE09823D75D44B3AB1AD5DF2337EB5A3A5A",
+  "cases/zhuozai/media/flows/previews/theater-collection.webp": "28C12E3D1FA03C6468881E3E004EFA3E5409C827AB1A7A96C11B00C1C4FA0916",
+  "cases/zhuozai/media/flows/previews/theater-finished.webp": "F81638FFEE94C92E03DF156F5FA6B937623DD4331ECB2BCB62D02EB53B94A9DB",
+  "cases/zhuozai/media/flows/previews/theater-play-controls.webp": "E5923F4E8A71201F58216401527D01D530E3FC3AB0667A11E503F4BC0605BCCF",
+  "cases/zhuozai/media/flows/previews/theater-playing.webp": "6E4705E6022423B44A4DDB24934EA9A59187564A3B08F6D5497188E67CE7110E",
+  "cases/zhuozai/media/flows/previews/theater-save.webp": "5AFDF0ABB34107FAA1F520A403756DE9F9A0698BF5251EBB41145BA6D59B60C1",
+  "cases/zhuozai/media/flows/previews/theater-script.webp": "0D9B23732E571470DE551028F4724E0396A1B2DFB9B7BB3B764B655AC87E3239",
+  "cases/zhuozai/media/flows/previews/theater-setup-panel.webp": "D621059A8AC79E7981CC29316CC8B5FB8B01AEBAC9D4CE5F6FAF585343CDC0EA",
+  "cases/zhuozai/media/flows/previews/theater-setup.webp": "4208D750006E0CB41CD5751D3E5721FD8EA91285C19AB97B7C3F0A23975C76C9",
+  "cases/zhuozai/media/flows/previews/theater-transcript-detail.webp": "6D5435E7CEA631057B63FE42388ABC8B20B0A9C908642CBC8AD5303B7D39C6F4",
+  "cases/zhuozai/media/flows/role-detail.webp": "32977E78E1DC827D0A2395EE6D6171B29C27E14FE8DC726DEDD5B2F807B10BF7",
+  "cases/zhuozai/media/flows/role-library.png": "48F43C1B29C64F0D2850DE411F0FB4D4317D39B45C1C2B1A808D7414B209D9B2",
+  "cases/zhuozai/media/flows/theater-collection.png": "66CFDE32872A20C45BEA65826DD346062C8C6205BD643E116FB63A4F1FC2A580",
+  "cases/zhuozai/media/flows/theater-collection.webp": "5F39C99BE3AAC3CC742F39772F95A67144FD44732B6C5C849629D31F00D6A8BF",
+  "cases/zhuozai/media/flows/theater-finished.png": "3B7C1714F1353C0F447553AABCE94706DFD77F33C8ECC7EB44EA25BB8DD8B4CB",
+  "cases/zhuozai/media/flows/theater-finished.webp": "81438BCD7ED56A8619E82DD704065FFE0DC414F60C360D1464B9C15D9E3B9145",
+  "cases/zhuozai/media/flows/theater-play-controls.webp": "A6F8476B783918A63E414741014B4CA6AC83C6BD5A6326860C73AF3F0EE3D735",
+  "cases/zhuozai/media/flows/theater-playing.webp": "195B0E270E58015DB57645BD1FBD3DE93757497439B83E03C6003AA2F39E75D8",
+  "cases/zhuozai/media/flows/theater-save.webp": "650D0D18A128B49FA4E0FADE07AF5B073048B23BB0B721338ACC617B529C5BC7",
+  "cases/zhuozai/media/flows/theater-script.png": "1922E1E3EA154C5B8A4701B0CAA6401CA17EDEF498F3A831F6819604C4D74A02",
+  "cases/zhuozai/media/flows/theater-setup-panel.webp": "0E5AF7435E4676746FF0D8A5F78AD44CB560EC621ED7A1561101E387DC031209",
+  "cases/zhuozai/media/flows/theater-setup.png": "1351ED503474DA36E6D5593C21A4CFAC5C7619117C76D485EE1AD7566818F1E5",
+  "cases/zhuozai/media/flows/theater-transcript-detail.webp": "903E0BA4F1B3FB74FDF3FDB7B6711C193272CADD9AC5C5E895A3E386E52675CF",
+  "cases/zhuozai/media/previews/chengxia.webp": "36A3288BCF456096C42394AAD549E4B873D877C653CDEDF9BEF452FD292F3042",
+  "cases/zhuozai/media/previews/ui-collection.webp": "55B05D5C46B1CFB05C90C27CFAD1A6115AD5F16DC212F26B9E67D02C94144396",
+  "cases/zhuozai/media/ui-collection.png": "26D3EED612B6006BABAA85EFE832555A57A2F2F256527AB373DF998594C2B8E4",
+  "cases/zhuozai/media/ui-collection.webp": "5BF3FA29B67761350A2F5BE967D14C6A3EB8E952A452609C64F63439D71830DA",
+  "cases/zhuozai/文字排版规范.md": "B942F5F807229A0B031A34A114EE86BDFDB59734F153407C045873FC17CD474E",
+  "cases/zhuozai/案例编排说明.md": "7BF85C4C7638FA4E674E92634B36BB37319CB3C5D8D7CB2313591BC9AC5F787C",
+  "cases/zhuozai/素材来源.json": "F559EA287BB1A38594283197C426ED548C91B5D4E0E03660910AF29BCF18D5AF",
+  "favicon.svg": "EA733F5C06F4A3CCE2F7903490C35E3F2FA5A763171E4C622A056774FE11FA6A",
+  "index.html": "62D365C6692B5F779B18F84034E16FE3ED8C428A3485DF359C1DE7408327AA07",
+  "loading.css": "4CAA322B56B21D8DFBA37AA696BD016762B2BB36881FBB088C2674BB25E66D16",
+  "media.js": "B3E540AD65E145A82237EEB222FD3625330297C9684B15873E3C8C06D981BB9D",
+  "package.json": "C6408957BE2A31474BD426B0DC66B4CDDCC598E16B1700D1D3171DEE9E73D8C0",
+  "styles.css": "DD827781274465FD387FD5373A8CD764ED451098ABBDDA998053327BC499C5E9",
+  "typography.css": "585176447A3FB23AA968EE140DB3F94526D39D0811ABF3B5BFCDAC50AEC5B77C",
+  "vendor/THREE-LICENSE.txt": "8B378EBE60E2FE500158CB0AC71CB5E8B7D92953C2ABCC63A0EB90499653B5BC",
+  "vendor/three.core.min.js": "0E9DD2793E01D0D9EB4F2AB00B4FFCDD4488275EBEBEE5C31FA8D347BC29F0BF",
+  "vendor/three.module.min.js": "86BCEE248B64F44BCFC23C331AE74619061957D59CAB040171DCB6FB5900BEB6",
+  "启动网站.cmd": "0EDBD8F5B22789C3F11971244871F1B36E23F9E710FDC8B25CA6429165EC81BE",
+  "更新说明-branch3.md": "4F62F88FFE7CEC8B41AD926F7C69039335C03C48ED01802A0AC61EDD8030F7D1",
+  "本地使用说明.txt": "7C0BB1F404A862723A7ED75F0EF3B7283CE0076E66F8E4C5517AFD542907A3A3",
+  "桌崽AI-UI锦集.png": "26D3EED612B6006BABAA85EFE832555A57A2F2F256527AB373DF998594C2B8E4",
+  "桌崽AI-UI锦集.webp": "5BF3FA29B67761350A2F5BE967D14C6A3EB8E952A452609C64F63439D71830DA",
+  "研数据-UI锦集.png": "E769026FD8E12C05FD630CD3E4EF942CE5613C616E826624AE0FE6270650EB02",
+  "研数据-UI锦集.webp": "09000A5D43309BD60CBA953C5937BFB937CC1517246F50953C2120CC93444E29"
+}

@@ -95,10 +95,7 @@ const collection = document.querySelector("#collection");
 const intro = document.querySelector("#intro");
 const gestureCue = document.querySelector("#gesture-cue");
 const stageFooter = document.querySelector("#stage-footer");
-const activeCopy = document.querySelector("#active-copy");
-const activeDescription = document.querySelector("#active-description");
-const activeCategory = document.querySelector("#active-category");
-const activeYear = document.querySelector("#active-year");
+const copyField = document.querySelector("#copy-field");
 const projectCount = document.querySelector("#project-count");
 const previousProject = document.querySelector("#previous-project");
 const nextProject = document.querySelector("#next-project");
@@ -205,7 +202,6 @@ let cardWidth = 350;
 let cardHeight = 224;
 let wideLayout = false;
 let cardCenterX = 195;
-let backgroundPaused = false;
 let ownsDetailHistory = false;
 let initialized = false;
 let activeIndex = -1;
@@ -221,14 +217,15 @@ let previousFrameTime = 0;
 let animationStartedAt = 0;
 let frameTimeTotal = 0;
 
-const copyState = {
-  visible: false,
-  index: -1,
-};
+const copyEls = [];
+let copyVisibleIndex = -1;
+let copyPreviewIndex = -1;
+let copySwitchLock = 0;
 
 const drag = {
   active: false,
   pointerId: null,
+  startX: 0,
   startY: 0,
   lastY: 0,
   lastTime: 0,
@@ -243,14 +240,12 @@ const motions = projects.map(() => ({
   y: 0,
   rotation: 0,
   scale: 1,
-  tiltX: 0,
   tiltY: 0,
   opacity: 1,
   vx: 0,
   vy: 0,
   vrotation: 0,
   vscale: 0,
-  vtiltX: 0,
   vtiltY: 0,
   vopacity: 0,
 }));
@@ -459,7 +454,6 @@ function cardTarget(index) {
   let x = 0;
   let rotation = 0;
   let scale = 1;
-  let tiltX = -1.2;
   let tiltY = 0;
   let opacity = 1;
   let z = 0;
@@ -470,7 +464,6 @@ function cardTarget(index) {
     x = xOffsets[index];
     rotation = rotations[index];
     scale = 1 - index * 0.014;
-    tiltX = -2.4 - index * 0.18;
     tiltY = xOffsets[index] * 0.16;
     z = 48 - index * 8;
     stackOrder = 50 - index;
@@ -479,7 +472,6 @@ function cardTarget(index) {
     x = xOffsets[index] * 0.3;
     rotation = rotations[index] * 0.18;
     scale = 0.89 + index * 0.006;
-    tiltX = -1.2;
     tiltY = 0;
     opacity = 0.5;
     z = 8 + index * 2;
@@ -494,7 +486,6 @@ function cardTarget(index) {
     x = xOffsets[index] * 0.35;
     rotation = rotations[index] * 0.45;
     scale = 0.97 - distance * 0.018;
-    tiltX = -1.8;
     tiltY = xOffsets[index] * 0.08;
     opacity = Math.max(0.48, 0.74 - distance * 0.08);
     z = 36 - distance * 5;
@@ -517,14 +508,14 @@ function cardTarget(index) {
     }
   }
 
-  return Object.assign(targets[index], { x, y, rotation, scale, tiltX, tiltY, opacity, z, stackOrder });
+  return Object.assign(targets[index], { x, y, rotation, scale, tiltY, opacity, z, stackOrder });
 }
 
-function springScalar(motion, key, target, dt, omega) {
+function springScalar(motion, key, target, dt, omega, damping = 1) {
   const velocityKey = `v${key}`;
   const value = motion[key];
   const velocity = motion[velocityKey];
-  const f = 1 + 2 * dt * omega;
+  const f = 1 + 2 * dt * omega * damping;
   const oo = omega * omega;
   const hoo = dt * oo;
   const hhoo = dt * hoo;
@@ -541,8 +532,10 @@ function writeCardTransform(index, target) {
   const card = cards[index];
   const mesh = meshes[index];
   const radians = THREE.MathUtils.degToRad;
+  const tiltY = motion.tiltY;
+  const rotation = motion.rotation;
 
-  card.style.transform = `translate3d(calc(-50% + ${motion.x.toFixed(2)}px), ${motion.y.toFixed(2)}px, 0) rotateX(${motion.tiltX.toFixed(2)}deg) rotateY(${motion.tiltY.toFixed(2)}deg) rotateZ(${motion.rotation.toFixed(2)}deg) scale(${motion.scale.toFixed(4)})`;
+  card.style.transform = `translate3d(calc(-50% + ${motion.x.toFixed(2)}px), ${motion.y.toFixed(2)}px, 0) rotateY(${tiltY.toFixed(2)}deg) rotateZ(${rotation.toFixed(2)}deg) scale(${motion.scale.toFixed(4)})`;
   card.style.opacity = motion.opacity.toFixed(3);
   metrics.cardTopPositions[index] = Number(motion.y.toFixed(1));
 
@@ -552,7 +545,7 @@ function writeCardTransform(index, target) {
     stageHeight / 2 - (motion.y + cardHeight / 2),
     target.z,
   );
-  mesh.rotation.set(radians(-motion.tiltX), radians(motion.tiltY), radians(-motion.rotation));
+  mesh.rotation.set(0, radians(tiltY), radians(-rotation));
   mesh.scale.set(cardWidth * motion.scale, cardWidth * motion.scale, cardWidth * motion.scale);
 
 }
@@ -580,14 +573,12 @@ function settleImmediately() {
     motion.y = target.y;
     motion.rotation = target.rotation;
     motion.scale = target.scale;
-    motion.tiltX = target.tiltX;
     motion.tiltY = target.tiltY;
     motion.opacity = target.opacity;
     motion.vx = 0;
     motion.vy = 0;
     motion.vrotation = 0;
     motion.vscale = 0;
-    motion.vtiltX = 0;
     motion.vtiltY = 0;
     motion.vopacity = 0;
     writeCardTransform(index, target);
@@ -618,7 +609,6 @@ function animationFrame(time) {
       motion.y = target.y;
       motion.rotation = target.rotation;
       motion.scale = target.scale;
-      motion.tiltX = target.tiltX;
       motion.tiltY = target.tiltY;
       motion.opacity = target.opacity;
     } else {
@@ -631,7 +621,6 @@ function animationFrame(time) {
       }
       moving = springScalar(motion, "rotation", target.rotation, dt, 18) || moving;
       moving = springScalar(motion, "scale", target.scale, dt, 20) || moving;
-      moving = springScalar(motion, "tiltX", target.tiltX, dt, 18) || moving;
       moving = springScalar(motion, "tiltY", target.tiltY, dt, 18) || moving;
       moving = springScalar(motion, "opacity", target.opacity, dt, 22) || moving;
     }
@@ -700,31 +689,61 @@ function resizeStage() {
   }
 }
 
-function fillActiveCopy(index) {
-  const project = projects[index];
-  if (!project) return;
-  document.querySelector("#active-title").textContent = project.title;
-  document.querySelector("#active-number").textContent = `PROJECT ${project.number} / ${String(projects.length).padStart(2, "0")}`;
-  activeDescription.textContent = project.description;
-  activeCategory.textContent = project.category;
-  activeYear.textContent = project.year;
+function escapeCopy(value) {
+  return String(value).replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  }[char]));
 }
 
-function setCopyState(visible, index = -1) {
-  const nextVisible = Boolean(visible && index >= 0 && !detailOpen);
-  const nextIndex = nextVisible ? index : -1;
-  const changed = nextVisible !== copyState.visible || nextIndex !== copyState.index;
-  if (!changed) return;
-  if (nextVisible) fillActiveCopy(nextIndex);
-  activeCopy.inert = !nextVisible;
-  copyState.visible = nextVisible;
-  copyState.index = nextIndex;
-  activeCopy.classList.toggle("is-visible", nextVisible);
-  activeCopy.setAttribute("aria-hidden", String(!nextVisible));
-  stage.classList.toggle("has-copy-preview", nextVisible && activeIndex < 0);
-  metrics.copyVisible = nextVisible;
-  metrics.copyProjectIndex = nextIndex;
-  if (changed) metrics.copyTransitions += 1;
+function buildCardCopies() {
+  if (!copyField) return;
+  copyField.innerHTML = projects.map((project, index) => `
+    <section class="active-copy card-copy" data-copy-index="${index}" aria-hidden="true" inert>
+      <span class="active-number">PROJECT ${project.number} / ${String(projects.length).padStart(2, "0")}</span>
+      <h2>${escapeCopy(project.title)}</h2>
+      <p>${escapeCopy(project.description)}</p>
+      <span class="active-meta"><span>${escapeCopy(project.category)}</span> · <span>${escapeCopy(project.year)}</span></span>
+      <button class="explore-button" type="button" data-copy-open>查看作品 <span aria-hidden="true">↗</span></button>
+    </section>
+  `).join("");
+  copyEls.push(...copyField.querySelectorAll(".card-copy"));
+  copyEls.forEach((el) => {
+    el.inert = true;
+    el.setAttribute("aria-hidden", "true");
+  });
+}
+
+function updateCopyPositions() {
+  copyEls.forEach((el, index) => {
+    const y = motions[index].y + cardHeight + 30;
+    el.style.setProperty("--copy-y", `${y.toFixed(1)}px`);
+  });
+}
+
+function setCopyElVisible(el, visible) {
+  el.classList.toggle("is-visible", visible);
+  el.inert = !visible;
+  el.setAttribute("aria-hidden", String(!visible));
+}
+
+function hideAllCopies() {
+  copyVisibleIndex = -1;
+  copyPreviewIndex = -1;
+  copyEls.forEach((el) => setCopyElVisible(el, false));
+  stage.classList.remove("has-copy-preview");
+  metrics.copyVisible = false;
+  metrics.copyProjectIndex = -1;
+}
+
+function showCopyNow(index, { preview = false } = {}) {
+  if (!copyEls[index]) return;
+  copyVisibleIndex = preview ? -1 : index;
+  copyPreviewIndex = preview ? index : -1;
+  copyEls.forEach((el, i) => setCopyElVisible(el, i === index));
+  stage.classList.toggle("has-copy-preview", preview);
+  metrics.copyVisible = true;
+  metrics.copyProjectIndex = index;
+  metrics.copyTransitions += 1;
 }
 
 function updateCopyRange() {
@@ -735,47 +754,42 @@ function updateCopyRange() {
   metrics.copyExitRange = Number(exitRange.toFixed(1));
   metrics.copyFocusY = Number(focusPosition.toFixed(1));
 
+  updateCopyPositions();
+
   if (detailOpen) {
-    metrics.copyDistance = null;
-    setCopyState(false);
+    hideAllCopies();
     return;
   }
 
-  const candidateIndexes = activeIndex >= 0
-    ? [activeIndex]
-    : projects.map((_, index) => index);
-  let candidateIndex = -1;
-  let candidateDistance = Number.POSITIVE_INFINITY;
-  candidateIndexes.forEach((index) => {
-    const distance = Math.abs(motions[index].y - focusPosition);
-    if (distance < candidateDistance) {
-      candidateDistance = distance;
-      candidateIndex = index;
+  if (activeIndex >= 0) {
+    const distance = Math.abs(motions[activeIndex].y - focusPosition);
+    metrics.copyDistance = Number(distance.toFixed(1));
+    stage.classList.remove("has-copy-preview");
+    if (
+      copyVisibleIndex !== activeIndex &&
+      distance <= enterRange &&
+      performance.now() >= copySwitchLock
+    ) {
+      showCopyNow(activeIndex);
     }
-  });
-
-  if (candidateIndex >= 0) {
-    const restingCopyY = focusPosition + cardHeight + 30;
-    const followingCopyY = motions[candidateIndex].y + cardHeight + 30;
-    const copyY = Math.min(stageHeight - 132, Math.max(restingCopyY, followingCopyY));
-    activeCopy.style.setProperty("--copy-y", `${copyY.toFixed(1)}px`);
-  }
-
-  if (copyState.visible && candidateIndex === copyState.index && candidateDistance <= exitRange) {
-    metrics.copyDistance = Number(candidateDistance.toFixed(1));
     return;
   }
 
-  if (candidateIndex >= 0 && candidateDistance <= enterRange) {
-    metrics.copyDistance = Number(candidateDistance.toFixed(1));
-    setCopyState(true, candidateIndex);
+  if (!drag.active) {
+    hideAllCopies();
     return;
   }
 
-  metrics.copyDistance = Number.isFinite(candidateDistance)
-    ? Number(candidateDistance.toFixed(1))
-    : null;
-  setCopyState(false);
+  // The intro preview keeps the face card's own copy, not a global block.
+  const previewIndex = 0;
+  const distance = Math.abs(motions[previewIndex].y - focusPosition);
+  metrics.copyDistance = Number(distance.toFixed(1));
+  if (copyPreviewIndex === previewIndex && distance <= exitRange) return;
+  if (distance <= enterRange) {
+    showCopyNow(previewIndex, { preview: true });
+    return;
+  }
+  if (copyPreviewIndex === previewIndex) hideAllCopies();
 }
 
 function updateCardStates() {
@@ -816,7 +830,6 @@ function updateCollectionUI() {
 
   if (hasActive) {
     const project = projects[activeIndex];
-    fillActiveCopy(activeIndex);
     liveStatus.textContent = `当前项目：${project.title}，第 ${activeIndex + 1} 个，共 ${projects.length} 个。`;
   } else {
     liveStatus.textContent = "作品卡片位于初始堆叠状态。";
@@ -825,12 +838,24 @@ function updateCollectionUI() {
 
 function setActive(nextIndex, { announce = true } = {}) {
   const clamped = Math.max(-1, Math.min(projects.length - 1, nextIndex));
+  const previous = activeIndex;
   drag.offset = 0;
-  const preserveCopy = copyState.visible && copyState.index === clamped;
-  if (!preserveCopy) setCopyState(false);
-  if (clamped === activeIndex) {
+  if (clamped === previous) {
     scheduleFrame();
     return;
+  }
+  if (clamped >= 0 && previous < 0 && copyPreviewIndex === clamped) {
+    copyPreviewIndex = -1;
+    copyVisibleIndex = clamped;
+    stage.classList.remove("has-copy-preview");
+    metrics.copyVisible = true;
+    metrics.copyProjectIndex = clamped;
+    copySwitchLock = 0;
+  } else {
+    hideAllCopies();
+    copySwitchLock = clamped >= 0 && previous >= 0 && wideLayout && !reducedMotion.matches
+      ? performance.now() + 240
+      : 0;
   }
   activeIndex = clamped;
   updateCollectionUI();
@@ -952,7 +977,7 @@ function showDetail(index, { fromHistory = false, replaceHistory = false } = {})
     collection.setAttribute("aria-hidden", "true");
     stage.classList.add("is-detail");
     stage.classList.remove("is-deck");
-    setCopyState(false);
+    hideAllCopies();
   }, {label: `正在打开${projects[index].title}`, focus: () => detailBack.focus({preventScroll: true})});
 }
 
@@ -983,10 +1008,11 @@ function closeDetail({ fromHistory = false } = {}) {
 }
 
 function beginDrag(event) {
-  if (detailOpen || (event.pointerType === "mouse" && event.button !== 0)) return;
+  if (drag.active || !event.isPrimary || detailOpen || (event.pointerType === "mouse" && event.button !== 0)) return;
   if (event.target.closest("button:not(.project-card), a")) return;
   drag.active = true;
   drag.pointerId = event.pointerId;
+  drag.startX = event.clientX;
   drag.startY = event.clientY;
   drag.lastY = event.clientY;
   drag.lastTime = performance.now();
@@ -1004,10 +1030,12 @@ function moveDrag(event) {
   const now = performance.now();
   const elapsed = Math.max(8, now - drag.lastTime);
   drag.offset = event.clientY - drag.startY;
-  drag.velocity = (event.clientY - drag.lastY) / elapsed;
+  const blend = 1 - Math.exp(-elapsed / 35);
+  const decay = Math.exp(-elapsed / 85);
+  drag.velocity = THREE.MathUtils.lerp(drag.velocity * decay, THREE.MathUtils.clamp((event.clientY - drag.lastY) / elapsed, -3, 3), blend);
   drag.lastY = event.clientY;
   drag.lastTime = now;
-  if (Math.abs(drag.offset) > 8) {
+  if (Math.hypot(event.clientX - drag.startX, drag.offset) > 8) {
     drag.moved = true;
     if (!drag.captured) {
       stage.setPointerCapture?.(event.pointerId);
@@ -1020,8 +1048,16 @@ function moveDrag(event) {
 function finishDrag(event, cancelled = false) {
   if (!drag.active || (event && event.pointerId !== drag.pointerId)) return;
   const offset = drag.offset;
-  const velocity = drag.velocity;
+  const velocity = drag.velocity * Math.exp(-(performance.now() - drag.lastTime) / 85);
   const moved = drag.moved;
+  if (!cancelled && moved && !reducedMotion.matches) {
+    const boundary = (activeIndex < 0 && offset > 0) ||
+      (activeIndex === projects.length - 1 && offset < 0);
+    motions.forEach((motion, index) => {
+      const weight = activeIndex < 0 ? 1 - index * 0.025 : index < activeIndex ? 0.28 : index === activeIndex ? 1 : 0.76;
+      motion.vy = THREE.MathUtils.clamp(velocity * 1000, -900, 900) * weight * (boundary ? 0.32 : 1);
+    });
+  }
   drag.active = false;
   if (drag.captured && event && stage.hasPointerCapture?.(event.pointerId)) {
     stage.releasePointerCapture(event.pointerId);
@@ -1032,8 +1068,8 @@ function finishDrag(event, cancelled = false) {
   suppressClick = moved;
   const goNext = offset < -48 || velocity < -0.48;
   const goPrevious = offset > 48 || velocity > 0.48;
-  if (!cancelled && goNext) setActive(activeIndex + 1);
-  else if (!cancelled && goPrevious) setActive(activeIndex - 1);
+  if (!cancelled && moved && goNext) setActive(activeIndex + 1);
+  else if (!cancelled && moved && goPrevious) setActive(activeIndex - 1);
   else {
     drag.offset = 0;
     scheduleFrame();
@@ -1105,7 +1141,7 @@ nextDetail.addEventListener("click", () => {
 
 stage.addEventListener("pointerdown", beginDrag);
 stage.addEventListener("pointermove", moveDrag, { passive: false });
-stage.addEventListener("pointerup", finishDrag);
+window.addEventListener("pointerup", finishDrag);
 stage.addEventListener("pointercancel", event => finishDrag(event, true));
 stage.addEventListener("lostpointercapture", event => { if (drag.active && event.target === stage) finishDrag(event, true); });
 stage.addEventListener("wheel", handleWheel, { passive: false });
@@ -1126,17 +1162,19 @@ window.addEventListener('hashchange', syncLocation);
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && (detailOpen || typeof pendingPage === 'number')) closeDetail();
 });
-const motionToggle = document.querySelector('#motion-toggle');
 function updateBackgroundMotion() {
-  const paused = backgroundPaused || reducedMotion.matches || document.hidden || detailOpen;
+  const paused = reducedMotion.matches || document.hidden || detailOpen;
   stage.classList.toggle('motion-paused', paused);
-  motionToggle.setAttribute('aria-pressed', String(backgroundPaused || reducedMotion.matches));
-  motionToggle.textContent = reducedMotion.matches ? '动态已减弱' : backgroundPaused ? '播放动态' : '暂停动态';
-  motionToggle.disabled = reducedMotion.matches;
 }
-motionToggle.addEventListener('click', () => { backgroundPaused = !backgroundPaused; updateBackgroundMotion(); });
 document.querySelector('#explore-projects').addEventListener('click', () => setActive(0));
-document.querySelector('#open-active').addEventListener('click', () => showDetail(activeIndex));
+copyField?.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-copy-open]');
+  if (!button) return;
+  const copy = button.closest('[data-copy-index]');
+  if (!copy) return;
+  const index = Number(copy.dataset.copyIndex);
+  if (index >= 0) showDetail(index);
+});
 updateBackgroundMotion();
 document.addEventListener("visibilitychange", () => {
   updateBackgroundMotion();
@@ -1159,6 +1197,7 @@ reducedMotion.addEventListener?.("change", () => {
 initThree();
 updateTypeScale();
 resizeStage();
+buildCardCopies();
 updateCollectionUI();
 new ResizeObserver(resizeStage).observe(stage);
 window.addEventListener("resize", updateTypeScale, { passive: true });

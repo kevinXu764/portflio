@@ -336,3 +336,16 @@
  .zz-theater-focus .zz-media-viewport{padding:0}
  .zz-pet-device .zz-media-viewport .zz-image,.zz-collapse-evidence .zz-media-viewport .zz-image{min-width:0}
 }
+
+/* v2.24：尺寸由同批 branch3 的真实 DOM 裁图决定，不沿用旧坐标。 */
+.zz-memory-search{max-width:100%;padding:10px;border:1px solid #ded5c1;border-radius:6px}
+.zz-pet-device{height:510px;align-items:center}
+.zz-pet-device .zz-shot{max-width:250px}
+.zz-pet-device .zz-image img{max-height:500px;object-fit:contain}
+.zz-theater-stage>.zz-shot .zz-image img{position:static;width:100%;max-width:100%;height:auto}
+.zz-theater-stage>.zz-shot{aspect-ratio:auto;overflow:visible}
+.zz-support-grid>.zz-shot{align-self:start}
+#zz-theater>.zz-support-grid{margin-top:40px}
+#zz-theater>.zz-subtitle+.zz-shot{background:#4b3864;padding:18px;border-radius:8px}
+@media(max-width:1100px){.zz-pet-device{height:450px}.zz-pet-device .zz-image img{max-height:440px}}
+@media(max-width:600px){.zz-pet-device{height:auto}.zz-pet-device .zz-image img{max-height:560px}#zz-theater>.zz-subtitle+.zz-shot{padding:10px}}

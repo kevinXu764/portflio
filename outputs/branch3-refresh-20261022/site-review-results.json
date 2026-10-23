@@ -1,0 +1,778 @@
+{
+  "status": "PASS",
+  "total": 106,
+  "passed": 106,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "作品一路由载入",
+      "pass": true
+    },
+    {
+      "name": "仍为7张作品卡",
+      "pass": true
+    },
+    {
+      "name": "作品一仍为7章",
+      "pass": true
+    },
+    {
+      "name": "1440 context 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 context 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 context 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 context 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 meet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 meet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 meet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 meet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 chat 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 chat 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 chat 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 chat 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 call 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 call 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 call 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 call 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 memory 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 memory 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 memory 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 memory 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 pet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 pet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 pet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 pet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 theater 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1440 theater 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1440 theater 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1440 theater 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1440 统一使用Web截图且无旧focus",
+      "pass": true
+    },
+    {
+      "name": "1024 context 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 context 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 context 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 context 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 meet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 meet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 meet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 meet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 chat 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 chat 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 chat 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 chat 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 call 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 call 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 call 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 call 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 memory 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 memory 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 memory 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 memory 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 pet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 pet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 pet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 pet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 theater 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "1024 theater 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "1024 theater 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "1024 theater 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "1024 统一使用Web截图且无旧focus",
+      "pass": true
+    },
+    {
+      "name": "390 context 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 context 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 context 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 context 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 meet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 meet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 meet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 meet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 chat 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 chat 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 chat 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 chat 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 call 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 call 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 call 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 call 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 memory 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 memory 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 memory 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 memory 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 pet 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 pet 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 pet 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 pet 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 theater 无横向溢出",
+      "pass": true
+    },
+    {
+      "name": "390 theater 可见图片已加载",
+      "pass": true
+    },
+    {
+      "name": "390 theater 章节高亮正确",
+      "pass": true
+    },
+    {
+      "name": "390 theater 无旧图坐标硬裁切",
+      "pass": true
+    },
+    {
+      "name": "390 统一使用Web截图且无旧focus",
+      "pass": true
+    },
+    {
+      "name": "点击打开原生图片预览",
+      "pass": true
+    },
+    {
+      "name": "看图加载新版2倍原图",
+      "pass": true
+    },
+    {
+      "name": "图片可键盘放大",
+      "pass": true
+    },
+    {
+      "name": "图片可键盘复位",
+      "pass": true
+    },
+    {
+      "name": "Esc先关闭图片并保留案例",
+      "pass": true
+    },
+    {
+      "name": "关闭图片保留阅读位置",
+      "pass": true
+    },
+    {
+      "name": "补充流程可收起",
+      "pass": true
+    },
+    {
+      "name": "补充流程可重新展开",
+      "pass": true
+    },
+    {
+      "name": "下一个作品进入研数据",
+      "pass": true
+    },
+    {
+      "name": "保留其他路由 brand-atlas",
+      "pass": true
+    },
+    {
+      "name": "保留其他路由 move-with-me",
+      "pass": true
+    },
+    {
+      "name": "保留其他路由 quiet-type",
+      "pass": true
+    },
+    {
+      "name": "保留其他路由 civic-signal",
+      "pass": true
+    },
+    {
+      "name": "保留其他路由 objects-at-rest",
+      "pass": true
+    },
+    {
+      "name": "返回作品集可用",
+      "pass": true
+    },
+    {
+      "name": "运行时异常0",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "1440-cover",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 241204,
+      "sha256": "356f0123c01d129064389f659690671675022a9419d880f542be6e7d29265a2c"
+    },
+    {
+      "name": "1440-collection",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 911807,
+      "sha256": "891a697051f35122d4dc88fe2519935cb67e7bb47593970ed36647e1301aa2cb"
+    },
+    {
+      "name": "1440-context",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 117982,
+      "sha256": "ad9a124fe5695cabb049a7fd4d4c86460b7a364f997de156666b00d6f8c6256a"
+    },
+    {
+      "name": "1440-meet",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 449206,
+      "sha256": "7777683365ce2c7bae0b0f7335ec2ef9817c806c2c68a2f2adaf2fe7ecf7eb67"
+    },
+    {
+      "name": "1440-chat",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 160818,
+      "sha256": "7d9c1a4b8474843b316bc2c83b7e4eead37238f82c67737ae4c63ba19456c918"
+    },
+    {
+      "name": "1440-call",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 213649,
+      "sha256": "f1551cf605d05f154bb02c50441a2dbb30e8769e00f73e54037688526576bbdd"
+    },
+    {
+      "name": "1440-memory",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 157875,
+      "sha256": "431268eca3b632a8818f4a692fb622e9a392ff2a1be6cc38ac6e50b03e530a72"
+    },
+    {
+      "name": "1440-pet",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 154690,
+      "sha256": "86e73ade5e51a483b7ad86a669073900200c6aec3ea77a619876882aa879501f"
+    },
+    {
+      "name": "1440-theater",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 324465,
+      "sha256": "52705b8e15953bd5d2d51000a3db73b61feaeed827385031ca5d4b4475a0b68c"
+    },
+    {
+      "name": "390-meet",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 390,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 220153,
+      "sha256": "2120ac906e3127bc057e70b3d56ab001e7808e3bfbf1a215994766816319b25a"
+    },
+    {
+      "name": "390-call",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 390,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 110430,
+      "sha256": "aa5f467b5cdb886b9256ce9c5a9749960ce62428afea3a8404984e3e630ca057"
+    },
+    {
+      "name": "390-pet",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 390,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 116111,
+      "sha256": "d6c4d7c103967cfd4c3642b3aa26ffe1a4ae578d1c22172efa8913c02f1cc8cf"
+    },
+    {
+      "name": "390-theater",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 390,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 117295,
+      "sha256": "51665c16f9c438993901907ecd4204d159be375381d80120d18e743ac1cf77d8"
+    },
+    {
+      "name": "1440-create-steps",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 256830,
+      "sha256": "e2935d408472f8edcf379968a5c68b4e621ee1d1007f4a4d26628196634e9c1c"
+    },
+    {
+      "name": "1440-event-states",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 121817,
+      "sha256": "910038154dee5dc0bcca0e220f6b1c039661d66ec35392339e881411f83f773a"
+    },
+    {
+      "name": "1440-pet-modes",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 193589,
+      "sha256": "225c33c2624f95acf4c53abde77cf1e9df755636d7d2fa277aadd2c3637a7e0f"
+    },
+    {
+      "name": "1440-theater-results",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 364747,
+      "sha256": "ff55b5e58cd156a4415b501823a30e7eeb7f31517ad1f2eb480d25e9e3065baa"
+    },
+    {
+      "name": "1440-community",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 351658,
+      "sha256": "a670b78b6105bb4d3a0b5a045d509b0d4d8e38a59f3e561c08a4da4e64cb1fe3"
+    },
+    {
+      "name": "1440-image-preview",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 324753,
+      "sha256": "a7d116b58d1de960627956a44d7203d653a57f6dc252a2f12cd7956f08c48463"
+    },
+    {
+      "name": "1440-card-collection",
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1100,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "dpr": 1
+      },
+      "bytes": 223918,
+      "sha256": "e9d62deeeb83ce7ac0f2773607acab1f1a6c85d44be4c088ebbb3f2d7e807862"
+    }
+  ],
+  "runtimeErrors": [],
+  "viewportSource": 1440,
+  "sourceDpr": 2
+}

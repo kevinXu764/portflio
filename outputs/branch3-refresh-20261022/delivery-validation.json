@@ -1,0 +1,42 @@
+{
+    "status":  "PASS",
+    "host":  "WIN-BOG6EEAE2HG",
+    "account":  "administrator",
+    "target":  "C:\\Users\\Administrator\\Desktop\\徐自泉文件\\学习文件\\exp\\card",
+    "runtimeFiles":  247,
+    "runtimeMatch":  247,
+    "protectedFilesUnchanged":  93,
+    "sourceRuntimeFiles":  43,
+    "sourceRuntimeMatch":  43,
+    "standaloneSha256":  "9C4B9B58866E79EC67CB3DCA2D61F0CE4A8941B38503E97CA6ADCF3B1B80F7F2",
+    "webViewportWidth":  1440,
+    "deviceScaleFactor":  2,
+    "sourceCaptures":  42,
+    "reports":  [
+                    {
+                        "report":  "site-review-results.json",
+                        "status":  "PASS",
+                        "total":  106,
+                        "passed":  106,
+                        "failed":  0
+                    },
+                    {
+                        "report":  "offline-review-results.json",
+                        "status":  "PASS",
+                        "total":  11,
+                        "passed":  11,
+                        "failed":  0
+                    }
+                ],
+    "prototypeSpacingPasses":  9,
+    "independentVisualAudit":  "PASS",
+    "taskProcesses":  0,
+    "profilesCleaned":  [
+                            "capture-profile",
+                            "collection-profile",
+                            "patch-capture-profile",
+                            "portfolio-review-profile",
+                            "offline-review-profile"
+                        ],
+    "backup":  "outputs/branch3-refresh-20261022/before-runtime.zip"
+}

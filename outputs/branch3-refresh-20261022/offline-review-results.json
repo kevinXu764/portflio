@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "total": 11,
+  "passed": 11,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "离线file入口打开作品一",
+      "pass": true
+    },
+    {
+      "name": "离线封面图可加载",
+      "pass": true
+    },
+    {
+      "name": "离线原图查看可用",
+      "pass": true
+    },
+    {
+      "name": "离线Esc关闭图片",
+      "pass": true
+    },
+    {
+      "name": "1440恢复按钮不遮挡气泡且位于窗口内",
+      "pass": true
+    },
+    {
+      "name": "1440恢复控制器可用",
+      "pass": true
+    },
+    {
+      "name": "390恢复按钮不遮挡气泡且位于窗口内",
+      "pass": true
+    },
+    {
+      "name": "390恢复控制器可用",
+      "pass": true
+    },
+    {
+      "name": "320恢复按钮不遮挡气泡且位于窗口内",
+      "pass": true
+    },
+    {
+      "name": "320恢复控制器可用",
+      "pass": true
+    },
+    {
+      "name": "运行时异常0",
+      "pass": true
+    }
+  ],
+  "runtimeErrors": []
+}

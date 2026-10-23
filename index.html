@@ -31,14 +31,16 @@
         <div class="stage-texture" aria-hidden="true"></div>
         <div class="stage-topbar">
           <span class="archive-label">MY ASSETS</span>
-          <button id="motion-toggle" type="button" aria-pressed="false">暂停动态</button>
         </div>
         <canvas id="scene" aria-hidden="true"></canvas>
 
         <div class="collection-view" id="collection">
           <header class="intro" id="intro">
             <p class="eyebrow">SELECTED WORK · 2023—2026</p>
-            <h1>My Assets</h1>
+            <div class="hero-wordmark">
+              <h1 class="hero-title" aria-label="Design Showcase"><span class="hero-glyphs" aria-hidden="true"><span class="hero-line"><span class="hero-glyph">D</span><span class="hero-glyph">e</span><span class="hero-glyph">s</span><span class="hero-glyph">i</span><span class="hero-glyph">g</span><span class="hero-glyph">n</span></span><span class="hero-line"><span class="hero-glyph">S</span><span class="hero-glyph">h</span><span class="hero-glyph">o</span><span class="hero-glyph">w</span><span class="hero-glyph">c</span><span class="hero-glyph">a</span><span class="hero-glyph">s</span><span class="hero-glyph">e</span></span></span></h1>
+              <canvas class="hero-tech" id="hero-tech" aria-hidden="true"></canvas>
+            </div>
             <p class="intro-subtitle">关于产品、体验与设计。</p>
             <button class="explore-button" id="explore-projects" type="button">浏览作品 <span aria-hidden="true">↗</span></button>
           </header>
@@ -55,7 +57,7 @@
               <span class="zz-card-art" aria-hidden="true">
                 <span class="zz-card-window"></span>
                 <svg class="zz-card-spark" viewBox="0 0 56 56"><path d="M28 2 33 22 53 28 33 34 28 54 22 34 2 28 22 22Z"/></svg>
-                <img class="zz-card-character" src="cases/zhuozai/media/previews/chengxia.webp" data-full-src="cases/zhuozai/media/chengxia.png" data-image-resolution="preview" width="1024" height="1536" alt="" decoding="sync" fetchpriority="high">
+                <img class="zz-card-character" src="cases/zhuozai/media/previews/chengxia.webp" data-full-src="cases/zhuozai/media/chengxia.png" data-image-resolution="preview" width="1333" height="1180" alt="" decoding="sync" fetchpriority="high">
                 <span class="zz-card-message">我在呢。</span>
               </span>
               <span class="zz-card-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M9 5h22a6 6 0 0 1 6 6v15a6 6 0 0 1-6 6H18L8 38v-7a6 6 0 0 1-5-6V11a6 6 0 0 1 6-6Z"/><path d="M14 15v7m12-7v7"/></svg></span>
@@ -114,13 +116,7 @@
             </button>
           </div>
 
-          <section class="active-copy" id="active-copy" aria-live="polite" aria-hidden="true" inert>
-            <span class="active-number" id="active-number"></span>
-            <h2 id="active-title"></h2>
-            <p id="active-description"></p>
-            <span class="active-meta"><span id="active-category"></span> · <span id="active-year"></span></span>
-            <button class="explore-button" id="open-active" type="button">查看作品 <span aria-hidden="true">↗</span></button>
-          </section>
+          <div class="copy-field" id="copy-field" aria-live="polite"></div>
 
           <nav class="step-controls" id="step-controls" aria-label="作品切换">
             <button id="previous-project" type="button" aria-label="上一个作品">
@@ -205,5 +201,6 @@
     </main>
 
     <script defer src="./assets/app.bundle.js"></script>
+    <script defer src="./assets/hero-tech.js"></script>
   </body>
 </html>
