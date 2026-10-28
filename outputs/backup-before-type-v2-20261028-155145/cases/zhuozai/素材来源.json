@@ -1,0 +1,884 @@
+{
+  "source": "branch3 v0.4",
+  "sourceRoot": "C:\\Users\\Administrator\\Desktop\\徐自泉文件\\学习文件\\exp\\ptf_old\\桌崽AI\\branch3",
+  "viewportWidth": 1440,
+  "deviceScaleFactor": 2,
+  "renderEngine": "Windows Chrome Headless / actual HTML / DOM-based crop",
+  "captureCount": 42,
+  "captureRuntimeErrors": 0,
+  "encoding": "源截图 PNG；作品集页面 WebP 使用 quality 90，预览 WebP 使用 quality 76。",
+  "sources": [
+    {
+      "clip": {
+        "x": 208,
+        "y": 60,
+        "width": 1232,
+        "height": 1294.3125,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 3393415,
+      "sha256": "9d2823d738a73850f1e695ef76514e3a45fe6e92b035214119fd47b7883ee67f",
+      "name": "discover",
+      "url": "#discover",
+      "source": "branch3 v0.4",
+      "title": "发现角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 751.25,
+        "width": 1208,
+        "height": 494.0625,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1066501,
+      "sha256": "2d52dd7a8a2461c33978b9aae6a56394f397212f9bb62e245240ab72f3ea6a30",
+      "name": "community-home",
+      "url": "#discover",
+      "source": "branch3 v0.4",
+      "title": "发现角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 265,
+        "y": 35,
+        "width": 910,
+        "height": 930,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1236784,
+      "sha256": "add5b6f0e54d7621411e8dfe2565defeb430ee7cf9a22b260e0bdfb985e4a984",
+      "name": "community-replay",
+      "url": "#discover",
+      "source": "branch3 v0.4",
+      "title": "发现角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 445,
+        "y": 232,
+        "width": 550,
+        "height": 536,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 344538,
+      "sha256": "94df438d4398724177004cbe253ea05acb524a3f5270ed495aacb4efa9a888f8",
+      "name": "role-detail",
+      "url": "#discover",
+      "source": "branch3 v0.4",
+      "title": "发现角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 935.84375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1274801,
+      "sha256": "0e7501fa0bbf3457fc785471f929b68f33c14895da9b6b30932d272fedbb165c",
+      "name": "create-look",
+      "url": "#create",
+      "source": "branch3 v0.4",
+      "title": "创建角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 667.328125,
+        "height": 807,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 117698,
+      "sha256": "62486015db84096304d34e40b82d283abcaf6f5b99cd5c446a861f095bf691ba",
+      "name": "create-validation",
+      "url": "#create",
+      "source": "branch3 v0.4",
+      "title": "创建角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 807,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 562968,
+      "sha256": "67887a1dc0d1d84bff7efcbbc306ea129d3f73b5f45cac477835d14eb5310602",
+      "name": "create-personality",
+      "url": "#create",
+      "source": "branch3 v0.4",
+      "title": "创建角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 672,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 547326,
+      "sha256": "ede5d925258ef4d48cfd82b35b4a215d1074b83f9c594fe54186c6240a7f5481",
+      "name": "create-confirm",
+      "url": "#create",
+      "source": "branch3 v0.4",
+      "title": "创建角色 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 876,
+        "height": 718,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 95663,
+      "sha256": "b19607551899b7ebed520a2d2a15455b2490a3bd990327a89d68f6b8fc537873",
+      "name": "create-first-chat",
+      "url": "#chat?id=xiaoya&first=1",
+      "source": "branch3 v0.4",
+      "title": "和小芽聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 718,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 485147,
+      "sha256": "46d3979e54a1395007ffeb0b1508e6fe89d65743804f8db034be73f2ead2cfd4",
+      "name": "chat-focus",
+      "url": "#chat?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "和澄夏聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 221,
+        "y": 725.796875,
+        "width": 874,
+        "height": 192,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 32887,
+      "sha256": "31c149c7af6cca77a72d72e0f42a24f563830e4b89277c2dd7f6c6c76a1dc985",
+      "name": "chat-draft",
+      "url": "#chat?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "和澄夏聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 221,
+        "y": 824.171875,
+        "width": 874,
+        "height": 192,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 32847,
+      "sha256": "6fad435eb6453b60fe837e7390e4e1539b3dbef575fb4f3858e47b3ee7fe16ab",
+      "name": "chat-waiting-detail",
+      "url": "#chat?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "和澄夏聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 221,
+        "y": 286.796875,
+        "width": 874,
+        "height": 676.375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 140302,
+      "sha256": "c661fcc9b15dd6978a7dcbea3b049372023781176ff1a040a81b0367be71335b",
+      "name": "chat-cancel",
+      "url": "#chat?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "和澄夏聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 445,
+        "y": 158.5,
+        "width": 550,
+        "height": 683,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 108630,
+      "sha256": "a279039cff8a878f25d8f1dd42b93a6f6d373a16dddd936272a74d5ef808db6d",
+      "name": "memory-from-chat",
+      "url": "#chat?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "和澄夏聊聊 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 82,
+        "y": 110,
+        "width": 348,
+        "height": 741,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 161074,
+      "sha256": "719929434de0b314144e97e0dbd9aada8ad42db9860ac570cf27020379acb328",
+      "name": "call-connecting",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 82,
+        "y": 110,
+        "width": 1276,
+        "height": 741,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 661434,
+      "sha256": "7911334a20c5d4174b00592fdc9ad1d914708dba8490bca1bad39e4ba4c67051",
+      "name": "call-event",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1052,
+        "y": 139,
+        "width": 286,
+        "height": 413.59375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 51074,
+      "sha256": "48c658f4020eddd2bd93882551cfc095d630af52843dd4281a60ac2d34fa6827",
+      "name": "event-start-current",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1052,
+        "y": 139,
+        "width": 286,
+        "height": 413.59375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 52481,
+      "sha256": "a31fae966ba26c16dc70a4fcab3c9553b952c69680760fb6b60980ec3630a31c",
+      "name": "event-progress-current",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1052,
+        "y": 139,
+        "width": 286,
+        "height": 392.59375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 48601,
+      "sha256": "416a4386334c79f06039573416a8be47231535bf81f04f9be7ad2102876ee4f8",
+      "name": "event-success-current",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1052,
+        "y": 139,
+        "width": 286,
+        "height": 374.59375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 51586,
+      "sha256": "d05b811baa13e7005984d72621fbc110d471ecfdaada8f038b41504b281641a9",
+      "name": "event-paused",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 82,
+        "y": 110,
+        "width": 348,
+        "height": 741,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 160228,
+      "sha256": "b87eb162a4631482046abbbeaf057980aeba6cc1da2f60ac17a3d7eaf9687b3b",
+      "name": "call-ended",
+      "url": "#call?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "视频通话 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 208,
+        "y": 60,
+        "width": 1232,
+        "height": 1099.796875,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 450341,
+      "sha256": "5d371d8ba3bb328400d46b27e64b609cf22d53abd1d62433ef92f741ec0907ba",
+      "name": "memory-collection",
+      "url": "#memories",
+      "source": "branch3 v0.4",
+      "title": "共同记忆 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 222,
+        "y": 524.796875,
+        "width": 1203.984375,
+        "height": 275,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 119046,
+      "sha256": "5455ded7011a3661578b34a34ff27ace81fd48485235f9399cc74f49a4e6e573",
+      "name": "memory-types",
+      "url": "#memories",
+      "source": "branch3 v0.4",
+      "title": "共同记忆 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 445,
+        "y": 185.5,
+        "width": 550,
+        "height": 629,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 106204,
+      "sha256": "3c395d043ae9e816dcdb9fbf756f86fb53be8cb94c19ec8d4d73c1f1f7799f86",
+      "name": "memory-edit",
+      "url": "#memories",
+      "source": "branch3 v0.4",
+      "title": "共同记忆 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1112,
+        "y": 462.296875,
+        "width": 312,
+        "height": 50,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 7546,
+      "sha256": "e46c0dec47c5b3fe102f71673aabe313db0487ff7e58c3c84c3629afa9a01609",
+      "name": "memory-filter-controls",
+      "url": "#memories",
+      "source": "branch3 v0.4",
+      "title": "共同记忆 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 445,
+        "y": 343.703125,
+        "width": 550,
+        "height": 312.59375,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 52246,
+      "sha256": "43b4a7a3377104e1d5ee32aa072534ac173bf05bbaad1ebfbcf096e43ad9317b",
+      "name": "memory-delete",
+      "url": "#memories",
+      "source": "branch3 v0.4",
+      "title": "共同记忆 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 685,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 291033,
+      "sha256": "1292164967b7d2027e8f6f788c26b922204abbe61e7611acb2e9cc9fa609b7f8",
+      "name": "pet-overview",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1129,
+        "y": 268.796875,
+        "width": 282,
+        "height": 559,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 155727,
+      "sha256": "4779f5f34f25f588ef981c8f92edc8a889cffe68fcc10ad733872e077ab287ae",
+      "name": "pet-full",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1129,
+        "y": 432.796875,
+        "width": 282,
+        "height": 392,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 103153,
+      "sha256": "243030a40ffceb9753adcaa28e179377f1a05390c3fc13ef1d00d6d298bd9cf7",
+      "name": "pet-avatar",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1129,
+        "y": 386.796875,
+        "width": 282,
+        "height": 442,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 77638,
+      "sha256": "c9cbf65ad83eae28cad6b67ea2ae9bbbfa7269c3f5f34b4254c8a4fef1624b75",
+      "name": "pet-small",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1129,
+        "y": 248.796875,
+        "width": 282,
+        "height": 579,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 157572,
+      "sha256": "a29344befb060f9b9f97aec5a46787e936324d9132e81f5156d970beea1c6de9",
+      "name": "pet-reply",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 685,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 296780,
+      "sha256": "eaeadd24faec28feb6493fa9091fc9e8e938a69bff75b7f86e5d162c96fe623a",
+      "name": "pet-paused",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 685,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 281722,
+      "sha256": "35c10e111b5454d454eae1aff42eec4b6467ec5775fc953377afb78a51c4545d",
+      "name": "pet-hidden",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1129,
+        "y": 268.796875,
+        "width": 282,
+        "height": 559,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 175160,
+      "sha256": "f8b6972c0d0e8a276864af2e0ade8fcc45ba37493b953427efd6e1061f1d4efd",
+      "name": "pet-character",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 1317,
+        "y": 734.796875,
+        "width": 93,
+        "height": 93,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 19938,
+      "sha256": "0f6ecae783e0c09655923c8417eb3214e3a9d7c0b0989ec77f6a4f615061e155",
+      "name": "pet-collapsed",
+      "url": "#pet?id=chengxia",
+      "source": "branch3 v0.4",
+      "title": "桌面陪伴 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 324,
+        "height": 830,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 157775,
+      "sha256": "61ad6c2bd5cf79e014f237f02e9172ea429f964fb18922c4ecc41ce95caa6fa8",
+      "name": "theater-setup-panel",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 220,
+        "y": 200.796875,
+        "width": 1208,
+        "height": 830,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1457762,
+      "sha256": "ca3c4c72a88f647d86705ef83907f259bd38f8acffff736a99704f5332601276",
+      "name": "theater-playing",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 548,
+        "y": 667.796875,
+        "width": 875,
+        "height": 82,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 34556,
+      "sha256": "7d7faa15ca2580c37533319b797f078a9ad8037e3db0ffbddf4b5dff74390bb2",
+      "name": "theater-play-controls",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 547,
+        "y": 749.796875,
+        "width": 877,
+        "height": 195,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 36120,
+      "sha256": "7c0d8af8da65e309eaddd711221275966bf3837e0702f5bbf92145e99eb5dcf8",
+      "name": "theater-transcript-detail",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 543,
+        "y": 200.796875,
+        "width": 885,
+        "height": 1025,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1316676,
+      "sha256": "cd96ab7199444f478933fa7864af40dde2b6283cf6857bb1b18f6c99d0f42cd0",
+      "name": "theater-finished",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 445,
+        "y": 346.5,
+        "width": 550,
+        "height": 307,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 68340,
+      "sha256": "58d154e59f8531dbcd69ec8c53f97223a5b0a6bbaa0f005dab300ab3a121af8b",
+      "name": "theater-save",
+      "url": "#theater",
+      "source": "branch3 v0.4",
+      "title": "双人剧场 · 桌崽 AI"
+    },
+    {
+      "clip": {
+        "x": 208,
+        "y": 60,
+        "width": 1232,
+        "height": 976.125,
+        "scale": 1
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "dpr": 2
+      },
+      "bytes": 1917321,
+      "sha256": "4d79d22150787f3160c3c251fa7cfc9102f18ab63e6ea09c4c1c01afa9bd8eea",
+      "name": "theater-collection",
+      "url": "#works",
+      "source": "branch3 v0.4",
+      "title": "本地作品 · 桌崽 AI"
+    }
+  ],
+  "prototypeVisualFix": "Two-line bubbles grow upward; restore control moved into desktop titlebar.",
+  "sourceRuntimeHashes": {
+    "index.html": "0693E6BBDDC9F977D317527DC7302547D2C03047BA964CA7B95C726779B2BAF8",
+    "app.js": "9FEA0B57F8715F4BD1988F07CAE3E4CFB295362FE8569601DBD44F54116FB28A",
+    "styles.css": "E278172A49FE0B2755296FAC65E0A5955D2B5F299D4A8EC8E384B42525A421BA",
+    "pages.css": "F9030C1ADBC6D985D9F73D3D74E19660FE2B19ACB4C7703F7C07ECF4AD8AD5A1",
+    "portfolio-layout.css": "687C55F84600451BA65774CB94EBDC76855B0D91FB62B8C9CEE57B6D7A093C6A",
+    "portfolio-color.css": "7E815E64F49B6CA55BE46887F11E1FD23F70916D0FBC56D0A63BF3473A2E62CD",
+    "home-community.css": "1079229524D32BB495F84A2BF0E4C6C3265694DCE87E04CA1D5FF0048D0AE0E1"
+  },
+  "verification": {
+    "site": {
+      "passed": 106,
+      "failed": 0
+    },
+    "offlineAndRestore": {
+      "passed": 11,
+      "failed": 0
+    },
+    "bubbleSpacing": {
+      "passed": 9,
+      "failed": 0
+    },
+    "independentVisualAudit": "PASS"
+  },
+  "verificationNote": "verification 和 prototypeVisualFix 记录 2026-10-22 的验收；2026-10-28 的截图清单与页面检查见 outputs/copy-ui-refresh-20261028。",
+  "refresh20261028": {
+    "captureManifest": "outputs/copy-ui-refresh-20261028/capture-manifest.json",
+    "captureCount": 42,
+    "collectionRecipe": "outputs/copy-ui-refresh-20261028/collection.html",
+    "captureViewport": "1440 × 1000 CSS px，DPR 2"
+  }
+}

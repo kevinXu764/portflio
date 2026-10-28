@@ -1,12 +1,12 @@
 {
   "source": "branch3 v0.4",
-  "sourceRoot": "C:\\Users\\Administrator\\Desktop\\徐自泉文件\\学习文件\\exp\\ptf_old\\桌崽AI\\branch3",
+  "sourceRoot": "C:\\Users\\Administrator\\Desktop\\作品集源目录\\学习文件\\exp\\ptf_old\\桌崽AI\\branch3",
   "viewportWidth": 1440,
   "deviceScaleFactor": 2,
   "renderEngine": "Windows Chrome Headless / actual HTML / DOM-based crop",
   "captureCount": 42,
   "captureRuntimeErrors": 0,
-  "encoding": "lossless WebP; previews separately compressed",
+  "encoding": "源截图 PNG；作品集页面 WebP 使用 quality 90，预览 WebP 使用 quality 76。",
   "sources": [
     {
       "clip": {
@@ -21,8 +21,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 3402068,
-      "sha256": "dc0697cfe13a4bd604a6e04502d38a970a587144390d4f5825bdf338731eeb21",
+      "bytes": 3393415,
+      "sha256": "9d2823d738a73850f1e695ef76514e3a45fe6e92b035214119fd47b7883ee67f",
       "name": "discover",
       "url": "#discover",
       "source": "branch3 v0.4",
@@ -41,8 +41,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1075660,
-      "sha256": "76b57df7cb02923d64191ea7b90cf375f766d9779ad8dede16f62d61e58d7b27",
+      "bytes": 1066501,
+      "sha256": "2d52dd7a8a2461c33978b9aae6a56394f397212f9bb62e245240ab72f3ea6a30",
       "name": "community-home",
       "url": "#discover",
       "source": "branch3 v0.4",
@@ -61,8 +61,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1237308,
-      "sha256": "cce5c1fdf518f73c6c8e0ba40ffe39f26afb81b3e373f8479f9988ae5522fb49",
+      "bytes": 1236784,
+      "sha256": "add5b6f0e54d7621411e8dfe2565defeb430ee7cf9a22b260e0bdfb985e4a984",
       "name": "community-replay",
       "url": "#discover",
       "source": "branch3 v0.4",
@@ -81,8 +81,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 346124,
-      "sha256": "5c5b58d54bb7259ab366d7da975b7e9b941076116e0e844906eb5cb9f6d8b7c5",
+      "bytes": 344538,
+      "sha256": "94df438d4398724177004cbe253ea05acb524a3f5270ed495aacb4efa9a888f8",
       "name": "role-detail",
       "url": "#discover",
       "source": "branch3 v0.4",
@@ -101,8 +101,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1279020,
-      "sha256": "43a7b6bb4265dfe2274ac9cebc9bc69040f06e133d7089cead5b08f80e130bc8",
+      "bytes": 1274801,
+      "sha256": "0e7501fa0bbf3457fc785471f929b68f33c14895da9b6b30932d272fedbb165c",
       "name": "create-look",
       "url": "#create",
       "source": "branch3 v0.4",
@@ -121,8 +121,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 118204,
-      "sha256": "f35a20d346d7e9ed9083d3fe51d305fc22daf1764f85935ee94895c6d8073852",
+      "bytes": 117698,
+      "sha256": "62486015db84096304d34e40b82d283abcaf6f5b99cd5c446a861f095bf691ba",
       "name": "create-validation",
       "url": "#create",
       "source": "branch3 v0.4",
@@ -141,8 +141,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 563611,
-      "sha256": "43bcff67c4330a44f41b9c10e3fb24fe9cdd50420932e174a5da61c9aaa5040a",
+      "bytes": 562968,
+      "sha256": "67887a1dc0d1d84bff7efcbbc306ea129d3f73b5f45cac477835d14eb5310602",
       "name": "create-personality",
       "url": "#create",
       "source": "branch3 v0.4",
@@ -161,8 +161,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 552703,
-      "sha256": "8c6bd5ff538ed32e0cc9f49dbdc911408eda29113ad6a6e58b2c9a4bc32d8e04",
+      "bytes": 547326,
+      "sha256": "ede5d925258ef4d48cfd82b35b4a215d1074b83f9c594fe54186c6240a7f5481",
       "name": "create-confirm",
       "url": "#create",
       "source": "branch3 v0.4",
@@ -181,8 +181,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 98431,
-      "sha256": "642130d901d4a1433035edcc6d5f8e1d7964ea942cb065a6f2b0eab7aa5eb6d9",
+      "bytes": 95663,
+      "sha256": "b19607551899b7ebed520a2d2a15455b2490a3bd990327a89d68f6b8fc537873",
       "name": "create-first-chat",
       "url": "#chat?id=xiaoya&first=1",
       "source": "branch3 v0.4",
@@ -201,8 +201,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 486935,
-      "sha256": "c0ee5cd2dc47dd8e2a7ef2aaeda38901991b31d2eb977e985385e5d7e8fa831c",
+      "bytes": 485147,
+      "sha256": "46d3979e54a1395007ffeb0b1508e6fe89d65743804f8db034be73f2ead2cfd4",
       "name": "chat-focus",
       "url": "#chat?id=chengxia",
       "source": "branch3 v0.4",
@@ -281,8 +281,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 109774,
-      "sha256": "57800a498217fb8b459bb4ad44f6789498ec1ad1ecfaa7d02626aeae3b89301c",
+      "bytes": 108630,
+      "sha256": "a279039cff8a878f25d8f1dd42b93a6f6d373a16dddd936272a74d5ef808db6d",
       "name": "memory-from-chat",
       "url": "#chat?id=chengxia",
       "source": "branch3 v0.4",
@@ -301,8 +301,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 162836,
-      "sha256": "52445c40d03ad3d66356d849e48833a18219e85986be8bb358e979349c165104",
+      "bytes": 161074,
+      "sha256": "719929434de0b314144e97e0dbd9aada8ad42db9860ac570cf27020379acb328",
       "name": "call-connecting",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -321,8 +321,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 669803,
-      "sha256": "65ee78a330f75cfa1d3778f4fe15e8ec0b1b2d8657b16e29216a806f4a348506",
+      "bytes": 661434,
+      "sha256": "7911334a20c5d4174b00592fdc9ad1d914708dba8490bca1bad39e4ba4c67051",
       "name": "call-event",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -341,8 +341,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 51308,
-      "sha256": "93c306bcdb998bf13393d4d988e37d8369f6dc57db0c305fa824b13a7a7096c2",
+      "bytes": 51074,
+      "sha256": "48c658f4020eddd2bd93882551cfc095d630af52843dd4281a60ac2d34fa6827",
       "name": "event-start-current",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -361,8 +361,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 52456,
-      "sha256": "d7565dde22dd12f38f88fc2b7d38ffe36b07a5238eae587bbf0cb2f56b1d4695",
+      "bytes": 52481,
+      "sha256": "a31fae966ba26c16dc70a4fcab3c9553b952c69680760fb6b60980ec3630a31c",
       "name": "event-progress-current",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -381,8 +381,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 49636,
-      "sha256": "aac940a23c616bf6574de5244a12bfb6acf89753bdc202d89d05c7cf6f5d884b",
+      "bytes": 48601,
+      "sha256": "416a4386334c79f06039573416a8be47231535bf81f04f9be7ad2102876ee4f8",
       "name": "event-success-current",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -401,8 +401,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 51921,
-      "sha256": "d14f49396746f976d55b18c169764363a91a60337b98dc0bd2ba65192238428b",
+      "bytes": 51586,
+      "sha256": "d05b811baa13e7005984d72621fbc110d471ecfdaada8f038b41504b281641a9",
       "name": "event-paused",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -421,8 +421,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 160971,
-      "sha256": "aa429a3869f0578cc74f1bcdea12067d37e9337f0c9b3305e73f7f02072e3c70",
+      "bytes": 160228,
+      "sha256": "b87eb162a4631482046abbbeaf057980aeba6cc1da2f60ac17a3d7eaf9687b3b",
       "name": "call-ended",
       "url": "#call?id=chengxia",
       "source": "branch3 v0.4",
@@ -441,8 +441,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 460366,
-      "sha256": "b2c204e97a80e746be29c5f199164f4b885568cf077d031c3de279246d57c6ae",
+      "bytes": 450341,
+      "sha256": "5d371d8ba3bb328400d46b27e64b609cf22d53abd1d62433ef92f741ec0907ba",
       "name": "memory-collection",
       "url": "#memories",
       "source": "branch3 v0.4",
@@ -481,8 +481,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 107880,
-      "sha256": "29dc97efec7aa641d3818ff67a4b65bf255014a559ea60edd28244ba2d3999b8",
+      "bytes": 106204,
+      "sha256": "3c395d043ae9e816dcdb9fbf756f86fb53be8cb94c19ec8d4d73c1f1f7799f86",
       "name": "memory-edit",
       "url": "#memories",
       "source": "branch3 v0.4",
@@ -521,8 +521,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 51359,
-      "sha256": "e4b104ea30db9ae2f1f629e341322ca20cfa921c9ced2181116ca0aeb0502c14",
+      "bytes": 52246,
+      "sha256": "43b4a7a3377104e1d5ee32aa072534ac173bf05bbaad1ebfbcf096e43ad9317b",
       "name": "memory-delete",
       "url": "#memories",
       "source": "branch3 v0.4",
@@ -541,8 +541,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 294344,
-      "sha256": "f7c802ee20b7a2c0f4a0e18ef79229dbeb8f529e51120cecb5fe38a2d94d3cee",
+      "bytes": 291033,
+      "sha256": "1292164967b7d2027e8f6f788c26b922204abbe61e7611acb2e9cc9fa609b7f8",
       "name": "pet-overview",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -581,8 +581,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 103162,
-      "sha256": "e043d178779e30cb1d79a55ee2c281fcbb1cc9d62ef3e3765517fa3b303b2903",
+      "bytes": 103153,
+      "sha256": "243030a40ffceb9753adcaa28e179377f1a05390c3fc13ef1d00d6d298bd9cf7",
       "name": "pet-avatar",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -601,8 +601,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 77653,
-      "sha256": "18510a8f4bbbceec463cca08bd4efaf7fe5db4eb970bc67de4945e3915399acd",
+      "bytes": 77638,
+      "sha256": "c9cbf65ad83eae28cad6b67ea2ae9bbbfa7269c3f5f34b4254c8a4fef1624b75",
       "name": "pet-small",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -621,8 +621,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 157906,
-      "sha256": "dfbe863308a113e2ca2df0474cb452aaafec42e7fd79ae50b50b4401e0bc9c31",
+      "bytes": 157572,
+      "sha256": "a29344befb060f9b9f97aec5a46787e936324d9132e81f5156d970beea1c6de9",
       "name": "pet-reply",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -641,8 +641,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 300048,
-      "sha256": "6faa503e56a4969569e61be042b3aa7676456d5deb72cf3120a5bb51ed4b36cd",
+      "bytes": 296780,
+      "sha256": "eaeadd24faec28feb6493fa9091fc9e8e938a69bff75b7f86e5d162c96fe623a",
       "name": "pet-paused",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -661,8 +661,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 285038,
-      "sha256": "a6211052f00cacfb9411f451202b729a7893966aaf66a6cb1ee5debd0d8da6d9",
+      "bytes": 281722,
+      "sha256": "35c10e111b5454d454eae1aff42eec4b6467ec5775fc953377afb78a51c4545d",
       "name": "pet-hidden",
       "url": "#pet?id=chengxia",
       "source": "branch3 v0.4",
@@ -721,8 +721,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 158222,
-      "sha256": "bbb284eb4544169cc2232076fab097e046a7fe9404447450ee5ef2e48e2ebd4f",
+      "bytes": 157775,
+      "sha256": "61ad6c2bd5cf79e014f237f02e9172ea429f964fb18922c4ecc41ce95caa6fa8",
       "name": "theater-setup-panel",
       "url": "#theater",
       "source": "branch3 v0.4",
@@ -741,8 +741,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1459639,
-      "sha256": "869bed4418c029af6dcf051c44fc492ed5fae9683f0efa59595e76acbc0d9ccd",
+      "bytes": 1457762,
+      "sha256": "ca3c4c72a88f647d86705ef83907f259bd38f8acffff736a99704f5332601276",
       "name": "theater-playing",
       "url": "#theater",
       "source": "branch3 v0.4",
@@ -801,8 +801,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1314300,
-      "sha256": "b0ee7e7fef61f4c83c8bb2b67d3ddea5e907a9629b11c23f95af2b02a4b4545f",
+      "bytes": 1316676,
+      "sha256": "cd96ab7199444f478933fa7864af40dde2b6283cf6857bb1b18f6c99d0f42cd0",
       "name": "theater-finished",
       "url": "#theater",
       "source": "branch3 v0.4",
@@ -821,8 +821,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 68258,
-      "sha256": "9677cdd6a58899a5c0e2b262fc65505bbd5be7278a3a8e500d30cd707ffb32ed",
+      "bytes": 68340,
+      "sha256": "58d154e59f8531dbcd69ec8c53f97223a5b0a6bbaa0f005dab300ab3a121af8b",
       "name": "theater-save",
       "url": "#theater",
       "source": "branch3 v0.4",
@@ -841,8 +841,8 @@
         "height": 1000,
         "dpr": 2
       },
-      "bytes": 1924915,
-      "sha256": "68102538bef09f2eb7e38f7fe14ce6ae79fd0a181af4ee680dd2e946d6027e21",
+      "bytes": 1917321,
+      "sha256": "4d79d22150787f3160c3c251fa7cfc9102f18ab63e6ea09c4c1c01afa9bd8eea",
       "name": "theater-collection",
       "url": "#works",
       "source": "branch3 v0.4",
@@ -851,8 +851,8 @@
   ],
   "prototypeVisualFix": "Two-line bubbles grow upward; restore control moved into desktop titlebar.",
   "sourceRuntimeHashes": {
-    "index.html": "476299A23A6E1A957B3682711F5B2E6E08F688B21B295A5BC05A54F037559510",
-    "app.js": "C5471E90C7C69B85D9BBD7AE71456105BC7D1E3CAA2FBED928D72774DBC9AF36",
+    "index.html": "0693E6BBDDC9F977D317527DC7302547D2C03047BA964CA7B95C726779B2BAF8",
+    "app.js": "9FEA0B57F8715F4BD1988F07CAE3E4CFB295362FE8569601DBD44F54116FB28A",
     "styles.css": "E278172A49FE0B2755296FAC65E0A5955D2B5F299D4A8EC8E384B42525A421BA",
     "pages.css": "F9030C1ADBC6D985D9F73D3D74E19660FE2B19ACB4C7703F7C07ECF4AD8AD5A1",
     "portfolio-layout.css": "687C55F84600451BA65774CB94EBDC76855B0D91FB62B8C9CEE57B6D7A093C6A",
@@ -873,5 +873,12 @@
       "failed": 0
     },
     "independentVisualAudit": "PASS"
+  },
+  "verificationNote": "verification 和 prototypeVisualFix 记录 2026-10-22 的验收；2026-10-28 的截图清单与页面检查见 outputs/copy-ui-refresh-20261028。",
+  "refresh20261028": {
+    "captureManifest": "outputs/copy-ui-refresh-20261028/capture-manifest.json",
+    "captureCount": 42,
+    "collectionRecipe": "outputs/copy-ui-refresh-20261028/collection.html",
+    "captureViewport": "1440 × 1000 CSS px，DPR 2"
   }
 }

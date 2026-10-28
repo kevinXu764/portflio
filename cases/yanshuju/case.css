@@ -9,13 +9,13 @@
 .yd-section{padding-top:64px;padding-bottom:64px}.yd-heading{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-bottom:28px!important}.yd-heading h2{font-size:40px}.yd-heading p{font-size:16px;line-height:1.6;padding-top:6px;max-width:30em}.yd-blue-tint{background:var(--yd-soft)}.yd-dark{background:var(--yd-ink);color:#fff}
 .yd-shot{width:100%;align-self:start}.yd-image{display:block;padding:24px;width:100%;background:#fff;text-align:left;border-radius:10px;cursor:zoom-in!important}.yd-image img{display:block;width:100%;max-width:100%;height:auto;min-height:0;border-radius:8px}.yd-shot figcaption{font-size:16px;line-height:1.55;padding-top:14px;color:var(--yd-muted)}.yd-dark .yd-shot figcaption{color:#d1e1ee}.yd-shot video{display:block;width:100%;height:auto;background:#fff;border-radius:8px}
 .yd-overview{padding-top:44px;padding-bottom:44px;background:#f5f7fa}.yd-overview-content{display:grid;grid-template-columns:1fr 1fr;gap:48px}.yd-overview-content>p{max-width:30em}.yd-route{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:start;list-style:none;padding:0;margin:0}.yd-route li{font-weight:600}
-.yd-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}.yd-preference-main{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:center;gap:64px;margin-top:48px}.yd-aside{font-size:28px;line-height:1.55;font-weight:600}
+.yd-pair{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}.yd-preference-main{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);align-items:center;gap:64px;margin-top:48px}
 .yd-conversation-board{display:grid;grid-template-columns:1.12fr 1fr;gap:36px;align-items:start}.yd-conversation-states{display:grid;gap:32px}.yd-response-run{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center;margin-top:48px}
 .yd-gallery{min-width:0}.yd-switch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.yd-switch button{min-height:44px;padding:9px 16px;font-size:16px;line-height:1.5;background:#e3ebf8;color:var(--yd-ink);border-radius:8px}.yd-switch button[aria-pressed=true]{background:var(--yd-blue);color:#fff}.yd-dark .yd-switch button{background:#254361;color:#e4eff8}.yd-dark .yd-switch button[aria-pressed=true]{background:#c4e9ff;color:#102742}.yd-gallery-panel{width:100%}
 .yd-detail-run{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:40px}.yd-detail-run>div{display:grid;gap:32px;align-content:start}.yd-detail-run>div:first-child .yd-shot:last-child{width:min(100%,480px);justify-self:center}.yd-school-details{margin-top:40px}.yd-dock-shot{margin:36px auto 0!important;max-width:760px}.yd-comparison-details{display:grid;grid-template-columns:1.55fr .7fr;gap:40px;align-items:start;margin-top:44px}.yd-decision-board{display:grid;grid-template-columns:.9fr 1.2fr;gap:40px;align-items:start}.yd-evidence-run{display:grid;gap:28px}
 
 @media(max-width:1100px){.yd-cover,.yd-section{padding-inline:28px}.yd-cover h1{font-size:76px}.yd-heading{gap:32px}.yd-heading h2{font-size:36px}.yd-conversation-board{gap:28px}.yd-preference-main{gap:36px}.yd-section{padding-top:56px;padding-bottom:56px}}
-@media(max-width:800px){.yd-case :is(section,header,footer)[id]{scroll-margin-top:140px}.yd-cover,.yd-section{padding-inline:24px}.yd-cover{padding-top:38px}.yd-cover-copy,.yd-heading{grid-template-columns:1fr;gap:16px}.yd-cover-copy>div>p{font-size:28px}.yd-cover h1{font-size:64px}.yd-cover-copy{margin-bottom:28px}.yd-cover-meta{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px}.yd-heading{gap:12px;margin-bottom:24px!important}.yd-heading p{padding-top:0}.yd-overview-content{grid-template-columns:1fr;gap:16px}.yd-preference-main{grid-template-columns:1fr;gap:24px;margin-top:32px}.yd-aside{font-size:16px;font-weight:400}.yd-aside br{display:none}.yd-conversation-board{grid-template-columns:1fr;gap:32px}.yd-conversation-main{max-width:680px;justify-self:center}.yd-conversation-states{grid-template-columns:1fr 1fr;gap:28px}.yd-conversation-states>.yd-shot:last-child{grid-column:1/-1}.yd-response-run{grid-template-columns:1fr 1fr;align-items:start;gap:24px;margin-top:32px}.yd-detail-run{gap:28px}.yd-comparison-details{grid-template-columns:1.35fr .8fr;gap:24px}.yd-decision-board{grid-template-columns:1fr 1fr;gap:28px}}
+@media(max-width:800px){.yd-case :is(section,header,footer)[id]{scroll-margin-top:140px}.yd-cover,.yd-section{padding-inline:24px}.yd-cover{padding-top:38px}.yd-cover-copy,.yd-heading{grid-template-columns:1fr;gap:16px}.yd-cover-copy>div>p{font-size:28px}.yd-cover h1{font-size:64px}.yd-cover-copy{margin-bottom:28px}.yd-cover-meta{flex-wrap:wrap;justify-content:flex-start;gap:8px 20px}.yd-heading{gap:12px;margin-bottom:24px!important}.yd-heading p{padding-top:0}.yd-overview-content{grid-template-columns:1fr;gap:16px}.yd-preference-main{grid-template-columns:1fr;gap:24px;margin-top:32px}.yd-conversation-board{grid-template-columns:1fr;gap:32px}.yd-conversation-main{max-width:680px;justify-self:center}.yd-conversation-states{grid-template-columns:1fr 1fr;gap:28px}.yd-conversation-states>.yd-shot:last-child{grid-column:1/-1}.yd-response-run{grid-template-columns:1fr 1fr;align-items:start;gap:24px;margin-top:32px}.yd-detail-run{gap:28px}.yd-comparison-details{grid-template-columns:1.35fr .8fr;gap:24px}.yd-decision-board{grid-template-columns:1fr 1fr;gap:28px}}
 @media(max-width:520px){.yd-cover,.yd-section{padding-inline:20px}.yd-section{padding-top:36px;padding-bottom:36px}.yd-overview{padding-top:32px;padding-bottom:32px}.yd-cover-copy>div>p{font-size:24px}.yd-cover-intro br{display:none}.yd-heading h2{font-size:28px}.yd-pair,.yd-response-run,.yd-conversation-states,.yd-detail-run,.yd-comparison-details,.yd-decision-board{grid-template-columns:1fr;gap:28px}.yd-image{padding:16px}.yd-preference-main{margin-top:28px}.yd-conversation-states>.yd-shot:last-child{grid-column:auto}.yd-detail-run{margin-top:28px}.yd-detail-run>div{gap:28px}.yd-detail-run>div:first-child .yd-shot:last-child{width:100%}.yd-switch{gap:8px;margin-bottom:16px}.yd-switch button{padding:9px 12px}.yd-shot figcaption{font-size:16px}}
 @media(max-width:899px){.yd-toc{justify-content:start}}
 @media(max-width:600px){.yd-toc{padding-block:10px;gap:24px}.yd-toc button{font-size:14px}}
@@ -41,7 +41,7 @@
 .yd-media-viewport{width:100%;min-width:0;overflow:hidden;padding:24px;background:#fff;border-radius:10px}
 .yd-media-viewport .yd-image{width:100%;min-width:0;max-width:100%;padding:0;border-radius:8px}
 .yd-interest-run,.yd-preference-main,.yd-response-run{grid-template-columns:minmax(0,1fr);max-width:960px;margin-inline:auto;gap:28px}
-.yd-preference-main{margin-top:48px}.yd-aside{font-size:16px;font-weight:400;line-height:1.65}.yd-aside br{display:none}
+.yd-preference-main{margin-top:48px}
 .yd-conversation-board{grid-template-columns:minmax(0,1fr);gap:40px}
 .yd-conversation-main{width:100%;max-width:960px;margin-inline:auto}
 .yd-conversation-states{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:32px}
@@ -54,7 +54,22 @@
 @media(max-width:800px){.yd-conversation-states{grid-template-columns:minmax(0,1fr);gap:28px}}
 @media(max-width:600px){
  .yd-media-viewport{padding:16px}
- .yd-aside{font-size:16px}
+ 
 }
 
 @media(max-width:350px){.yd-generation-flow>div{grid-template-columns:1fr;gap:2px}.yd-overview .yd-route{column-gap:16px}}
+
+/* Preference notes use the same reading hierarchy as other design explanations. */
+.yd-preference-notes{max-width:28em}.yd-preference-notes h3{font-size:22px;line-height:1.4;margin-bottom:12px}.yd-preference-notes p{font-size:16px;line-height:1.7;color:var(--yd-muted)}
+
+/* Desktop introductions and design notes use a larger reading scale. */
+@media (min-width:1024px) {
+  .yd-cover-intro > p { font-size:20px!important; line-height:1.75!important; max-width:28em; text-wrap:balance; }
+  .yd-heading h2 { font-size:clamp(36px,3.1vw,44px); }
+  .yd-heading p,.yd-mechanism .yd-heading p { font-size:20px; line-height:1.75; }
+  .yd-overview-content > p { font-size:18px; line-height:1.75; }
+  .yd-route li { font-size:18px; }
+  .yd-preference-notes { max-width:40rem; }
+  .yd-preference-notes h3 { font-size:26px; }
+  .yd-preference-notes p { font-size:20px; line-height:1.75; }
+}
