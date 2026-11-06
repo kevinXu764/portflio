@@ -1,4 +1,4 @@
-/* Portfolio content: three source projects and three explicit empty slots. */
+/* Portfolio content: three source projects and three category covers with pending content. */
 window.CARD_WORKS=Object.freeze([
   {
     "slug": "zhuozai-ai",
@@ -7,7 +7,7 @@ window.CARD_WORKS=Object.freeze([
     "category": "AI 陪伴 · 产品与交互",
     "description": "AI 角色互动方案，包含文字与视频交流、关系事件、记忆收藏、桌面陪伴和双人剧场。",
     "summary": "角色交流与桌面陪伴",
-    "cover": "assets/zhuozai-matrix-20261028.webp",
+    "cover": "assets/zhuozai-matrix-20261105.webp",
     "color": "#b6a0e3",
     "tags": [
       "Web",
@@ -47,46 +47,46 @@ window.CARD_WORKS=Object.freeze([
   },
   {
     "slug": "reserved-4",
-    "title": "预留作品 04",
-    "en": "RESERVED 04",
-    "category": "作品占位",
-    "description": "此位置预留给后续作品，暂未添加项目内容。",
-    "summary": "待添加作品",
-    "cover": "assets/reserved-4.svg",
-    "color": "#c2baa9",
+    "title": "数据可视化",
+    "en": "DATA VISUALIZATION",
+    "category": "数据可视化",
+    "description": "图表、信息图与数据界面作品将在此补充。",
+    "summary": "图表、信息图与数据界面 · 内容待补充",
+    "cover": "assets/data-visualization-sunburst-20261106.webp",
+    "color": "#d6d8ce",
     "tags": [
-      "预留位置",
-      "暂无详情"
+      "数据可视化",
+      "内容待补充"
     ],
     "placeholder": true
   },
   {
     "slug": "reserved-5",
-    "title": "预留作品 05",
-    "en": "RESERVED 05",
-    "category": "作品占位",
-    "description": "此位置预留给后续作品，暂未添加项目内容。",
-    "summary": "待添加作品",
-    "cover": "assets/reserved-5.svg",
-    "color": "#acc1b5",
+    "title": "游戏 UI",
+    "en": "GAME INTERFACE",
+    "category": "游戏界面设计",
+    "description": "游戏界面与组件设计作品将在此补充。",
+    "summary": "游戏界面与组件设计 · 内容待补充",
+    "cover": "assets/game-ui-poster-v2-20261106.webp",
+    "color": "#cdd6ae",
     "tags": [
-      "预留位置",
-      "暂无详情"
+      "游戏 UI",
+      "内容待补充"
     ],
     "placeholder": true
   },
   {
     "slug": "reserved-6",
-    "title": "预留作品 06",
-    "en": "RESERVED 06",
-    "category": "作品占位",
-    "description": "此位置预留给后续作品，暂未添加项目内容。",
-    "summary": "待添加作品",
-    "cover": "assets/reserved-6.svg",
-    "color": "#b7bacb",
+    "title": "运营素材",
+    "en": "CAMPAIGN VISUALS",
+    "category": "运营视觉设计",
+    "description": "活动视觉、海报与运营素材将在此补充。",
+    "summary": "活动视觉与运营素材 · 内容待补充",
+    "cover": "assets/campaign-poster-v4-20261106.webp",
+    "color": "#b6c4eb",
     "tags": [
-      "预留位置",
-      "暂无详情"
+      "运营素材",
+      "内容待补充"
     ],
     "placeholder": true
   }

@@ -14,7 +14,8 @@
     coverTextureWidth:2048, // 保留现有封面原生尺寸，仅对更大的资源限制上传尺寸
     browseGap:.28, // 第二屏两侧额外留白，保持主卡尺寸不变
     browseZoom:1.12, // 第二屏额外放大 12%，不改变首屏构图
-    renderPixelBudget:4000000, // 兼顾普通屏超采样、高密度手机与 GPU 开销
+    renderPixelBudget:2400000, // 控制主画布采样量，保留抗锯齿与高密度显示
+    transmissionResolutionScale:.5, // 仅玻璃折射背景使用半宽高缓冲，封面与文字仍在主画布绘制
     coverInset:.16, glassTransmission:.72, glassRoughness:.035, glassIridescence:0,
     // 一体成型透明边：外凸缘 → 浅槽 → 内唇边；这些是实际曲面，不是描边贴图。
     edgeBevel:.055, rimRise:.070, grooveDepth:.045, grooveOcclusion:.16, edgeBevelSegments:8,
@@ -69,20 +70,23 @@
   const floorFade={value:0};
   const orbitRadius=Math.hypot(-8.8,config.cameraHeight-config.cameraTargetY,13.5);
   const pointers=new Map();let gesture=null,feedbackTimer=0;
-  let renderer,scene,camera,ground,key,cards=[],shadowTexture,coverTextures=[],coverLoaded=0,materialSets=[],descriptions=[],coverReady;
+  let renderer,scene,camera,ground,key,cards=[],shadowTexture,coverTextures=[],coverLoaded=0,materialSets=[],cavityMaterialSets=[],descriptions=[],coverReady;
   const lerp=(a,b,t)=>a+(b-a)*t;
   const isBrowsing=()=>anchorTarget===1&&!screenTransition&&scrollProgress===1;
   const heroSpacing=()=>Math.max(3.25,(camera.right-camera.left)/camera.zoom/2+.55)+config.browseGap;
   const workUrl=index=>works[index].placeholder?null:works[index].url||`detail.html?work=${encodeURIComponent(works[index].slug)}`;
-  let raycaster,rayPointer;
+  let raycaster,rayPointer,shadowView;
+  let linkProjection=[],lastLinkClip='';
   // Let the document paint before creating a GPU context.
   await nextPaint();
   try {
     if(!window.THREE) throw new Error('3D library is missing');
-    raycaster=new THREE.Raycaster();rayPointer=new THREE.Vector2();
+    raycaster=new THREE.Raycaster();rayPointer=new THREE.Vector2();shadowView=new THREE.Vector3();
+    linkProjection=Array.from({length:4},()=>new THREE.Vector3());
     renderer=new THREE.WebGLRenderer({canvas:$('scene'),antialias:true,alpha:false,powerPreference:'high-performance'});
     renderer.setPixelRatio(renderPixelRatio(stage.clientWidth,stage.clientHeight));
     renderer.setClearColor(0xf4f3ef,1);
+    renderer.transmissionResolutionScale=config.transmissionResolutionScale;
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.toneMapping=THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure=1.07;
@@ -118,6 +122,12 @@
     ground.receiveShadow=true;ground.castShadow=false;scene.add(ground);
     shadowTexture=createShadowTexture();
     const geometry=cardGeometry(config.width,config.height,.12);
+    // Internal sealed air chamber; original external shell is unchanged.
+    // 0.11 lateral wall, 0.055 rear skin, >=0.050 front skin at the groove.
+    const cavityGeometry=new THREE.ExtrudeGeometry(roundedShape(config.width-.14,config.height-.14,.085),{
+      depth:.070,bevelEnabled:true,bevelThickness:.012,bevelSize:.012,bevelSegments:5,steps:1,curveSegments:16
+    });
+    cavityGeometry.translate(0,0,-.023);
     const coverGeometry=new THREE.ShapeGeometry(roundedShape(config.width-config.coverInset*2,config.height-config.coverInset*2,.035));
     // ShapeGeometry starts with world-space UVs; map the whole flat print to [0,1].
     const uv=coverGeometry.attributes.uv,positions=coverGeometry.attributes.position;
@@ -132,8 +142,14 @@
         attenuationColor:tint.value,attenuationDistance:.8,iridescence:0
       });
       const rim=face.clone();rim.name=face.name+'-rim';rim.vertexColors=true;rim.roughness=.022;
-      return [face,rim];
+      const innerRear=new THREE.MeshPhysicalMaterial({name:'cavity-rear-'+tint.name,
+        color:new THREE.Color(tint.value).lerp(new THREE.Color(0xffffff),.65),
+        side:THREE.BackSide,roughness:.13,metalness:0,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:.65});
+      const innerWall=innerRear.clone();innerWall.name='cavity-inner-wall-'+tint.name;
+      innerWall.color.set(tint.value).multiplyScalar(.42);innerWall.roughness=.07;innerWall.envMapIntensity=1.1;
+      return [face,rim,innerRear,innerWall];
     });
+    cavityMaterialSets=materialSets.map(materials=>materials.slice(2));
     const printSurface=config.thickness/2+config.rimRise;
     const backing=new THREE.MeshStandardMaterial({color:0xe8e5e0,metalness:0,roughness:.4,envMapIntensity:.15});
     for(let i=0;i<config.pool;i++){
@@ -142,6 +158,8 @@
       const card=new THREE.Mesh(geometry,materialSets[0]);card.name='molded-card-substrate';
       // The inset print casts the main shadow; the translucent border stays light.
       card.castShadow=false;card.receiveShadow=false;group.add(card);
+      const cavity=new THREE.Mesh(cavityGeometry,cavityMaterialSets[0]);
+      cavity.name='sealed-internal-air-chamber';cavity.castShadow=false;cavity.receiveShadow=false;group.add(cavity);
       // Artwork keeps its source contrast; reflections belong to the modeled glass rim.
       const printMaterial=new THREE.MeshBasicMaterial({
         map:coverTextures[0]||null,color:0xffffff,toneMapped:false,shadowSide:THREE.DoubleSide
@@ -173,6 +191,11 @@
             vec2 halfSize=vec2(1.70*max(.65,abs(cos(cardYaw))),1.10)*cardScale;
             float c=cos(cardAngle),s=sin(cardAngle);
             mat2 rotation=mat2(c,-s,s,c);
+            // Conservative union bounds, including maximum blur. Outside it all
+            // 32 original samples are exactly zero; no quality is traded away.
+            vec2 extent=vec2(abs(c)*halfSize.x+abs(s)*halfSize.y,abs(s)*halfSize.x+abs(c)*halfSize.y)+vec2(.226*cardScale);
+            vec2 driftEnd=vec2(-1.48,-1.18)*cardScale;
+            if(any(lessThan(shadowPoint,driftEnd-extent))||any(greaterThan(shadowPoint,extent)))discard;
             for(int i=0;i<32;i++){
               float t=float(i)/31.0;
               vec2 drift=vec2(-1.48,-1.18)*t*cardScale;
@@ -182,20 +205,37 @@
               float mask=1.0-smoothstep(-softness,softness,d);
               float fade=pow(1.0-t,1.65);
               coverage=max(coverage,mask*fade);
+              if(coverage>=1.0)break; // Remaining samples cannot exceed one.
             }
             gl_FragColor=vec4(vec3(.24,.25,.27),strength*coverage);
           }`
       });
       const longShadow=new THREE.Mesh(new THREE.PlaneGeometry(7.6,5.8),longShadowMaterial);
       longShadow.renderOrder=-5;longShadow.visible=false;scene.add(longShadow);
-      cards.push({group,card,material,cover,shadow,longShadow,description,descriptions,logical:NaN,workIndex:-1,colorIndex:0,lift:0});
+      cards.push({group,card,cavity,material,cover,shadow,longShadow,description,descriptions,logical:NaN,workIndex:-1,colorIndex:0,lift:0});
     }
     status.hidden=true;
   } catch(error) {
-    status.textContent='暂时无法开启 3D 场景。请使用支持 WebGL 的浏览器，并开启硬件加速。';
-    status.hidden=false;console.error(error);return;
+    showWebGLFallback();console.error(error);return;
   }
 
+  function showWebGLFallback(){
+    document.body.classList.add('webgl-unavailable');
+    mainLink.hidden=true;$('motion-toggle').hidden=true;
+    $('header-works').href='#fallback-works';document.querySelector('.skip-link').href='#fallback-works';
+    const section=document.createElement('section');section.className='fallback-works';section.id='fallback-works';
+    const note=document.createElement('p');note.className='fallback-notice';note.setAttribute('role','status');
+    note.textContent='浏览器暂时无法启动 3D。请开启图形加速并重启浏览器；Edge 可在 edge://gpu 查看状态。你仍可查看以下作品。';section.append(note);
+    const grid=document.createElement('div');grid.className='fallback-grid';
+    works.forEach((work,index)=>{if(work.placeholder)return;
+      const link=document.createElement('a');link.className='fallback-card';link.href=workUrl(index);
+      const image=document.createElement('img');image.src=work.cover;image.alt=work.title+'封面';image.width=1567;image.height=1004;
+      const title=document.createElement('h2');title.textContent=work.title;
+      const text=document.createElement('p');text.textContent=work.description;
+      const action=document.createElement('span');action.textContent='查看详情 ↗';
+      link.append(image,title,text,action);grid.append(link);
+    });section.append(grid);gallery.append(section);
+  }
   function roundedShape(w,h,r){
     const shape=new THREE.Shape(),x=-w/2,y=-h/2;
     shape.moveTo(x+r,y);shape.lineTo(x+w-r,y);shape.quadraticCurveTo(x+w,y,x+w,y+r);
@@ -426,7 +466,7 @@
     }
   }
   function renderPixelRatio(w,h){
-    const preferred=Math.max(1.5,Math.min(window.devicePixelRatio||1,3));
+    const preferred=Math.max(1.25,Math.min(window.devicePixelRatio||1,2));
     return Math.min(preferred,Math.sqrt(config.renderPixelBudget/Math.max(1,w*h)));
   }
   function resize(){
@@ -456,7 +496,7 @@
     link.setAttribute('aria-disabled',String(work.placeholder||cameraControlsEnabled||!isBrowsing()));$('placeholder-note').hidden=!work.placeholder;
     if(url){link.href=url;mainLink.href=url;}else{link.removeAttribute('href');mainLink.removeAttribute('href');}
     $('work-tags').replaceChildren(...work.tags.map(tag=>{const li=document.createElement('li');li.textContent=tag;return li;}));
-    $('browse-hint').textContent=work.placeholder?'预留卡片 · 左右拖动继续浏览':'左右拖动切换 · 点击卡片查看案例';
+    $('browse-hint').textContent=work.placeholder?'内容待补充 · 左右拖动继续浏览':'左右拖动切换 · 点击卡片查看案例';
     mainLink.setAttribute('aria-label',`查看${works[index].title}详情`);
     dotButtons.forEach((button,i)=>button.setAttribute('aria-current',String(i===index)));
   }
@@ -464,7 +504,12 @@
     const shadowBlend=smooth(.45,1,sceneBlend);
     floorFade.value=smooth(.25,.88,sceneBlend);
     const floorWeight=1-floorFade.value;
-    const shadowView=new THREE.Vector3();camera.getWorldDirection(shadowView);
+    // No visible ground contribution: retain its transmission background, but
+    // skip the obsolete shadow-map pass. Restore before the first return frame.
+    renderer.shadowMap.autoUpdate=floorWeight>0;
+    if(floorWeight===0)renderer.shadowMap.needsUpdate=false;
+    camera.getWorldDirection(shadowView);
+    const cardSpacing=heroSpacing(),longShadowStrength=viewport.width<700?.16:.17;
     const shadowViewZ=Math.abs(shadowView.z)>.1?shadowView.z:-.1;
     // A top-right studio light matches the lower-left cast direction in this study.
     key.position.set(lerp(3.8,7,shadowBlend),lerp(11,8,shadowBlend),lerp(5.5,15,shadowBlend));
@@ -474,8 +519,8 @@
       const lift=config.lift*(1-smooth(config.liftInner,config.liftOuter,Math.abs(d)));
       const offset=logical-carouselPosition,distance=Math.abs(offset);
       const presence=1-sceneBlend*smooth(1.05,1.95,distance);
-      item.group.visible=presence>.001;item.shadow.visible=item.group.visible;
-      item.group.position.set(lerp(0,offset*heroSpacing(),sceneBlend),lerp(config.height/2+config.edgeBevel+.005+lift,1.72-.1*Math.min(distance,2),sceneBlend),lerp(z,-.65*distance,sceneBlend));
+      item.group.visible=presence>.001;
+      item.group.position.set(lerp(0,offset*cardSpacing,sceneBlend),lerp(config.height/2+config.edgeBevel+.005+lift,1.72-.1*Math.min(distance,2),sceneBlend),lerp(z,-.65*distance,sceneBlend));
       // Rotation belongs to the logical card, even when the render pool recycles.
       const tilt=cardTilts.get(logical)?.rotation,tiltWeight=smooth(.45,1,sceneBlend);
       item.group.rotation.set((tilt?.x||0)*tiltWeight,
@@ -485,17 +530,18 @@
       const index=mod(logical,works.length);
       if(index!==item.workIndex){
         item.workIndex=index;item.description.material.map=item.descriptions[index];
-        item.colorIndex=index;item.card.material=materialSets[index];item.material=item.card.material[0];
+        item.colorIndex=index;item.card.material=materialSets[index];item.cavity.material=cavityMaterialSets[index];item.material=item.card.material[0];
         item.cover.material.map=coverTextures[index];
       }
       // Contact occlusion remains flush with the floor, softens as the card rises.
       item.shadow.position.set(item.group.position.x,.004,item.group.position.z);item.shadow.scale.set((1+lift*.12)*presence,(1+lift*.6)*presence,1);item.shadow.material.opacity=.12*(1-lift/config.lift*.72)*floorWeight;
+      item.shadow.visible=item.group.visible&&item.shadow.material.opacity>0;
 
       const shadowDepth=-1.8-item.group.position.z;
       item.longShadow.position.set(item.group.position.x+shadowDepth*shadowView.x/shadowViewZ,
         item.group.position.y+shadowDepth*shadowView.y/shadowViewZ-.026,-1.8);
-      item.longShadow.material.uniforms.strength.value=shadowBlend*(stage.clientWidth<700?.16:.17)*lerp(1,.36,smooth(0,1,distance))*(1-smooth(1.1,1.85,distance))*presence;
-      item.longShadow.visible=item.group.visible&&item.longShadow.material.uniforms.strength.value>0;
+      item.longShadow.material.uniforms.strength.value=shadowBlend*longShadowStrength*lerp(1,.36,smooth(0,1,distance))*(1-smooth(1.1,1.85,distance))*presence;
+      item.longShadow.visible=item.group.visible&&item.longShadow.material.uniforms.strength.value>=.00001;
       item.longShadow.material.uniforms.cardScale.value=item.group.scale.x;
       item.longShadow.material.uniforms.cardAngle.value=item.group.rotation.z;
       item.longShadow.material.uniforms.cardYaw.value=item.group.rotation.y;
@@ -510,11 +556,12 @@
     if(mainLink.hidden)return;
     const item=cards.find(card=>card.logical===selectedLogical&&card.group.visible);
     if(!item){mainLink.hidden=true;return;}
-    const corners=[[-1,1],[1,1],[1,-1],[-1,-1]].map(([x,y])=>{
-      const point=new THREE.Vector3(x*config.width/2,y*config.height/2,item.cover.position.z);
+    const corners=linkProjection.map((point,i)=>{
+      point.set((i===0||i===3?-1:1)*config.width/2,(i<2?1:-1)*config.height/2,item.cover.position.z);
       item.group.localToWorld(point);point.project(camera);return `${((point.x+1)*50).toFixed(3)}% ${((1-point.y)*50).toFixed(3)}%`;
     });
-    mainLink.style.clipPath=`polygon(${corners.join(',')})`;
+    const clip=`polygon(${corners.join(',')})`;
+    if(clip!==lastLinkClip){mainLink.style.clipPath=clip;lastLinkClip=clip;}
   }
   function setBrowseAvailability(){
     const browsing=isBrowsing();featuredUI.inert=!browsing;
@@ -522,7 +569,7 @@
     for(const button of [previousButton,nextButton,...dotButtons])button.disabled=cameraControlsEnabled||!browsing;
     $('work-link').tabIndex=cameraControlsEnabled||!browsing||works[mod(selectedLogical,works.length)].placeholder?-1:0;
     $('work-link').setAttribute('aria-disabled',String(cameraControlsEnabled||!browsing||works[mod(selectedLogical,works.length)].placeholder));
-    $('browse-hint').textContent=cameraControlsEnabled?'视角调整中 · 按 Q 返回作品浏览':works[mod(selectedLogical,works.length)].placeholder?'预留卡片 · 左右拖动继续浏览':'左右拖动切换 · 点击卡片查看案例';
+    $('browse-hint').textContent=cameraControlsEnabled?'视角调整中 · 按 Q 返回作品浏览':works[mod(selectedLogical,works.length)].placeholder?'内容待补充 · 左右拖动继续浏览':'左右拖动切换 · 点击卡片查看案例';
     $('scroll-cue').inert=scrollProgress>.1;
     stage.setAttribute('aria-label',cameraControlsEnabled
       ?'视角控制已开启；拖动调整视角，滚轮或双指捏合缩放；方向键调整角度，加减号缩放，Home 恢复，Q 关闭，W 保存'
@@ -849,7 +896,6 @@
   $('header-works').addEventListener('click',event=>{event.preventDefault();goToAnchor(1);});
   $('home-link').addEventListener('click',event=>{event.preventDefault();goToAnchor(0);});
   $('motion-toggle').addEventListener('click',()=>setPlaying(!playing));
-  document.querySelectorAll('.work-directory a').forEach(link=>link.addEventListener('click',persistGalleryState));
   $('back-to-overview').addEventListener('click',event=>{event.preventDefault();goToAnchor(0);});
   $('work-link').addEventListener('click',event=>{if(cameraControlsEnabled||!isBrowsing()||works[mod(selectedLogical,works.length)].placeholder){event.preventDefault();return;}persistGalleryState();});
   mainLink.addEventListener('click',()=>persistGalleryState());
@@ -880,7 +926,7 @@
     g.velocity=lerp(g.velocity,sample,1-Math.exp(-elapsed/35));g.x=event.clientX;g.time=now;
     const unit=stage.clientWidth*heroSpacing()/((camera.right-camera.left)/camera.zoom);
     dragMaterialTilt(dx,g.velocity,unit);
-    carouselPosition=g.from-clamp(dx/unit,-1.12,1.12);needsRender=true;updateMainLink();wake();
+    carouselPosition=g.from-clamp(dx/unit,-1.12,1.12);needsRender=true;wake();
   });
   function finishBrowseGesture(event){
     const g=browseGesture;if(!g||g.id!==event.pointerId)return;
@@ -1025,7 +1071,7 @@
   new ResizeObserver(resize).observe(stage);restoreGalleryState();resize();
   // Read-only diagnostics. Nothing here is exposed as extra gallery UI.
   window.galleryState=()=>({
-    version:19,shadowTransition:{floorFade:floorFade.value,floorWeight:1-floorFade.value,longFade:smooth(.45,1,sceneBlend),floorVisible:ground.visible,floorDepthWrite:ground.material.depthWrite,groundOrder:ground.renderOrder,shadows:cards.filter(c=>c.group.visible).map(c=>({logical:c.logical,contact:c.shadow.material.opacity,long:c.longShadow.material.uniforms.strength.value,visible:c.longShadow.visible})),longSamples:32},descriptionAlignment:{align:'right',cardRight:config.width/2,textRight:cards[0].description.position.x+3.65*(1268/1280-.5)},rendering:{programs:renderer.info.programs.length,pixelRatio:renderer.getPixelRatio(),buffer:[$('scene').width,$('scene').height],pixelBudget:config.renderPixelBudget,printMaterial:cards[0].cover.material.type,anisotropy:coverTextures[0].anisotropy},startup:{...startup},
+    version:19,cavityPreview:{externalShape:'unchanged-v5',closedChamber:true,chamberDepth:.094,sideWall:.113,backSkin:.055,minimumFrontSkin:.056},shadowTransition:{shadowMapUpdating:renderer.shadowMap.autoUpdate,floorFade:floorFade.value,floorWeight:1-floorFade.value,longFade:smooth(.45,1,sceneBlend),floorVisible:ground.visible,floorDepthWrite:ground.material.depthWrite,groundOrder:ground.renderOrder,shadows:cards.filter(c=>c.group.visible).map(c=>({logical:c.logical,contact:c.shadow.material.opacity,long:c.longShadow.material.uniforms.strength.value,visible:c.longShadow.visible})),longSamples:32},descriptionAlignment:{align:'right',cardRight:config.width/2,textRight:cards[0].description.position.x+3.65*(1268/1280-.5)},rendering:{programs:renderer.info.programs.length,pixelRatio:renderer.getPixelRatio(),buffer:[$('scene').width,$('scene').height],pixelBudget:config.renderPixelBudget,transmissionResolutionScale:renderer.transmissionResolutionScale,printMaterial:cards[0].cover.material.type,anisotropy:coverTextures[0].anisotropy},startup:{...startup},
     palette:colors.map((tint,i)=>({name:tint.name,color:materialSets[i][0].color.getHexString(),
       metalness:materialSets[i][0].metalness,roughness:materialSets[i][0].roughness,transmission:materialSets[i][0].transmission})),
     cards:cards.map(item=>({logical:item.logical,workIndex:item.workIndex,colorIndex:item.colorIndex,
